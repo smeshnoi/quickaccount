@@ -1,25 +1,25 @@
 package com.quickaccount;
 
 public class MessageDao {
-    private static MessageDao INSTANCE = null;
+    private static MessageDao instance = null;
 
     public MessageDao() {
 
     }
 
     public static MessageDao getINSTANCE() {
-        if (INSTANCE == null) {
+        if (instance == null) {
             synchronized (MessageDao.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new MessageDao();
+                if (instance == null) {
+                    instance = new MessageDao();
                 }
             }
         }
-        return INSTANCE;
+        return instance;
     }
 
     public String getMessage() {
-        String string = "Unknown page";
+        String string = "This page generate dao layer";
         return string;
     }
 }
