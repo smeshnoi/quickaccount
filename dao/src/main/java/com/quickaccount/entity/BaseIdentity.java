@@ -1,4 +1,8 @@
 package com.quickaccount.entity;
 
-public class BaseIdentity {
+import javax.persistence.Id;
+
+public abstract class BaseIdentity {
+    @Id
+    private Long id;
 }
