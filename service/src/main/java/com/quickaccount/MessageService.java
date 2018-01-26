@@ -1,20 +1,20 @@
 package com.quickaccount;
 
 public class MessageService {
-    private static MessageService instance = null;
+    private static MessageService INSTANCE = null;
 
     public MessageService() {
     }
 
     public static MessageService getINSTANCE() {
-        if (instance == null) {
+        if (INSTANCE == null) {
             synchronized (MessageService.class) {
-                if (instance == null) {
-                    instance = new MessageService();
+                if (INSTANCE == null) {
+                    INSTANCE = new MessageService();
                 }
             }
         }
-        return instance;
+        return INSTANCE;
     }
 
     public String generateMessage() {
