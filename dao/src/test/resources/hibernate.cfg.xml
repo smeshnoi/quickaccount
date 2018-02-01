@@ -15,5 +15,8 @@
 
     <mapping class="com.quickaccount.entity.Currency"/>
     <mapping class="com.quickaccount.entity.User"/>
+    <mapping class="com.quickaccount.entity.Company"/>
+    <mapping class="com.quickaccount.entity.Rate"/>
+    <mapping class="com.quickaccount.entity.TypeAccount"/>
   </session-factory>
 </hibernate-configuration>

@@ -22,4 +22,9 @@ public class Currency extends BaseIdentity {
     @JoinColumn(name = "id", nullable = false, unique = true)
     private User user;
 
+    @OneToOne(mappedBy = "currencyIn")
+    private Rate rateIn;
+
+    @OneToOne(mappedBy = "currencyOut")
+    private Rate rateOut;
 }
