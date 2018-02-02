@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -18,13 +20,16 @@ public class Currency extends BaseIdentity {
     @Column(name = "currency", unique = true, nullable = false)
     private String currency;
 
-    @OneToOne
-    @JoinColumn(name = "id", nullable = false, unique = true)
-    private User user;
+    @OneToMany(mappedBy = "currency")
+    private Set<User> userSet = new HashSet<>();
 
     @OneToOne(mappedBy = "currencyIn")
     private Rate rateIn;
 
     @OneToOne(mappedBy = "currencyOut")
     private Rate rateOut;
+
+    public Currency(String currency) {
+        this.currency = currency;
+    }
 }

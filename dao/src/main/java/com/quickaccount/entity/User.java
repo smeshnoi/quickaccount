@@ -26,8 +26,8 @@ public class User extends BaseIdentity {
     @Column(name = "last_name", nullable = false)
     private String last_name;
 
-    @Column(name = "currency_id", nullable = false)
-    @OneToOne(mappedBy = "user")
+    @ManyToOne(cascade =  CascadeType.ALL)
+    @JoinColumn(name = "currency_id")
     private Currency currency;
 
     @Column(name = "password", nullable = false)
@@ -48,4 +48,14 @@ public class User extends BaseIdentity {
 
     @OneToMany(mappedBy = "user")
     private Set<Rate> rateHashSet = new HashSet<>();
+
+    public User(String login, String first_name, String last_name, Currency currency, String password, Role role, Contact contact) {
+        this.login = login;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.currency = currency;
+        this.password = password;
+        this.role = role;
+        this.contact = contact;
+    }
 }

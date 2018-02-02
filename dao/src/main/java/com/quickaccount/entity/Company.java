@@ -30,4 +30,10 @@ public class Company extends BaseIdentity {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    public Company(String company_name, String description, Contact contact) {
+        this.company_name = company_name;
+        this.description = description;
+        this.contact = contact;
+    }
 }
