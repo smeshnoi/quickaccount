@@ -29,6 +29,9 @@ public class Currency extends BaseIdEntity {
     @OneToOne(mappedBy = "currencyOut")
     private Rate rateOut;
 
+    @OneToMany(mappedBy = "currency")
+    private Set<Transaction> transactionSet = new HashSet<>();
+
     public Currency(String currency) {
         this.currency = currency;
     }

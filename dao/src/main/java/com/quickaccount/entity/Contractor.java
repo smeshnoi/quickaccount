@@ -1,18 +1,19 @@
 package com.quickaccount.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
 @Entity
+@NoArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED)
+@ToString(callSuper = true)
 @Table(name = "contractors")
 public class Contractor extends BaseIdEntity {
+
+    @Column(name = "contractor_name", nullable = false, unique = true)
+    private String contractorName;
+
 }
