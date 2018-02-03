@@ -10,7 +10,8 @@ import org.junit.Test;
 
 public class CurrencyMappingTest {
     private static CurrencyMappingTest INSTANCE = null;
-    private static final SessionFactory SESSION_FACTORY = new Configuration().configure().buildSessionFactory();
+    private static final SessionFactory SESSION_FACTORY =
+            new Configuration().configure().buildSessionFactory();
 
     public CurrencyMappingTest() {
     }

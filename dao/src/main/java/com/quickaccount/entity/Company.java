@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "companies")
-public class Company extends BaseIdentity {
+public class Company extends BaseIdEntity {
 
     @Column(name = "company_name")
     private String company_name;
@@ -29,7 +29,7 @@ public class Company extends BaseIdentity {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User userCompany;
 
     public Company(String company_name, String description, Contact contact) {
         this.company_name = company_name;

@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "account_types")
-public class TypeAccount extends BaseIdentity {
+public class TypeAccount extends BaseIdEntity {
 
     @Column(name = "name", nullable = false)
     private String typeAccountName;

@@ -15,7 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "currency")
-public class Currency extends BaseIdentity {
+public class Currency extends BaseIdEntity {
 
     @Column(name = "currency", unique = true, nullable = false)
     private String currency;

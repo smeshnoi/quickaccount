@@ -11,8 +11,23 @@ import org.junit.Test;
 import java.util.List;
 
 public class CompanyMappingTest {
+    private static CompanyMappingTest INSTANCE = null;
     private static final SessionFactory SESSION_FACTORY =
             new Configuration().configure().buildSessionFactory();
+
+    public CompanyMappingTest() {
+    }
+
+    public static CompanyMappingTest getINSTANCE() {
+        if(INSTANCE == null) {
+            synchronized (CompanyMappingTest.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new CompanyMappingTest();
+                }
+            }
+        }
+        return INSTANCE;
+    }
 
     @Test
     public void testAddCompany() {

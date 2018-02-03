@@ -15,7 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class User extends BaseIdentity {
+public class User extends BaseIdEntity {
 
     @Column(name = "login", unique = true, nullable = false)
     private String login;
@@ -43,11 +43,14 @@ public class User extends BaseIdentity {
     })
     private Contact contact;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "userCompany")
     private Set<Company> companySet = new HashSet<>();
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "userRate")
     private Set<Rate> rateHashSet = new HashSet<>();
+
+    @OneToMany(mappedBy = "userAccount")
+    private Set<Account> accountHashSet = new HashSet<>();
 
     public User(String login, String first_name, String last_name, Currency currency, String password, Role role, Contact contact) {
         this.login = login;

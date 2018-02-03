@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @Table(name = "currency_rates")
-public class Rate extends BaseIdentity {
+public class Rate extends BaseIdEntity {
 
     @Column(name = "date")
     private LocalDate rateDate;
@@ -32,5 +32,5 @@ public class Rate extends BaseIdentity {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User userRate;
 }
