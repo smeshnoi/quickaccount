@@ -15,7 +15,7 @@
 <table bgcolor="gray" border="1">
     <c:forEach var="currency" items="${requestScope.currency}">
         <tr>
-            <%--<td><c:out value="${currency.currency}"></c:out></td>--%>
+            <td><c:out value="${currency.currency}"></c:out></td>
         </tr>
     </c:forEach>
 </table>
