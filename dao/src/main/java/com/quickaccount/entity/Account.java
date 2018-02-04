@@ -29,5 +29,11 @@ public class Account extends BaseIdEntity {
     private User userAccount;
 
     @OneToMany(mappedBy = "account")
-    private Set<Transaction> transactionSet = new HashSet<>();
+    private Set<TransactionAccount> transactionAccountSet = new HashSet<>();
+
+    public Account(String accountName, TypeAccount typeAccount, User userAccount) {
+        this.accountName = accountName;
+        this.typeAccount = typeAccount;
+        this.userAccount = userAccount;
+    }
 }

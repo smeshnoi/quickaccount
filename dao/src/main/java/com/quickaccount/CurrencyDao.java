@@ -10,22 +10,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CurrencyDao {
-    private static CurrencyDao INSTANCE = null;
+    private static CurrencyDao instance = null;
     private static final SessionFactory SESSION_FACTORY =
             new Configuration().configure().buildSessionFactory();
 
     public CurrencyDao() {
     }
 
-    public static CurrencyDao getINSTANCE() {
-        if(INSTANCE == null) {
+    public static CurrencyDao getInstance() {
+        if (instance == null) {
             synchronized (CurrencyDao.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new CurrencyDao();
+                if (instance == null) {
+                    instance = new CurrencyDao();
                 }
             }
         }
-        return INSTANCE;
+        return instance;
     }
 
     public List<Currency> getAllCurrency() {
@@ -33,6 +33,9 @@ public class CurrencyDao {
         Session session = SESSION_FACTORY.openSession();
         Transaction transaction = session.beginTransaction();
         currencyList = session.createQuery("select c from Currency c", Currency.class).list();
+        for (Currency currency: currencyList) {
+            System.out.println(currency.getCurrency());
+        }
         transaction.commit();
         session.close();
         return currencyList;

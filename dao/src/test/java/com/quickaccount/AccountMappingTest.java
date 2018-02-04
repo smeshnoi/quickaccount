@@ -1,7 +1,8 @@
 package com.quickaccount;
 
-import com.quickaccount.entity.Company;
-import com.quickaccount.entity.Contact;
+import com.quickaccount.entity.Account;
+import com.quickaccount.entity.TypeAccount;
+import com.quickaccount.entity.TypeDC;
 import com.quickaccount.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,21 +10,19 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.junit.Test;
 
-import java.util.List;
-
-public class CompanyMappingTest {
-    private static CompanyMappingTest INSTANCE = null;
+public class AccountMappingTest {
+    private static AccountMappingTest INSTANCE = null;
     private static final SessionFactory SESSION_FACTORY =
             new Configuration().configure().buildSessionFactory();
 
-    public CompanyMappingTest() {
+    public AccountMappingTest() {
     }
 
-    public static CompanyMappingTest getINSTANCE() {
+    public static AccountMappingTest getINSTANCE() {
         if(INSTANCE == null) {
-            synchronized (CompanyMappingTest.class) {
+            synchronized (AccountMappingTest.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new CompanyMappingTest();
+                    INSTANCE = new AccountMappingTest();
                 }
             }
         }
@@ -31,27 +30,26 @@ public class CompanyMappingTest {
     }
 
     @Test
-    public void testAddCompany() {
+    public void testAddAccount() {
         UserMappingTest.getINSTANCE().testAddUser();
         Session session = SESSION_FACTORY.openSession();
         Transaction transaction = session.beginTransaction();
         User user = session.get(User.class, 1L);
-        Company company = new Company("Ivanov and Co", "consalting",
-                new Contact("ivanov_co@gmail.com", "+38094121421"), user);
-        session.save(company);
+        TypeAccount typeAccount = new TypeAccount("Test Type", TypeDC.CREDIT);
+        session.save(typeAccount);
+        Account account = new Account("Test Account", typeAccount, user);
+        session.save(account);
         transaction.commit();
         session.close();
     }
 
     @Test
-    public void testGetCompany() {
-        testAddCompany();
+    public void testGetAccount() {
+        testAddAccount();
         Session session = SESSION_FACTORY.openSession();
         Transaction transaction = session.beginTransaction();
-        List<Company> companyList = session.createQuery("select c from Company c", Company.class).list();
-        for (Company element: companyList) {
-            System.out.println(element.getCompanyName());
-        }
+        Account account = session.get(Account.class, 1L);
+        System.out.println(account.getAccountName() + " : " + account.getTypeAccount().getTypeDC());
         transaction.commit();
         session.close();
     }

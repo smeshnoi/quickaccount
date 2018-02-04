@@ -13,8 +13,8 @@ import java.io.IOException;
 public class MessageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("message", MessageService.getINSTANCE().generateMessage());
-        System.out.println(MessageService.getINSTANCE().generateMessage());
+        req.setAttribute("message", MessageService.getInstance().generateMessage());
+        System.out.println(MessageService.getInstance().generateMessage());
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/message.jsp").forward(req,resp);
     }
 }

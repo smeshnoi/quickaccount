@@ -28,4 +28,12 @@ public class Address extends BaseIdEntity {
     @OneToOne
     @JoinColumn(name = "id", nullable = false, unique = true)
     private ContractorLegalEntity contractorLegalEntity;
+
+    public Address(Long id, String city, String street, String building, int office) {
+        super(id);
+        this.city = city;
+        this.street = street;
+        this.building = building;
+        this.office = office;
+    }
 }

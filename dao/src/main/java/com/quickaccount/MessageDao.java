@@ -1,21 +1,21 @@
 package com.quickaccount;
 
 public class MessageDao {
-    private static MessageDao INSTANCE = null;
+    private static MessageDao instance = null;
 
     public MessageDao() {
 
     }
 
-    public static MessageDao getINSTANCE() {
-        if (INSTANCE == null) {
+    public static MessageDao getInstance() {
+        if (instance == null) {
             synchronized (MessageDao.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new MessageDao();
+                if (instance == null) {
+                    instance = new MessageDao();
                 }
             }
         }
-        return INSTANCE;
+        return instance;
     }
 
     public String getMessage() {

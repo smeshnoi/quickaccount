@@ -13,17 +13,30 @@ import org.junit.Test;
 import java.util.List;
 
 public class UserMappingTest {
+    private static UserMappingTest INSTANCE = null;
     private static final SessionFactory SESSION_FACTORY =
             new Configuration().configure().buildSessionFactory();
 
+    public UserMappingTest() {
+    }
+
+    public static UserMappingTest getINSTANCE() {
+        if(INSTANCE == null) {
+            synchronized (UserMappingTest.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new UserMappingTest();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
     @Test
     public void testAddUser() {
+        CurrencyMappingTest.getINSTANCE().testAddDB();
         Session session = SESSION_FACTORY.openSession();
         Transaction transaction = session.beginTransaction();
-        Currency currency = new Currency("GBR");
-        //public User(String login, String first_name, String last_name,
-        // Currency currency, String password, Role role,
-        // Contact contact) {
+        Currency currency = session.get(Currency.class, 1L);//new Currency("GBR");
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("test@gmail.com", "+375296465656"));
@@ -34,12 +47,12 @@ public class UserMappingTest {
 
     @Test
     public void testGetUser() {
-        testAddUser();
+        //testAddUser();
         Session session = SESSION_FACTORY.openSession();
         Transaction transaction = session.beginTransaction();
         List<User> userList = session.createQuery("select u from User u", User.class).list();
         for (User user: userList) {
-            System.out.println(user.getFirst_name() + ": " + user.getContact().getEmail() + " - "
+            System.out.println(user.getFirstName() + ": " + user.getContact().getEmail() + " - "
                     + user.getCurrency().getCurrency());
         }
         transaction.commit();

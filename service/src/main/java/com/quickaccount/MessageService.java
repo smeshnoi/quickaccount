@@ -1,25 +1,25 @@
 package com.quickaccount;
 
 public class MessageService {
-    private static MessageService INSTANCE = null;
+    private static MessageService instance = null;
 
     public MessageService() {
     }
 
-    public static MessageService getINSTANCE() {
-        if (INSTANCE == null) {
+    public static MessageService getInstance() {
+        if (instance == null) {
             synchronized (MessageService.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new MessageService();
+                if (instance == null) {
+                    instance = new MessageService();
                 }
             }
         }
-        return INSTANCE;
+        return instance;
     }
 
     public String generateMessage() {
         String string;
-        string = MessageDao.getINSTANCE().getMessage();
+        string = MessageDao.getInstance().getMessage();
         return string;
     }
 }

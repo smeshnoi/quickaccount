@@ -18,7 +18,7 @@ import java.util.Set;
 public class Company extends BaseIdEntity {
 
     @Column(name = "company_name")
-    private String company_name;
+    private String companyName;
 
     @Column(name = "description")
     private String description;
@@ -34,11 +34,12 @@ public class Company extends BaseIdEntity {
     private User userCompany;
 
     @OneToMany(mappedBy = "company")
-    private Set<Transaction> transactionSet = new HashSet<>();
+    private Set<TransactionAccount> transactionAccountSet = new HashSet<>();
 
-    public Company(String company_name, String description, Contact contact) {
-        this.company_name = company_name;
+    public Company(String companyName, String description, Contact contact, User userCompany) {
+        this.companyName = companyName;
         this.description = description;
         this.contact = contact;
+        this.userCompany = userCompany;
     }
 }

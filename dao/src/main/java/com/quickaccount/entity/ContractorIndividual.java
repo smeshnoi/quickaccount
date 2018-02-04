@@ -28,4 +28,6 @@ public class ContractorIndividual extends Contractor {
 
     @Column(name = "number_passport", nullable = false, unique = true)
     private String numberPassport;
+
+
 }

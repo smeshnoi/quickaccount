@@ -18,7 +18,10 @@
     <mapping class="com.quickaccount.entity.Rate"/>
     <mapping class="com.quickaccount.entity.TypeAccount"/>
     <mapping class="com.quickaccount.entity.Account"/>
-    <mapping class="com.quickaccount.entity.Transaction"/>
+    <mapping class="com.quickaccount.entity.TransactionAccount"/>
     <mapping class="com.quickaccount.entity.Contractor"/>
+    <mapping class="com.quickaccount.entity.ContractorIndividual"/>
+    <mapping class="com.quickaccount.entity.ContractorLegalEntity"/>
+    <mapping class="com.quickaccount.entity.Address"/>
   </session-factory>
 </hibernate-configuration>

@@ -1,9 +1,6 @@
 package com.quickaccount.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,6 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @Table(name = "currency_rates")
+@ToString(callSuper = true)
 public class Rate extends BaseIdEntity {
 
     @Column(name = "date")

@@ -21,10 +21,10 @@ public class User extends BaseIdEntity {
     private String login;
 
     @Column(name = "first_name", nullable = false)
-    private String first_name;
+    private String firstName;
 
     @Column(name = "last_name", nullable = false)
-    private String last_name;
+    private String lastName;
 
     @ManyToOne(cascade =  CascadeType.ALL)
     @JoinColumn(name = "currency_id")
@@ -52,10 +52,10 @@ public class User extends BaseIdEntity {
     @OneToMany(mappedBy = "userAccount")
     private Set<Account> accountHashSet = new HashSet<>();
 
-    public User(String login, String first_name, String last_name, Currency currency, String password, Role role, Contact contact) {
+    public User(String login, String firstName, String lastName, Currency currency, String password, Role role, Contact contact) {
         this.login = login;
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.currency = currency;
         this.password = password;
         this.role = role;

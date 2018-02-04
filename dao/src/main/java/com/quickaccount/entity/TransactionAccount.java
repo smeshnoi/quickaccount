@@ -1,9 +1,6 @@
 package com.quickaccount.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -11,10 +8,10 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "transactions")
-public class Transaction extends BaseIdEntity {
+@ToString(callSuper = true)
+public class TransactionAccount extends BaseIdEntity {
 
     @Column(name = "date", nullable = false)
     private LocalDate date;
@@ -41,4 +38,14 @@ public class Transaction extends BaseIdEntity {
     @ManyToOne
     @JoinColumn(name = "contractor_id", nullable = false)
     private Contractor contractor;
+
+    public TransactionAccount(LocalDate date, Company company, Account account, TypeDC typeDC, Currency currency, Double amount, Contractor contractor) {
+        this.date = date;
+        this.company = company;
+        this.account = account;
+        this.typeDC = typeDC;
+        this.currency = currency;
+        this.amount = amount;
+        this.contractor = contractor;
+    }
 }
