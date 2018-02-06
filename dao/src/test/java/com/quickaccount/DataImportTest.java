@@ -31,12 +31,12 @@ public class DataImportTest {
         Currency currency2 = new Currency("USD");
         session.save(currency);
         session.save(currency2);
-        User user = new User("test","Test", "Testov",
-                currency2, "passw", Role.USER,
-                new Contact("test@gmail.com", "+375296465656"));
+        User user = new User("test", "Test", "Testov",
+                             currency2, "passw", Role.USER,
+                             new Contact("test@gmail.com", "+375296465656"));
         session.save(user);
         Company company = new Company("Ivanov and Co", "consalting",
-                new Contact("ivanov_co@gmail.com", "+38094121421"), user);
+                                      new Contact("ivanov_co@gmail.com", "+38094121421"), user);
         session.save(company);
         LocalDate date = LocalDate.now();
         Currency currencyIn = session.get(Currency.class, 1L);
@@ -55,7 +55,7 @@ public class DataImportTest {
         contractorLegalEntity.setAccount("UK123A12434112");
         contractorLegalEntity.setUnn("1901291119");
         session.save(contractorLegalEntity);
-        Address address = new Address(2L,"Minsk", "Pobediteley", "5a", 11);
+        Address address = new Address(2L, "Minsk", "Pobediteley", "5a", 11);
         session.save(address);
         contractorLegalEntity.setAddress(address);
         session.save(contractorLegalEntity);
@@ -66,8 +66,8 @@ public class DataImportTest {
         session.save(account);
 
         TransactionAccount transactionAccount =
-                new TransactionAccount(date, company, account,
-                        TypeDC.CREDIT, currency, 100.55, contractorIndividual);
+            new TransactionAccount(date, company, account,
+                                   TypeDC.CREDIT, currency, 100.55, contractorIndividual);
         session.save(transactionAccount);
 
         transaction.commit();
