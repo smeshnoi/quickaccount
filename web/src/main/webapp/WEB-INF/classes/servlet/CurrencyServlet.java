@@ -13,8 +13,8 @@ import java.io.IOException;
 public class CurrencyServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //req.setAttribute("currency", 11);
-        System.out.println(CurrencyService.getInstance().getAllCurrency());
+        req.setAttribute("currency", CurrencyService.getInstance().getAllCurrency());
+        //System.out.println(CurrencyService.getInstance().getAllCurrency());
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/currency.jsp").forward(req,resp);
     }
 }
