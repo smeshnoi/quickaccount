@@ -21,7 +21,7 @@ public class Currency extends BaseIdEntity {
     private String currency;
 
     @OneToMany(mappedBy = "currency")
-    private Set<User> userSet = new HashSet<>();
+    private Set<User> userSet = new HashSet<User>();
 
     @OneToOne(mappedBy = "currencyIn")
     private Rate rateIn;

@@ -22,7 +22,6 @@ public class CurrencyService {
     }
 
     public List<Currency> getAllCurrency() {
-        System.out.println(CurrencyService.getInstance().getAllCurrency());
-        return null;
+        return CurrencyDao.getInstance().getAllCurrency();
     }
 }
