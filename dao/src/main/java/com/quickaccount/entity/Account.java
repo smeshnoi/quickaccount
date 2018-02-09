@@ -16,7 +16,6 @@ import java.util.Set;
 @Entity
 @Table(name = "accounts")
 public class Account extends BaseIdEntity {
-
     @Column(name = "account_name", nullable = false, unique = true)
     private String accountName;
 

@@ -24,4 +24,12 @@ public class CurrencyService {
     public List<Currency> getAllCurrency() {
         return CurrencyDao.getInstance().getAllCurrency();
     }
+
+    public Currency getCurrency() {
+        return CurrencyDao.getInstance().findById(1L);
+    }
+
+    public List<Currency> getAll() {
+        return CurrencyDao.getInstance().findAll();
+    }
 }

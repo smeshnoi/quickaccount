@@ -9,12 +9,14 @@ import org.hibernate.cfg.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CurrencyDao {
+public class CurrencyDao extends BaseDao<Currency> {
     private static CurrencyDao instance = null;
+
     private static final SessionFactory SESSION_FACTORY =
             new Configuration().configure().buildSessionFactory();
 
     public CurrencyDao() {
+        super(Currency.class);
     }
 
     public static CurrencyDao getInstance() {
