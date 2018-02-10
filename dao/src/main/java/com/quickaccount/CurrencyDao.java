@@ -30,16 +30,16 @@ public class CurrencyDao extends BaseDao<Currency> {
         return instance;
     }
 
-    public List<Currency> getAllCurrency() {
-        List<Currency> currencyList = new ArrayList<>();
-        Session session = SESSION_FACTORY.openSession();
-        Transaction transaction = session.beginTransaction();
-        currencyList = session.createQuery("select c from Currency c", Currency.class).list();
-        for (Currency currency: currencyList) {
-            System.out.println(currency.getCurrency());
-        }
-        transaction.commit();
-        session.close();
-        return currencyList;
-    }
+//    public List<Currency> getAllCurrency() {
+//        List<Currency> currencyList = new ArrayList<>();
+//        Session session = SESSION_FACTORY.openSession();
+//        Transaction transaction = session.beginTransaction();
+//        currencyList = session.createQuery("select c from Currency c", Currency.class).list();
+//        for (Currency currency: currencyList) {
+//            System.out.println(currency.getCurrency());
+//        }
+//        transaction.commit();
+//        session.close();
+//        return currencyList;
+//    }
 }

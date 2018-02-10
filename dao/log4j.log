@@ -1601,3 +1601,327 @@ insert into currency (id, currency) values (null, ?) [23505-195]
 2018-02-10 11:26:04,614 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 2018-02-10 11:26:04,630 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 2018-02-10 11:26:04,723 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:46:19,456 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:46:19,487 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:46:19,607 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:46:20,415 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:46:20,596 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:46:20,633 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:46:20,633 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:46:20,633 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:46:20,636 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:46:20,885 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:46:22,286 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:46:22,293 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:46:22,414 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:46:22,742 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:46:22,793 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:46:22,793 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:46:22,794 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:46:22,794 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:46:22,794 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:46:22,795 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:46:22,882 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:46:22,901 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:46:22,937 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:46:22,954 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:46:23,022 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:46:23,022 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:46:23,022 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:46:23,023 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:46:23,023 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:46:23,024 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:46:23,106 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:46:23,116 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:46:23,147 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:46:23,205 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-10 19:47:01,313 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:47:01,315 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:47:01,348 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:47:01,584 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:47:01,702 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:47:01,715 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:47:01,716 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:47:01,716 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:47:01,721 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:47:01,956 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:47:03,056 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:03,063 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:03,132 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:47:03,244 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:47:03,291 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:47:03,292 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:47:03,292 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:47:03,292 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:47:03,293 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:47:03,294 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:47:03,414 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:03,431 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:03,460 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:47:03,470 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:47:03,519 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:47:03,520 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:47:03,520 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:47:03,520 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:47:03,520 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:47:03,521 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:47:03,632 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:03,643 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:03,672 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:47:03,742 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-10 19:47:36,583 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:47:36,585 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:47:36,616 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:47:36,835 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:47:36,941 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:47:36,950 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:47:36,950 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:47:36,950 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:47:36,955 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:47:37,183 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:47:38,215 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:38,220 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:38,287 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:47:38,387 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:47:38,425 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:47:38,426 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:47:38,426 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:47:38,427 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:47:38,427 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:47:38,428 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:47:38,526 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:38,544 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:38,583 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:47:38,591 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:47:38,629 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:47:38,629 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:47:38,630 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:47:38,630 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:47:38,630 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:47:38,630 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:47:38,715 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:38,728 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:47:38,767 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:47:38,825 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-10 19:48:51,458 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:48:51,460 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:48:51,491 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:48:51,724 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:48:51,838 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:48:51,849 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:48:51,850 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:48:51,850 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:48:51,855 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:48:52,088 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:48:53,213 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:48:53,218 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:48:53,299 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:48:53,407 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:48:53,472 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:48:53,473 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:48:53,473 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:48:53,473 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:48:53,473 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:48:53,474 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:48:53,583 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:48:53,600 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:48:53,630 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:48:53,641 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:48:53,686 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:48:53,687 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:48:53,687 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:48:53,688 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:48:53,688 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:48:53,689 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:48:53,783 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:48:53,796 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:48:53,823 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:48:53,877 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-10 19:50:41,609 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:50:41,611 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:50:41,641 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:50:41,860 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:50:41,981 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:50:41,993 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:50:41,994 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:50:41,994 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:50:42,000 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:50:42,224 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:50:43,321 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:50:43,329 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:50:43,406 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:50:43,524 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:50:43,592 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:50:43,593 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:50:43,593 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:50:43,594 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:50:43,594 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:50:43,595 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:50:43,691 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:50:43,705 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:50:43,738 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:50:43,746 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:50:43,799 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:50:43,799 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:50:43,800 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:50:43,800 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:50:43,800 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:50:43,801 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:50:43,893 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:50:43,902 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:50:43,929 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:50:43,992 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-10 19:52:16,515 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:52:16,517 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:52:16,547 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:52:16,764 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:52:16,879 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:52:16,893 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:52:16,893 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:52:16,893 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:52:16,897 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:52:17,120 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:52:18,243 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:52:18,249 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:52:18,314 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:52:18,442 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:52:18,487 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:52:18,488 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:52:18,488 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:52:18,488 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:52:18,488 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:52:18,489 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:52:18,600 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:52:18,615 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:52:18,651 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:52:18,659 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:52:18,713 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:52:18,714 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:52:18,714 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:52:18,714 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:52:18,714 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:52:18,715 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:52:18,802 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:52:18,813 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:52:18,840 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:52:18,907 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-10 19:52:58,824 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:52:58,826 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:52:58,857 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:52:59,069 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:52:59,181 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:52:59,193 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:52:59,194 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:52:59,194 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:52:59,199 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:52:59,440 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:53:00,417 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7e70bd39] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:00,423 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6691490c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:00,484 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@24a1c17f'
+2018-02-10 19:53:00,581 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:53:00,617 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:53:00,617 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:53:00,617 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:53:00,617 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:53:00,617 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:53:00,618 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:53:00,715 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@bf71cec] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:00,734 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3ae66c85] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:00,770 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@24a1c17f'
+2018-02-10 19:53:00,780 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:53:00,821 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:53:00,822 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:53:00,822 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:53:00,822 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:53:00,822 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:53:00,823 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:53:00,934 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@695a69a1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:00,946 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4b1abd11] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:00,978 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@24a1c17f'
+2018-02-10 19:53:01,044 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:53:01,087 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:53:01,088 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:53:01,088 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:53:01,088 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:53:01,088 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:53:01,089 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:53:01,162 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@451f87af] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:01,177 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2b556bb2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:01,215 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@24a1c17f'
+2018-02-10 19:53:01,240 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-10 19:53:01,349 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:53:01,395 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:53:01,395 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:53:01,395 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:53:01,395 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:53:01,395 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:53:01,396 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:53:01,475 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@67594471] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:01,481 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@756b58a7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:53:01,509 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@24a1c17f'
+2018-02-10 19:56:14,668 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:56:14,670 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:56:14,700 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:56:14,913 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:56:15,022 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:56:15,031 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:56:15,032 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:56:15,032 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:56:15,035 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:56:15,251 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:56:16,316 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:16,321 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:16,392 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:56:16,521 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:56:16,572 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:56:16,573 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:56:16,573 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:56:16,573 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:56:16,574 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:56:16,575 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:56:16,681 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:16,697 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:16,737 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:56:16,749 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:56:16,800 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:56:16,801 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:56:16,801 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:56:16,802 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:56:16,802 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:56:16,803 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:56:16,898 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:16,908 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:16,936 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:56:27,836 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-10 19:56:27,838 INFO  - HHH000206: hibernate.properties not found
+2018-02-10 19:56:27,868 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:56:28,087 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-10 19:56:28,190 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:56:28,201 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:56:28,202 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:56:28,202 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:56:28,207 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:56:28,437 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:56:29,477 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4da855dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:29,484 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1eef9aef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:29,558 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:56:29,682 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:56:29,737 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:56:29,738 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:56:29,739 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:56:29,739 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:56:29,739 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:56:29,740 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:56:29,853 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c000e0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:29,871 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4ed68f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:29,910 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'
+2018-02-10 19:56:29,920 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-10 19:56:29,966 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-10 19:56:29,966 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:quickaccount]
+2018-02-10 19:56:29,966 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-02-10 19:56:29,967 INFO  - HHH10001003: Autocommit mode: false
+2018-02-10 19:56:29,967 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-10 19:56:29,967 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-10 19:56:30,044 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1c0752] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:30,052 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332f25c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-02-10 19:56:30,079 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7fb9f71f'

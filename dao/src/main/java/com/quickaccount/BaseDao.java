@@ -58,6 +58,7 @@ public abstract class BaseDao<T extends BaseIdEntity> {
 
         session.update(objectToUpdate);
 
+        transaction.commit();
         session.close();
         return objectToUpdate.getId();
     }
@@ -68,6 +69,7 @@ public abstract class BaseDao<T extends BaseIdEntity> {
 
         session.delete(objectToDelete);
 
+        transaction.commit();
         session.close();
         return objectToDelete.getId();
     }
