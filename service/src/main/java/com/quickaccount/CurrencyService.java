@@ -21,10 +21,6 @@ public class CurrencyService {
         return instance;
     }
 
-    public List<Currency> getAllCurrency() {
-        return CurrencyDao.getInstance().getAllCurrency();
-    }
-
     public Currency getCurrency() {
         return CurrencyDao.getInstance().findById(1L);
     }

@@ -4,5 +4,5 @@
 <body>
 <h2>Hello World!</h2>
 </body>
-<c:redirect url="/currency"/>
+<c:redirect url="/account"/>
 </html>
