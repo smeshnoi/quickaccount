@@ -28,18 +28,16 @@ public class AccountServlet extends HttpServlet {
                 page = 1;
             }
 
-            req.setAttribute("listAccount", AccountService.getInstance().getAllByParameter(text, limitPage, page, typeAccount));
             List<Integer> listPages = new ArrayList<>();
-            count = AccountService.getInstance().getAllByParameter(text, limitPage, page, typeAccount).size();
-            allPage =  (int)Math.ceil((double)count / limitPage);
             for(int i = 1; i <= allPage; i++) {
                 listPages.add(i);
             }
             req.setAttribute("listPages", listPages);
+            req.setAttribute("text", text);
+            req.setAttribute("listAccount", AccountService.getInstance().getAllByParameter(text, limitPage, page, typeAccount));
         } else {
             req.setAttribute("listAccount", AccountService.getInstance().getAll());
         }
-
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/account.jsp").forward(req,resp);
     }
 }

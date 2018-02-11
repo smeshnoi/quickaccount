@@ -19,7 +19,7 @@
     <form name="" id="">
         <tr>
             <td>
-                <input name="findAccount" type="text" value="<%= request.getParameter("findAccount") %>">
+                <input name="findAccount" type="text" value="${requestScope.text}">
                 <%--<input checked type="checkbox">--%>
                 <%--<select name="typeAccount">--%>
                     <%--<option value="">All</option>--%>

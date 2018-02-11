@@ -55,6 +55,9 @@ public class AccountDao extends BaseDao<Account> {
         int begin = page*limitPage - limitPage;
         int end = page*limitPage;
         List<Account> accountList = query.list();
+        if (begin > accountList.size()) {
+            begin = accountList.size();
+        }
         if (end > accountList.size()) {
             end = accountList.size();
         }
