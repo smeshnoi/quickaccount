@@ -46,12 +46,18 @@ public class AccountDao extends BaseDao<Account> {
         Session session = SESSION_FACTORY.openSession();
         Transaction transaction = session.beginTransaction();
         System.out.println(searchText);
+        TypeDC typeAccDC = null;
+        if (typeAccount.equals("CREDIT")) {
+            typeAccDC = TypeDC.CREDIT;
+        }else if (typeAccount.equals("DEBIT")) {
+            typeAccDC = TypeDC.DEBIT;
+        }
         Query<Account> query = session.createQuery("select a from Account a " +
-                "where a.accountName like :searchText "
-                //"and a.typeAccount = :typeAccount"
+                "where a.accountName like :searchText " +
+                "and a.typeAccount.typeDC = :typeAccount"
                 , Account.class)
-                .setParameter("searchText", "%" + searchText + "%");
-                //.setParameter("typeAccount", TypeDC.valueOf(typeAccount));
+                .setParameter("searchText", "%" + searchText + "%")
+                .setParameter("typeAccount", typeAccDC);
         int begin = page*limitPage - limitPage;
         int end = page*limitPage;
         List<Account> accountList = query.list();

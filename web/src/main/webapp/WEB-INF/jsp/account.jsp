@@ -21,11 +21,10 @@
             <td>
                 <input name="findAccount" type="text" value="${requestScope.text}">
                 <%--<input checked type="checkbox">--%>
-                <%--<select name="typeAccount">--%>
-                    <%--<option value="">All</option>--%>
-                    <%--<option value="CREDIT">CREDIT</option>--%>
-                    <%--<option value="DEBIT">DEBIT</option>--%>
-                <%--</select>--%>
+                <select name="typeAccount">
+                    <option value="CREDIT">CREDIT</option>
+                    <option value="DEBIT">DEBIT</option>
+                </select>
 
             </td>
         </tr>
