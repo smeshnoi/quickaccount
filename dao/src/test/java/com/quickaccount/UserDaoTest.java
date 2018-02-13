@@ -6,7 +6,6 @@ import com.quickaccount.entity.Currency;
 import com.quickaccount.entity.Role;
 import com.quickaccount.entity.User;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
@@ -16,7 +15,6 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class UserDaoTest {
-    private SessionFactory sessionFactory;
 
     @Before
     public void initDb() {
@@ -37,7 +35,6 @@ public class UserDaoTest {
                 currency, "passw", Role.USER,
                 new Contact("testuser@gmail.com", "+3752961111156"));
         UserDao.getInstance().save(user2);
-        User test = UserDao.getInstance().getUserByLogin("test");
         assertThat(UserDao.getInstance().getUserByLogin("test").getLogin(), equalTo("test"));
 
         transaction.commit();
