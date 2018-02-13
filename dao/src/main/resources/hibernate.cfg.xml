@@ -23,5 +23,6 @@
     <mapping class="com.quickaccount.entity.ContractorIndividual"/>
     <mapping class="com.quickaccount.entity.ContractorLegalEntity"/>
     <mapping class="com.quickaccount.entity.Address"/>
+    <mapping class="com.quickaccount.connection.ConnectionManager"/>
   </session-factory>
 </hibernate-configuration>

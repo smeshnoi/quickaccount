@@ -1,10 +1,10 @@
 package com.quickaccount;
 
+import com.quickaccount.connection.ConnectionManager;
 import com.quickaccount.entity.*;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,17 +12,17 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class DaoTest {
-    private SessionFactory sessionFactory;
+    //private SessionFactory sessionFactory;
 
     @Before
     public void initDb() {
-        sessionFactory = new Configuration().configure().buildSessionFactory();
-        DataImportTest.getInstance().importData(sessionFactory);
+        ConnectionManager.openSessionFactory();
+        DataImportTest.getInstance().importData(ConnectionManager.getSessionFactory());
     }
 
     @Test
     public void testGetCurrency() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency = session.get(Currency.class, 2L);
         assertThat(currency.getCurrency(), equalTo("USD"));
@@ -32,7 +32,7 @@ public class DaoTest {
 
     @Test
     public void testGetUser() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         User user = session.get(User.class, 1L);
         assertThat(user.getLogin(), equalTo("test"));
@@ -42,7 +42,7 @@ public class DaoTest {
 
     @Test
     public void testGetCompany() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Company Company = session.get(Company.class, 1L);
         assertThat(Company.getCompanyName(), equalTo("Ivanov and Co"));
@@ -52,7 +52,7 @@ public class DaoTest {
 
     @Test
     public void testGetCurrencyRate() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Rate rate = session.get(Rate.class, 1L);
         assertThat(rate.getCurrencyIn().getCurrency(), equalTo("HUN"));
@@ -64,7 +64,7 @@ public class DaoTest {
 
     @Test
     public void testGetContractor() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         ContractorIndividual contractor = session.get(ContractorIndividual.class, 1L);
         assertThat(contractor.getFirstName(), equalTo("Ivan"));
@@ -78,7 +78,7 @@ public class DaoTest {
 
     @Test
     public void testGetAccount() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Account account = session.get(Account.class, 1L);
         assertThat(account.getAccountName(), equalTo("Test Account"));
@@ -90,7 +90,7 @@ public class DaoTest {
 
     @Test
     public void testGetTransaction() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         TransactionAccount transactionAccount = session.get(TransactionAccount.class, 1L);
         assertThat(transactionAccount.getCompany().getCompanyName(), equalTo("Ivanov and Co"));
@@ -98,5 +98,10 @@ public class DaoTest {
         assertThat(transactionAccount.getContractor().getContractorName(), equalTo("Test"));
         transaction.commit();
         session.close();
+    }
+
+    @After
+    public void closeDB() {
+        ConnectionManager.getSessionFactory().close();
     }
 }

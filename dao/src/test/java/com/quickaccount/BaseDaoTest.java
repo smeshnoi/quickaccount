@@ -1,10 +1,10 @@
 package com.quickaccount;
 
+import com.quickaccount.connection.ConnectionManager;
 import com.quickaccount.entity.Currency;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,16 +14,16 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class BaseDaoTest {
-    private SessionFactory sessionFactory;
+    //private SessionFactory sessionFactory;
 
     @Before
     public void initDb() {
-        sessionFactory = new Configuration().configure().buildSessionFactory();
+        ConnectionManager.openSessionFactory();
     }
 
     @Test
     public void testGetCurrencyById() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("HUN");
         Currency currency2 = new Currency("USD");
@@ -34,14 +34,14 @@ public class BaseDaoTest {
         Transaction transaction2 = session.beginTransaction();
         Currency currency3 = CurrencyDao.getInstance().findById(1L);
         System.out.println(currency3.getCurrency());
-
+        assertThat(currency3.getCurrency(), equalTo("HUN"));
         transaction2.commit();
         session.close();
     }
 
     @Test
     public void testGetCurrencyAll() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("EUR");
         Currency currency2 = new Currency("USD");
@@ -51,13 +51,14 @@ public class BaseDaoTest {
         for (Currency curr: currencyList) {
             System.out.println(curr.getCurrency());
         }
+        assertThat(currencyList.get(0).getCurrency(), equalTo("EUR"));
         transaction.commit();
         session.close();
     }
 
     @Test
     public void testDelete() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency =  new Currency("BYN");
         Currency currency2 = new Currency("USD");
@@ -75,7 +76,7 @@ public class BaseDaoTest {
 
     @Test
     public void testUpdate() {
-        Session session = sessionFactory.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency =  new Currency("BYN");
         CurrencyDao.getInstance().save(currency);
@@ -87,5 +88,10 @@ public class BaseDaoTest {
         assertThat(currency3.getCurrency(), equalTo("EUR"));
         transaction.commit();
         session.close();
+    }
+
+    @After
+    public void closeDB() {
+        ConnectionManager.getSessionFactory().close();
     }
 }

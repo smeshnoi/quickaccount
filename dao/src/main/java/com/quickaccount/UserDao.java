@@ -1,14 +1,12 @@
 package com.quickaccount;
 
 import com.quickaccount.entity.User;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 public class UserDao extends BaseDao<User> {
     private static UserDao instance = null;
 
-    private static final SessionFactory SESSION_FACTORY =
-            new Configuration().configure().buildSessionFactory();
+//    private static final SessionFactory SESSION_FACTORY =
+//            new Configuration().configure().buildSessionFactory();
 
     public UserDao() {
         super(User.class);

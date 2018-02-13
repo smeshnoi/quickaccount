@@ -1,19 +1,12 @@
 package com.quickaccount;
 
 import com.quickaccount.entity.Currency;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CurrencyDao extends BaseDao<Currency> {
     private static CurrencyDao instance = null;
 
-    private static final SessionFactory SESSION_FACTORY =
-            new Configuration().configure().buildSessionFactory();
+//    private static final SessionFactory SESSION_FACTORY =
+//            new Configuration().configure().buildSessionFactory();
 
     public CurrencyDao() {
         super(Currency.class);

@@ -64,6 +64,20 @@ public class DataImportTest {
         session.save(typeAccount);
         Account account = new Account("Test Account", typeAccount, user);
         session.save(account);
+        Account account2 = new Account("Test2", typeAccount, user);
+        session.save(account2);
+        Account account3 = new Account("Test3", typeAccount, user);
+        session.save(account3);
+        Account account4 = new Account("Test4", typeAccount, user);
+        session.save(account4);
+        Account account5 = new Account("Test5", typeAccount, user);
+        session.save(account2);
+        Account account6 = new Account("Test6", typeAccount, user);
+        session.save(account6);
+        Account account7 = new Account("Test7", typeAccount, user);
+        session.save(account7);
+        Account account8 = new Account("Test8", typeAccount, user);
+        session.save(account8);
 
         TransactionAccount transactionAccount =
                 new TransactionAccount(date, company, account,

@@ -1,20 +1,19 @@
 package com.quickaccount;
 
+import com.quickaccount.connection.ConnectionManager;
 import com.quickaccount.entity.Account;
 import com.quickaccount.entity.TypeDC;
 import com.quickaccount.entity.User;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
 import java.util.List;
 
 public class AccountDao extends BaseDao<Account> {
     private static AccountDao instance = null;
-    private static final SessionFactory SESSION_FACTORY =
-            new Configuration().configure().buildSessionFactory();
+//    private static final SessionFactory SESSION_FACTORY =
+//            new Configuration().configure().buildSessionFactory();
 
     public static AccountDao getInstance() {
         if (instance == null) {
@@ -32,7 +31,7 @@ public class AccountDao extends BaseDao<Account> {
     }
 
     public List<Account> findAll(User user) {
-        Session session = SESSION_FACTORY.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
         List<Account> accountList = session.createQuery("select a from Account a", Account.class).list();
@@ -43,9 +42,8 @@ public class AccountDao extends BaseDao<Account> {
     }
 
     public List<Account> findAllByParameter(String searchText, int limitPage, int page, String typeAccount) {
-        Session session = SESSION_FACTORY.openSession();
+        Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        System.out.println(searchText);
         TypeDC typeAccDC = null;
         if (typeAccount.equals("CREDIT")) {
             typeAccDC = TypeDC.CREDIT;
@@ -60,6 +58,7 @@ public class AccountDao extends BaseDao<Account> {
                 .setParameter("typeAccount", typeAccDC);
         int begin = page*limitPage - limitPage;
         int end = page*limitPage;
+        //List<Account> accountList2 = session.createQuery("select a from Account a", Account.class).list();
         List<Account> accountList = query.list();
         if (begin > accountList.size()) {
             begin = accountList.size();
@@ -68,7 +67,6 @@ public class AccountDao extends BaseDao<Account> {
             end = accountList.size();
         }
         accountList = accountList.subList(begin, end);
-        System.out.println(accountList);
 
         transaction.commit();
         session.close();
