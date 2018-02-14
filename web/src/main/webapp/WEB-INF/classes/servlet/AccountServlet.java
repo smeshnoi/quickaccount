@@ -1,6 +1,7 @@
 package servlet;
 
 import com.quickaccount.AccountService;
+import com.quickaccount.entity.Account;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,21 +21,25 @@ public class AccountServlet extends HttpServlet {
         String typeAccount = req.getParameter("typeAccount");
         if ((text != null) || (typeAccount != null)) {
             int limitPage = Integer.parseInt(req.getParameter("limitPage"));
-            int allPage =  (int)Math.ceil((double)count / limitPage);
+
             int page = 0;
             if(req.getParameter("page") != null) {
                 page = Integer.parseInt(req.getParameter("page"));
             } else {
                 page = 1;
             }
+            List<Account> allByParameter = AccountService.getInstance().getAllByParameter(text, limitPage, page, typeAccount);
+
+            int allPage =  (int)Math.ceil((double)count / limitPage);
 
             List<Integer> listPages = new ArrayList<>();
+
             for(int i = 1; i <= allPage; i++) {
                 listPages.add(i);
             }
-            req.setAttribute("listPages", listPages);
             req.setAttribute("text", text);
-            req.setAttribute("listAccount", AccountService.getInstance().getAllByParameter(text, limitPage, page, typeAccount));
+            req.setAttribute("listPages", listPages);
+            req.setAttribute("listAccount", allByParameter);
         } else {
             req.setAttribute("listAccount", AccountService.getInstance().getAll());
         }

@@ -58,7 +58,6 @@ public class AccountDao extends BaseDao<Account> {
                 .setParameter("typeAccount", typeAccDC);
         int begin = page*limitPage - limitPage;
         int end = page*limitPage;
-        //List<Account> accountList2 = session.createQuery("select a from Account a", Account.class).list();
         List<Account> accountList = query.list();
         if (begin > accountList.size()) {
             begin = accountList.size();

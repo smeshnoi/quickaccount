@@ -14,8 +14,6 @@ public class CurrencyServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("currency", CurrencyService.getInstance().getAll());
-        //Currency currency = CurrencyService.getInstance().getCurrency();
-        //System.out.println(currency.getCurrency());
         CurrencyService.getInstance().getAll();
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/currency.jsp").forward(req,resp);
     }

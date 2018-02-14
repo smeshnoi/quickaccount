@@ -27,7 +27,6 @@ public class AccountService {
     }
 
     public List<Account> getAllByParameter(String findAccount, int limitPage, int page, String typeAccount) {
-        //System.out.println(AccountDao.getInstance().findAll());
         return AccountDao.getInstance().findAllByParameter(findAccount, limitPage, page, typeAccount);
     }
 }

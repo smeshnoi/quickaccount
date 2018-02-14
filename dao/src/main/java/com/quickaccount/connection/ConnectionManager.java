@@ -5,7 +5,7 @@ import org.hibernate.cfg.Configuration;
 
 public class ConnectionManager {
 
-    private static SessionFactory sessionFactory = new Configuration().configure("hibernate2.cfg.xml").buildSessionFactory();
+    private static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
     private ConnectionManager() {}
 

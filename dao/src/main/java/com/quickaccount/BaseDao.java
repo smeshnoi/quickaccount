@@ -8,8 +8,6 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public abstract class BaseDao<T extends BaseIdEntity> {
-//    private static final SessionFactory SESSION_FACTORY
-//            = new Configuration().configure().buildSessionFactory();
 
     private Class<T> entityClass;
 
