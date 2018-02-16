@@ -29,10 +29,6 @@ public class RateDaoTest {
         Currency currency2 = new Currency("EUR");
         CurrencyDao.getInstance().save(currency);
         CurrencyDao.getInstance().save(currency2);
-        Currency currency3 = new Currency("BYN");
-        Currency currency4 = new Currency("RUB");
-        CurrencyDao.getInstance().save(currency3);
-        CurrencyDao.getInstance().save(currency4);
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("testA@gmail.com", "+375296465656"));
@@ -42,8 +38,10 @@ public class RateDaoTest {
         LocalDate date3 = LocalDate.of(2017, 11, 11);
         Rate rate = new Rate(date, currency, currency2, 1.251, user);
         RateDao.getInstance().save(rate);
-        Rate rate2 = new Rate(date2, currency3, currency4, 1.248, user);
+        Rate rate2 = new Rate(date2, currency, currency2, 1.248, user);
         RateDao.getInstance().save(rate2);
+        Rate rate3 = new Rate(date3, currency, currency2, 1.24, user);
+        RateDao.getInstance().save(rate3);
         List<Rate> ratesByUser = RateDao.getInstance().getRatesByUser(user);
         assertThat(ratesByUser.get(0).getRate(), equalTo(1.251));
 

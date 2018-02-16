@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -23,11 +24,11 @@ public class Currency extends BaseIdEntity {
     @OneToMany(mappedBy = "currency")
     private Set<User> userSet = new HashSet<User>();
 
-    @OneToOne(mappedBy = "currencyIn")
-    private Rate rateIn;
+    @OneToMany(mappedBy = "currencyIn")
+    private List<Rate> rateIn;
 
-    @OneToOne(mappedBy = "currencyOut")
-    private Rate rateOut;
+    @OneToMany(mappedBy = "currencyOut")
+    private List<Rate> rateOut;
 
     @OneToMany(mappedBy = "currency")
     private Set<TransactionAccount> transactionAccountSet = new HashSet<>();

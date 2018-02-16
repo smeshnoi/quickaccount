@@ -17,11 +17,11 @@ public class Rate extends BaseIdEntity {
     @Column(name = "date")
     private LocalDate rateDate;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "currency_in_id")
     private Currency currencyIn;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "currency_out_id")
     private Currency currencyOut;
 
