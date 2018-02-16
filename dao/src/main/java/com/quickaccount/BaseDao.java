@@ -30,7 +30,7 @@ public abstract class BaseDao<T extends BaseIdEntity> {
         Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
-        List<T> list = session.createQuery("select t from " + entityClass.getName() +" t", entityClass)
+        List<T> list = session.createQuery("select t from " + entityClass.getName() + " t", entityClass)
                 .list();
 
         transaction.commit();
