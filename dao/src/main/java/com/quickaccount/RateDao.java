@@ -31,8 +31,8 @@ public class RateDao extends BaseDao<Rate> {
         Transaction transaction = session.beginTransaction();
         List<Rate> rateList = null;
         System.out.println(user.getId());
-        rateList = session.createQuery("select r from Rate r " +
-                "where r.userRate.id = :id ", Rate.class)
+        rateList = session.createQuery("select r from Rate r "
+                + "where r.userRate.id = :id ", Rate.class)
                 .setParameter("id", user.getId())
                 .getResultList();
 

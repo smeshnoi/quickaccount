@@ -45,9 +45,9 @@ public class AccountDao extends BaseDao<Account> {
         Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         TypeDC typeAccDC = null;
-        if (typeAccount.equals("CREDIT")) {
+        if ("CREDIT".equals(typeAccount)) {
             typeAccDC = TypeDC.CREDIT;
-        } else if (typeAccount.equals("DEBIT")) {
+        } else if ("DEBIT".equals(typeAccount)) {
             typeAccDC = TypeDC.DEBIT;
         }
         Query<Account> query = session.createQuery("select a from Account a "

@@ -31,8 +31,8 @@ public class UserDao extends BaseDao<User> {
         Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         User user = null;
-        Query<User> query = session.createQuery("select u from User u " +
-                "where u.login = :login ", User.class)
+        Query<User> query = session.createQuery("select u from User u "
+                + "where u.login = :login ", User.class)
                 .setParameter("login", login);
         user = query.list().get(0);
         transaction.commit();

@@ -3,7 +3,7 @@ package com.quickaccount.connection;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class ConnectionManager {
+public final class ConnectionManager {
 
     private static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
