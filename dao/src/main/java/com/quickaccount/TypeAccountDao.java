@@ -2,7 +2,7 @@ package com.quickaccount;
 
 import com.quickaccount.entity.TypeAccount;
 
-public class TypeAccountDao extends BaseDao<TypeAccount> {
+public class TypeAccountDao extends BaseDaoImpl<TypeAccount> {
     private static TypeAccountDao instance = null;
 
     public static TypeAccountDao getInstance() {

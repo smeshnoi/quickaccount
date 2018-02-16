@@ -22,10 +22,10 @@ public class CurrencyService {
     }
 
     public Currency getCurrency() {
-        return CurrencyDao.getInstance().findById(1L);
+        return CurrencyDaoImpl.getInstance().findById(1L);
     }
 
     public List<Currency> getAll() {
-        return CurrencyDao.getInstance().findAll();
+        return CurrencyDaoImpl.getInstance().findAll();
     }
 }

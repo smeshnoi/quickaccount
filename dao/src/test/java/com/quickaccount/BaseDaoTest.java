@@ -27,12 +27,12 @@ public class BaseDaoTest {
         Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("HUN");
         Currency currency2 = new Currency("USD");
-        CurrencyDao.getInstance().save(currency);
-        CurrencyDao.getInstance().save(currency2);
+        CurrencyDaoImpl.getInstance().save(currency);
+        CurrencyDaoImpl.getInstance().save(currency2);
         transaction.commit();
 
         Transaction transaction2 = session.beginTransaction();
-        Currency currency3 = CurrencyDao.getInstance().findById(1L);
+        Currency currency3 = CurrencyDaoImpl.getInstance().findById(1L);
         System.out.println(currency3.getCurrency());
         assertThat(currency3.getCurrency(), equalTo("HUN"));
         transaction2.commit();
@@ -45,9 +45,9 @@ public class BaseDaoTest {
         Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("EUR");
         Currency currency2 = new Currency("USD");
-        CurrencyDao.getInstance().save(currency);
-        CurrencyDao.getInstance().save(currency2);
-        List<Currency> currencyList = CurrencyDao.getInstance().findAll();
+        CurrencyDaoImpl.getInstance().save(currency);
+        CurrencyDaoImpl.getInstance().save(currency2);
+        List<Currency> currencyList = CurrencyDaoImpl.getInstance().findAll();
         for (Currency curr: currencyList) {
             System.out.println(curr.getCurrency());
         }
@@ -62,13 +62,13 @@ public class BaseDaoTest {
         Transaction transaction = session.beginTransaction();
         Currency currency =  new Currency("BYN");
         Currency currency2 = new Currency("USD");
-        CurrencyDao.getInstance().save(currency);
-        CurrencyDao.getInstance().save(currency2);
-        List<Currency> currencyList = CurrencyDao.getInstance().findAll();
+        CurrencyDaoImpl.getInstance().save(currency);
+        CurrencyDaoImpl.getInstance().save(currency2);
+        List<Currency> currencyList = CurrencyDaoImpl.getInstance().findAll();
         assertThat(currencyList.size(), equalTo(2));
         Currency currencyDelete = currencyList.get(0);
-        Long delete = CurrencyDao.getInstance().delete(currencyDelete);
-        currencyList = CurrencyDao.getInstance().findAll();
+        Long delete = CurrencyDaoImpl.getInstance().delete(currencyDelete);
+        currencyList = CurrencyDaoImpl.getInstance().findAll();
         assertThat(currencyList.size(), equalTo(1));
         transaction.commit();
         session.close();
@@ -79,12 +79,12 @@ public class BaseDaoTest {
         Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency =  new Currency("BYN");
-        CurrencyDao.getInstance().save(currency);
-        Currency currency2 = CurrencyDao.getInstance().findById(1L);
+        CurrencyDaoImpl.getInstance().save(currency);
+        Currency currency2 = CurrencyDaoImpl.getInstance().findById(1L);
         assertThat(currency2.getCurrency(), equalTo("BYN"));
         currency2.setCurrency("EUR");
-        CurrencyDao.getInstance().update(currency2);
-        Currency currency3 = CurrencyDao.getInstance().findById(1L);
+        CurrencyDaoImpl.getInstance().update(currency2);
+        Currency currency3 = CurrencyDaoImpl.getInstance().findById(1L);
         assertThat(currency3.getCurrency(), equalTo("EUR"));
         transaction.commit();
         session.close();

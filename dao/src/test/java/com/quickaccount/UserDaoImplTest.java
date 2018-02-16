@@ -14,7 +14,7 @@ import org.junit.Test;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class UserDaoTest {
+public class UserDaoImplTest {
 
     @Before
     public void initDb() {
@@ -26,16 +26,16 @@ public class UserDaoTest {
         Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("USD");
-        CurrencyDao.getInstance().save(currency);
+        CurrencyDaoImpl.getInstance().save(currency);
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("testA@gmail.com", "+375296465656"));
-        UserDao.getInstance().save(user);
+        UserDaoImpl.getInstance().save(user);
         User user2 = new User("user","Test1", "Testov1",
                 currency, "passw", Role.USER,
                 new Contact("testuser@gmail.com", "+3752961111156"));
-        UserDao.getInstance().save(user2);
-        assertThat(UserDao.getInstance().getUserByLogin("test").getLogin(), equalTo("test"));
+        UserDaoImpl.getInstance().save(user2);
+        assertThat(UserDaoImpl.getInstance().getUserByLogin("test").getLogin(), equalTo("test"));
 
         transaction.commit();
         session.close();

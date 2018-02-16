@@ -27,22 +27,22 @@ public class RateDaoTest {
         Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("USD");
         Currency currency2 = new Currency("EUR");
-        CurrencyDao.getInstance().save(currency);
-        CurrencyDao.getInstance().save(currency2);
+        CurrencyDaoImpl.getInstance().save(currency);
+        CurrencyDaoImpl.getInstance().save(currency2);
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("testA@gmail.com", "+375296465656"));
-        UserDao.getInstance().save(user);
+        UserDaoImpl.getInstance().save(user);
         LocalDate date = LocalDate.now();
         LocalDate date2 = LocalDate.of(2017, 12, 25);
         LocalDate date3 = LocalDate.of(2017, 11, 11);
         Rate rate = new Rate(date, currency, currency2, 1.251, user);
-        RateDao.getInstance().save(rate);
+        RateDaoImpl.getInstance().save(rate);
         Rate rate2 = new Rate(date2, currency, currency2, 1.248, user);
-        RateDao.getInstance().save(rate2);
+        RateDaoImpl.getInstance().save(rate2);
         Rate rate3 = new Rate(date3, currency, currency2, 1.24, user);
-        RateDao.getInstance().save(rate3);
-        List<Rate> ratesByUser = RateDao.getInstance().getRatesByUser(user);
+        RateDaoImpl.getInstance().save(rate3);
+        List<Rate> ratesByUser = RateDaoImpl.getInstance().getRatesByUser(user);
         assertThat(ratesByUser.get(0).getRate(), equalTo(1.251));
 
         transaction.commit();

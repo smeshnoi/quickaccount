@@ -10,7 +10,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class AccountDao extends BaseDao<Account> {
+public class AccountDao extends BaseDaoImpl<Account> {
     private static AccountDao instance = null;
 //    private static final SessionFactory SESSION_FACTORY =
 //            new Configuration().configure().buildSessionFactory();

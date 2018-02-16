@@ -28,11 +28,11 @@ public class AccountDaoTest {
         Session session = ConnectionManager.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("USD");
-        CurrencyDao.getInstance().save(currency);
+        CurrencyDaoImpl.getInstance().save(currency);
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("test@gmail.com", "+375296465656"));
-        UserDao.getInstance().save(user);
+        UserDaoImpl.getInstance().save(user);
 
         TypeAccount typeAccount = new TypeAccount("Test Type", TypeDC.CREDIT);
         TypeAccountDao.getInstance().save(typeAccount);
