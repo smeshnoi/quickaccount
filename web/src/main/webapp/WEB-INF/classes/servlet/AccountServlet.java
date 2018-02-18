@@ -2,6 +2,7 @@ package servlet;
 
 import com.quickaccount.AccountService;
 import com.quickaccount.entity.Account;
+import config.ApplicationContextHolder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +17,8 @@ import java.util.List;
 public class AccountServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int count = AccountService.getInstance().getAll().size();
+        AccountService accountServiceImpl = ApplicationContextHolder.getBean(AccountService.class);
+        int count = accountServiceImpl.getAll().size();
         String text = req.getParameter("findAccount");
         String typeAccount = req.getParameter("typeAccount");
         if ((text != null) || (typeAccount != null)) {
@@ -28,7 +30,7 @@ public class AccountServlet extends HttpServlet {
             } else {
                 page = 1;
             }
-            List<Account> allByParameter = AccountService.getInstance().getAllByParameter(text, limitPage, page, typeAccount);
+            List<Account> allByParameter = accountServiceImpl.getAllByParameter(text, limitPage, page, typeAccount);
 
             int allPage =  (int)Math.ceil((double)count / limitPage);
 
@@ -41,7 +43,7 @@ public class AccountServlet extends HttpServlet {
             req.setAttribute("listPages", listPages);
             req.setAttribute("listAccount", allByParameter);
         } else {
-            req.setAttribute("listAccount", AccountService.getInstance().getAll());
+            req.setAttribute("listAccount", accountServiceImpl.getAll());
         }
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/account.jsp").forward(req,resp);
     }

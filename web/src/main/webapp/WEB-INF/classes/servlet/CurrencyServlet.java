@@ -1,6 +1,7 @@
 package servlet;
 
 import com.quickaccount.CurrencyService;
+import config.ApplicationContextHolder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,8 +14,9 @@ import java.io.IOException;
 public class CurrencyServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("currency", CurrencyService.getInstance().getAll());
-        CurrencyService.getInstance().getAll();
+        CurrencyService currencyService = ApplicationContextHolder.getBean(CurrencyService.class);
+        req.setAttribute("currency", currencyService.getAll());
+        //currencyService.getAll();
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/currency.jsp").forward(req,resp);
     }
 }

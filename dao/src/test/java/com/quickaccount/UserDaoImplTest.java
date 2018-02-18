@@ -5,16 +5,28 @@ import com.quickaccount.entity.Contact;
 import com.quickaccount.entity.Currency;
 import com.quickaccount.entity.Role;
 import com.quickaccount.entity.User;
+import config.TestDatabaseConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.transaction.Transactional;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = TestDatabaseConfig.class)
+@Transactional
 public class UserDaoImplTest {
+    @Autowired
+    private CurrencyDaoImpl currencyDao;
 
     @Before
     public void initDb() {
@@ -23,22 +35,17 @@ public class UserDaoImplTest {
 
     @Test
     public void getUserByLogin() {
-        Session session = ConnectionManager.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
         Currency currency = new Currency("USD");
-        CurrencyDaoImpl.getInstance().save(currency);
+        currencyDao.save(currency);
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("testA@gmail.com", "+375296465656"));
-        UserDaoImpl.getInstance().save(user);
+        //UserDao.getInstance().save(user);
         User user2 = new User("user","Test1", "Testov1",
                 currency, "passw", Role.USER,
                 new Contact("testuser@gmail.com", "+3752961111156"));
-        UserDaoImpl.getInstance().save(user2);
-        assertThat(UserDaoImpl.getInstance().getUserByLogin("test").getLogin(), equalTo("test"));
-
-        transaction.commit();
-        session.close();
+        //UserDaoImpl.getInstance().save(user2);
+        //assertThat(UserDaoImpl.getInstance().getUserByLogin("test").getLogin(), equalTo("test"));
     }
 
     @After
