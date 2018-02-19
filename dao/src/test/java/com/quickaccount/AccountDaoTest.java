@@ -1,13 +1,7 @@
 package com.quickaccount;
 
-import com.quickaccount.connection.ConnectionManager;
 import com.quickaccount.entity.*;
 import config.TestDatabaseConfig;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +23,12 @@ public class AccountDaoTest {
     @Autowired
     private CurrencyDaoImpl currencyDao;
 
-    private TypeAccountDao typeAccountDao;
+    @Autowired
+    private TypeAccountDaoImpl typeAccountDao;
 
-    @Before
-    public void initDb() {
-        ConnectionManager.openSessionFactory();
-        //DataImportTest.getInstance().importData(sessionFactory);
-    }
+    @Autowired
+    private UserDaoImpl userDao;
+
 
     @Test
     public void testGetAccount() {
@@ -44,10 +37,10 @@ public class AccountDaoTest {
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("test@gmail.com", "+375296465656"));
-        //UserDaoImpl.getInstance().save(user);
+        userDao.save(user);
 
         TypeAccount typeAccount = new TypeAccount("Test Type", TypeDC.CREDIT);
-        //TypeAccountDao.getInstance().save(typeAccount);
+        typeAccountDao.save(typeAccount);
         Account account = new Account("Test Account", typeAccount, user);
         accountDao.save(account);
         Account account2 = new Account("Test2", typeAccount, user);
@@ -67,11 +60,5 @@ public class AccountDaoTest {
         List<Account> allByParameter = accountDao.findAllByParameter("3", 3, 1, "CREDIT");
         System.out.println(allByParameter.size());
         assertThat(allByParameter.size(), equalTo(3));
-
-    }
-
-    @After
-    public void closeDB() {
-        ConnectionManager.getSessionFactory().close();
     }
 }
