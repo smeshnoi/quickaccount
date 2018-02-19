@@ -28,10 +28,8 @@ public class UserDaoImplTest {
     @Autowired
     private CurrencyDaoImpl currencyDao;
 
-    @Before
-    public void initDb() {
-        ConnectionManager.openSessionFactory();
-    }
+    @Autowired
+    private UserDaoImpl userDao;
 
     @Test
     public void getUserByLogin() {
@@ -40,16 +38,12 @@ public class UserDaoImplTest {
         User user = new User("test","Test", "Testov",
                 currency, "passw", Role.USER,
                 new Contact("testA@gmail.com", "+375296465656"));
-        //UserDao.getInstance().save(user);
+        userDao.save(user);
         User user2 = new User("user","Test1", "Testov1",
                 currency, "passw", Role.USER,
                 new Contact("testuser@gmail.com", "+3752961111156"));
-        //UserDaoImpl.getInstance().save(user2);
-        //assertThat(UserDaoImpl.getInstance().getUserByLogin("test").getLogin(), equalTo("test"));
+        userDao.save(user2);
+        assertThat(userDao.getUserByLogin("test").getLogin(), equalTo("test"));
     }
 
-    @After
-    public void closeDB() {
-        ConnectionManager.getSessionFactory().close();
-    }
 }
