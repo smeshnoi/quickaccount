@@ -4,7 +4,6 @@ import com.quickaccount.entity.Account;
 import com.quickaccount.entity.TypeDC;
 import com.quickaccount.entity.User;
 import org.hibernate.Session;
-import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,9 +11,9 @@ import java.util.List;
 @Repository
 public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
-//    public AccountDaoImpl() {
-//        super(Account.class);
-//    }
+    public AccountDaoImpl() {
+        super(Account.class);
+    }
 
     @Override
     public List<Account> findAll(User user) {
@@ -33,15 +32,14 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
         } else if ("DEBIT".equals(typeAccount)) {
             typeAccDC = TypeDC.DEBIT;
         }
-        Query<Account> query = session.createQuery("select a from Account a "
+        List<Account> accountList = session.createQuery("select a from Account a "
                         + "where a.accountName like :searchText "
                         + "and a.typeAccount.typeDC = :typeAccount"
                 , Account.class)
                 .setParameter("searchText", "%" + searchText + "%")
-                .setParameter("typeAccount", typeAccDC);
+                .setParameter("typeAccount", typeAccDC).getResultList();
         int begin = page * limitPage - limitPage;
         int end = page * limitPage;
-        List<Account> accountList = query.list();
         if (begin > accountList.size()) {
             begin = accountList.size();
         }
@@ -49,7 +47,6 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
             end = accountList.size();
         }
         accountList = accountList.subList(begin, end);
-        session.close();
         return accountList;
     }
 }

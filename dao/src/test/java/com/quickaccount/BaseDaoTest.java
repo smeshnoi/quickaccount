@@ -1,10 +1,7 @@
 package com.quickaccount;
 
-import com.quickaccount.connection.ConnectionManager;
 import com.quickaccount.entity.Currency;
 import config.TestDatabaseConfig;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,12 +68,10 @@ public class BaseDaoTest {
     public void testUpdate() {
         Currency currency =  new Currency("BYN");
         currencyDao.save(currency);
-        Currency currency2 = currencyDao.findById(1L);
-        //assertThat(currency2.getCurrency(), equalTo("BYN"));
-        currency2.setCurrency("EUR");
-        currencyDao.update(currency2);
-        Currency currency3 = currencyDao.findById(1L);
-        assertThat(currency3.getCurrency(), equalTo("EUR"));
+        currency.setCurrency("EUR");
+        currencyDao.update(currency);
+        List<Currency> currency3 = currencyDao.findAll();
+        assertThat(currency3.get(0).getCurrency(), equalTo("EUR"));
     }
 
 }
