@@ -890,3 +890,375 @@ Expected: "EUR"
 2018-02-19 12:19:21,434 INFO  - HHH000397: Using ASTQueryTranslatorFactory
 2018-02-19 12:19:52,177 INFO  - Rolled back transaction for test context [DefaultTestContext@7ba93755 testClass = AccountDaoTest, testInstance = com.quickaccount.AccountDaoTest@22dc59b2, testMethod = testGetAccount@AccountDaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7c20cdd0 testClass = AccountDaoTest, locations = '{}', classes = '{class config.TestDatabaseConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
 2018-02-19 12:19:52,182 INFO  - Closing org.springframework.context.support.GenericApplicationContext@1d119efb: startup date [Mon Feb 19 12:19:14 MSK 2018]; root of context hierarchy
+2018-02-19 14:29:32,080 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:29:32,080 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:29:32,149 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-19 14:29:32,521 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:29:32,693 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-19 14:29:32,704 INFO  - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/quickaccount]
+2018-02-19 14:29:32,704 INFO  - HHH10001001: Connection properties: {user=root, password=****}
+2018-02-19 14:29:32,704 INFO  - HHH10001003: Autocommit mode: false
+2018-02-19 14:29:32,707 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-19 14:29:32,997 INFO  - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2018-02-19 14:30:01,000 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:30:01,000 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:30:01,038 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-19 14:30:01,309 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:30:01,561 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-19 14:30:01,572 INFO  - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/quickaccount]
+2018-02-19 14:30:01,572 INFO  - HHH10001001: Connection properties: {user=root, password=****}
+2018-02-19 14:30:01,572 INFO  - HHH10001003: Autocommit mode: false
+2018-02-19 14:30:01,576 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-19 14:30:01,902 INFO  - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2018-02-19 14:30:07,895 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:30:07,895 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:30:07,932 WARN  - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-02-19 14:30:08,149 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:30:08,334 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-02-19 14:30:08,344 INFO  - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/quickaccount]
+2018-02-19 14:30:08,345 INFO  - HHH10001001: Connection properties: {user=root, password=****}
+2018-02-19 14:30:08,345 INFO  - HHH10001003: Autocommit mode: false
+2018-02-19 14:30:08,348 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-02-19 14:30:08,759 INFO  - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2018-02-19 14:32:47,955 INFO  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-19 14:32:47,955 INFO  - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-02-19 14:32:47,970 INFO  - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c7fa833, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@724af044, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4678c730, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6767c1fc]
+2018-02-19 14:32:48,039 INFO  - Refreshing org.springframework.context.support.GenericApplicationContext@25bbe1b6: startup date [Mon Feb 19 14:32:48 MSK 2018]; root of context hierarchy
+2018-02-19 14:32:48,252 INFO  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.quickaccount.config.DatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in com.quickaccount.config.DatabaseConfig] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testDatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in config.TestDatabaseConfig]
+2018-02-19 14:32:49,070 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:32:49,070 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:32:49,132 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:32:49,399 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-19 14:32:50,292 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@226b143b'
+2018-02-19 14:32:50,328 WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rateDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\RateDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-02-19 14:32:50,330 ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f] to prepare test instance [com.quickaccount.RateDaoTest@2b8d084]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rateDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\RateDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 42 more
+2018-02-19 14:38:12,379 INFO  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-19 14:38:12,394 INFO  - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-02-19 14:38:12,394 INFO  - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c7fa833, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@724af044, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4678c730, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6767c1fc]
+2018-02-19 14:38:12,495 INFO  - Refreshing org.springframework.context.support.GenericApplicationContext@25bbe1b6: startup date [Mon Feb 19 14:38:12 MSK 2018]; root of context hierarchy
+2018-02-19 14:38:12,680 INFO  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.quickaccount.config.DatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in com.quickaccount.config.DatabaseConfig] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testDatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in config.TestDatabaseConfig]
+2018-02-19 14:38:13,441 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:38:13,442 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:38:13,503 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:38:13,720 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-19 14:38:14,493 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@226b143b'
+2018-02-19 14:38:14,526 WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rateDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\RateDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-02-19 14:38:14,529 ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f] to prepare test instance [com.quickaccount.RateDaoTest@2b8d084]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rateDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\RateDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 42 more
+2018-02-19 14:40:42,502 INFO  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-19 14:40:42,505 INFO  - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-02-19 14:40:42,505 INFO  - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d2cc05a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4f933fd1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@548a9f61, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1753acfe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c16905e]
+2018-02-19 14:40:42,606 INFO  - Refreshing org.springframework.context.support.GenericApplicationContext@3f49dace: startup date [Mon Feb 19 14:40:42 MSK 2018]; root of context hierarchy
+2018-02-19 14:40:42,753 INFO  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.quickaccount.config.DatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in com.quickaccount.config.DatabaseConfig] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testDatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in config.TestDatabaseConfig]
+2018-02-19 14:40:43,479 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:40:43,481 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:40:43,562 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:40:43,838 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-19 14:40:44,659 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@74fe5966'
+2018-02-19 14:40:44,706 INFO  - Using DataSource [ds0: url=jdbc:h2:mem:quickaccount;DATABASE_TO_UPPER=false;DB_CLOSE_DELAY=-1 user=sa] of Hibernate SessionFactory for HibernateTransactionManager
+2018-02-19 14:40:44,734 ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4f933fd1] to prepare test instance [com.quickaccount.RateDaoTest@1e6cc850]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.quickaccount.RateDaoTest': Unsatisfied dependency expressed through field 'currencyDao'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.quickaccount.CurrencyDaoImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:386)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.quickaccount.CurrencyDaoImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 27 more
+2018-02-19 14:40:44,766 INFO  - Closing org.springframework.context.support.GenericApplicationContext@3f49dace: startup date [Mon Feb 19 14:40:42 MSK 2018]; root of context hierarchy
+2018-02-19 14:41:38,172 INFO  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-19 14:41:38,188 INFO  - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-02-19 14:41:38,188 INFO  - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c7fa833, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@724af044, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4678c730, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6767c1fc]
+2018-02-19 14:41:38,291 INFO  - Refreshing org.springframework.context.support.GenericApplicationContext@25bbe1b6: startup date [Mon Feb 19 14:41:38 MSK 2018]; root of context hierarchy
+2018-02-19 14:41:38,472 INFO  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.quickaccount.config.DatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in com.quickaccount.config.DatabaseConfig] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testDatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in config.TestDatabaseConfig]
+2018-02-19 14:41:39,271 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:41:39,273 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:41:39,320 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:41:39,577 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-19 14:41:40,339 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@226b143b'
+2018-02-19 14:41:40,375 WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rateDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\RateDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-02-19 14:41:40,378 ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f] to prepare test instance [com.quickaccount.RateDaoTest@2b8d084]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'rateDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\RateDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.Rate>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 42 more
+2018-02-19 14:46:14,476 INFO  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-19 14:46:14,492 INFO  - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-02-19 14:46:14,492 INFO  - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c7fa833, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@724af044, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4678c730, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6767c1fc]
+2018-02-19 14:46:14,585 INFO  - Refreshing org.springframework.context.support.GenericApplicationContext@25bbe1b6: startup date [Mon Feb 19 14:46:14 MSK 2018]; root of context hierarchy
+2018-02-19 14:46:14,770 INFO  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.quickaccount.config.DatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in com.quickaccount.config.DatabaseConfig] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testDatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in config.TestDatabaseConfig]
+2018-02-19 14:46:15,522 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:46:15,523 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:46:15,568 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:46:15,846 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-19 14:46:16,907 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@226b143b'
+2018-02-19 14:46:16,938 WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\UserDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.User>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2018-02-19 14:46:16,938 ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f] to prepare test instance [com.quickaccount.RateDaoTest@432034a]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDaoImpl' defined in file [D:\Work\programs\DocumentProcessing\Java\maven\quickaccount\dao\target\classes\com\quickaccount\UserDaoImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.User>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<com.quickaccount.entity.User>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 42 more
+2018-02-19 14:46:44,049 INFO  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-19 14:46:44,064 INFO  - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-02-19 14:46:44,064 INFO  - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c7fa833, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@724af044, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4678c730, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6767c1fc]
+2018-02-19 14:46:44,149 INFO  - Refreshing org.springframework.context.support.GenericApplicationContext@25bbe1b6: startup date [Mon Feb 19 14:46:44 MSK 2018]; root of context hierarchy
+2018-02-19 14:46:44,297 INFO  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.quickaccount.config.DatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in com.quickaccount.config.DatabaseConfig] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testDatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in config.TestDatabaseConfig]
+2018-02-19 14:46:44,982 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:46:44,984 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:46:45,069 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:46:45,354 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-19 14:46:46,091 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@226b143b'
+2018-02-19 14:46:46,153 INFO  - Using DataSource [ds0: url=jdbc:h2:mem:quickaccount;DATABASE_TO_UPPER=false;DB_CLOSE_DELAY=-1 user=sa] of Hibernate SessionFactory for HibernateTransactionManager
+2018-02-19 14:46:46,266 INFO  - Began transaction (1) for test context [DefaultTestContext@45d6ef73 testClass = RateDaoTest, testInstance = com.quickaccount.RateDaoTest@3f29e26, testMethod = getRateByUser@RateDaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@47e4d9d0 testClass = RateDaoTest, locations = '{}', classes = '{class config.TestDatabaseConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate5.HibernateTransactionManager@26e412ef]; rollback [true]
+2018-02-19 14:46:46,313 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-19 14:46:46,407 INFO  - Rolled back transaction for test context [DefaultTestContext@45d6ef73 testClass = RateDaoTest, testInstance = com.quickaccount.RateDaoTest@3f29e26, testMethod = getRateByUser@RateDaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@47e4d9d0 testClass = RateDaoTest, locations = '{}', classes = '{class config.TestDatabaseConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2018-02-19 14:46:46,407 INFO  - Closing org.springframework.context.support.GenericApplicationContext@25bbe1b6: startup date [Mon Feb 19 14:46:44 MSK 2018]; root of context hierarchy
+2018-02-19 14:46:58,141 INFO  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-19 14:46:58,157 INFO  - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-02-19 14:46:58,157 INFO  - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d2cc05a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4f933fd1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@548a9f61, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1753acfe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c16905e]
+2018-02-19 14:46:58,259 INFO  - Refreshing org.springframework.context.support.GenericApplicationContext@3f49dace: startup date [Mon Feb 19 14:46:58 MSK 2018]; root of context hierarchy
+2018-02-19 14:46:58,441 INFO  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.quickaccount.config.DatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in com.quickaccount.config.DatabaseConfig] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=testDatabaseConfig; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in config.TestDatabaseConfig]
+2018-02-19 14:46:59,172 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-19 14:46:59,174 INFO  - HHH000206: hibernate.properties not found
+2018-02-19 14:46:59,238 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-19 14:46:59,473 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-19 14:47:00,270 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@319854f0'
+2018-02-19 14:47:00,333 INFO  - Using DataSource [ds0: url=jdbc:h2:mem:quickaccount;DATABASE_TO_UPPER=false;DB_CLOSE_DELAY=-1 user=sa] of Hibernate SessionFactory for HibernateTransactionManager
+2018-02-19 14:47:00,444 INFO  - Began transaction (1) for test context [DefaultTestContext@5411dd90 testClass = RateDaoTest, testInstance = com.quickaccount.RateDaoTest@50194e8d, testMethod = getRateByUser@RateDaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@42e22a53 testClass = RateDaoTest, locations = '{}', classes = '{class config.TestDatabaseConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate5.HibernateTransactionManager@48b22fd4]; rollback [true]
+2018-02-19 14:47:00,490 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-19 14:47:00,575 INFO  - Rolled back transaction for test context [DefaultTestContext@5411dd90 testClass = RateDaoTest, testInstance = com.quickaccount.RateDaoTest@50194e8d, testMethod = getRateByUser@RateDaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@42e22a53 testClass = RateDaoTest, locations = '{}', classes = '{class config.TestDatabaseConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2018-02-19 14:47:00,591 INFO  - Closing org.springframework.context.support.GenericApplicationContext@3f49dace: startup date [Mon Feb 19 14:46:58 MSK 2018]; root of context hierarchy

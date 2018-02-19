@@ -9,6 +9,9 @@ import java.util.List;
 
 @Repository
 public class RateDaoImpl extends BaseDaoImpl<Rate> implements RateDao {
+    public RateDaoImpl() {
+        super(Rate.class);
+    }
 
     @Override
     public List<Rate> getRatesByUser(User user) {

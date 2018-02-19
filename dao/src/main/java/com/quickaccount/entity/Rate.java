@@ -1,5 +1,6 @@
 package com.quickaccount.entity;
 
+
 import lombok.*;
 
 import javax.persistence.*;
