@@ -55,7 +55,7 @@ public class AccountDaoTest {
         accountDao.save(account7);
         Account account8 = new Account("Test8", typeAccount, user);
         accountDao.save(account8);
-        //System.out.println(accountDao.findAll());
+        System.out.println(accountDao.findAll());
         List<Account> allByParameter = accountDao.findAllByParameter("3", 3, 1, "CREDIT");
         System.out.println(allByParameter.size());
         //assertThat(allByParameter.size(), equalTo(3));

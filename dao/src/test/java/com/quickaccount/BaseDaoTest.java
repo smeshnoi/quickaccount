@@ -29,10 +29,10 @@ public class BaseDaoTest {
         Currency currency = new Currency("HUN");
         Currency currency2 = new Currency("USD");
         currencyDao.save(currency);
-        currencyDao.save(currency2);
-        Currency currency3 = currencyDao.findById(1L);
+        Long save = currencyDao.save(currency2);
+        Currency currency3 = currencyDao.findById(save);
         System.out.println(currency3.getCurrency());
-        assertThat(currency3.getCurrency(), equalTo("HUN"));
+        assertThat(currency3.getCurrency(), equalTo("USD"));
 
     }
 
@@ -73,5 +73,4 @@ public class BaseDaoTest {
         List<Currency> currency3 = currencyDao.findAll();
         assertThat(currency3.get(0).getCurrency(), equalTo("EUR"));
     }
-
 }
