@@ -1,6 +1,6 @@
 package config;
 
-import com.quickaccount.config.DatabaseConfig;
+import com.quickaccount.config.PersistenceConfig;
 import org.h2.jdbcx.JdbcDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(DatabaseConfig.class)
+@Import(PersistenceConfig.class)
 public class TestDatabaseConfig {
 
     @Value("${jdbc.url}")

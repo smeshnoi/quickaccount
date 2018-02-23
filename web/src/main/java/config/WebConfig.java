@@ -3,9 +3,11 @@ package config;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
-@Import(DatabaseConfig.class)
-@ComponentScan(basePackages = "com.quickaccount")
-public class ServiceConfig {
+@EnableWebMvc
+@ComponentScan(basePackages = {"controller"})
+@Import(value = {ThymeleafConfig.class})
+public class WebConfig {
 }

@@ -26,7 +26,7 @@ public class User extends BaseIdEntity {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @ManyToOne(cascade =  CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "currency_id")
     private Currency currency;
 

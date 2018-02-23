@@ -337,3 +337,295 @@ insert into currency (id, currency) values (null, ?) [42102-195]
 2018-02-20 09:27:40,611 INFO  - Rolled back transaction for test context [DefaultTestContext@300f7994 testClass = UserDaoImplTest, testInstance = com.quickaccount.UserDaoImplTest@5ee16a6d, testMethod = getUserByLogin@UserDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@71522fb7 testClass = UserDaoImplTest, locations = '{}', classes = '{class config.TestDatabaseConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
 2018-02-20 09:27:40,626 INFO  - Closing org.springframework.context.support.GenericApplicationContext@27a8c74e: startup date [Tue Feb 20 09:27:29 MSK 2018]; root of context hierarchy
 2018-02-20 09:27:40,629 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-21 09:59:19,143 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 09:59:19,311 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-21 09:59:19,312 INFO  - HHH000206: hibernate.properties not found
+2018-02-21 09:59:19,375 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-21 09:59:19,713 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 09:59:20,213 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3a71c100'
+2018-02-21 10:00:37,844 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 10:00:38,047 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-21 10:00:38,047 INFO  - HHH000206: hibernate.properties not found
+2018-02-21 10:00:38,125 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-21 10:00:38,437 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 10:00:38,863 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@11ee02f8'
+2018-02-21 10:16:09,551 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 10:16:09,731 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-21 10:16:09,732 INFO  - HHH000206: hibernate.properties not found
+2018-02-21 10:16:09,794 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-21 10:16:10,104 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 10:16:10,604 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@11ee02f8'
+2018-02-21 10:20:31,585 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 10:20:31,757 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-21 10:20:31,757 INFO  - HHH000206: hibernate.properties not found
+2018-02-21 10:20:31,820 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-21 10:20:32,206 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 10:20:32,753 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@11ee02f8'
+2018-02-21 13:47:14,775 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:14,885 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-21 13:47:14,885 INFO  - HHH000206: hibernate.properties not found
+2018-02-21 13:47:14,916 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-21 13:47:15,232 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:15,685 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 13:47:16,024 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:16,033 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:16,049 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 13:47:16,143 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:16,143 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:16,158 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 13:47:16,299 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:16,315 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:16,315 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 13:47:16,440 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:16,440 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:16,455 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 13:47:16,596 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:16,611 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:16,611 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 13:47:16,783 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:16,799 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:16,799 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 13:47:16,924 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 13:47:16,924 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 13:47:16,940 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:04,405 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:04,572 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-21 23:15:04,572 INFO  - HHH000206: hibernate.properties not found
+2018-02-21 23:15:04,603 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-21 23:15:04,900 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:05,430 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:05,758 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:05,773 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:05,789 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:05,883 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:05,898 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:05,898 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:06,088 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:06,100 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:06,112 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:06,258 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:06,273 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:06,284 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:06,411 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:06,427 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:06,427 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:06,547 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:06,554 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:06,569 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-21 23:15:06,683 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-21 23:15:06,698 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-21 23:15:06,698 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@25230246'
+2018-02-22 00:09:01,921 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-22 00:09:02,106 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-22 00:09:02,106 INFO  - HHH000206: hibernate.properties not found
+2018-02-22 00:09:02,200 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-22 00:09:02,635 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-22 00:09:04,121 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@453d496b'
+2018-02-22 00:09:04,671 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-23 12:36:24,868 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 12:36:25,065 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 12:36:25,065 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 12:36:25,159 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 12:36:25,643 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 12:36:26,706 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@203c20cf'
+2018-02-23 12:36:27,268 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-23 12:37:56,409 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 12:37:56,581 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 12:37:56,581 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 12:37:56,643 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 12:37:56,987 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 12:37:58,019 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44de94c3'
+2018-02-23 12:38:24,173 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 12:38:24,360 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 12:38:24,360 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 12:38:24,438 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 12:38:24,798 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 12:38:25,926 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@428bdd72'
+2018-02-23 12:39:13,153 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 12:39:13,325 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 12:39:13,325 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 12:39:13,388 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 12:39:13,700 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 12:39:14,673 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44de94c3'
+2018-02-23 12:39:58,328 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 12:39:58,500 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 12:39:58,500 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 12:39:58,547 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 12:39:58,875 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 12:40:00,005 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44de94c3'
+2018-02-23 12:42:17,417 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 12:42:17,589 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 12:42:17,589 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 12:42:17,667 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 12:42:17,996 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 12:42:18,965 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44de94c3'
+2018-02-23 12:46:13,396 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 12:46:13,568 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 12:46:13,583 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 12:46:13,630 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 12:46:14,005 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 12:46:15,052 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44de94c3'
+2018-02-23 13:01:26,376 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 13:01:26,567 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 13:01:26,582 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 13:01:26,629 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 13:01:26,954 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 13:01:28,020 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44de94c3'
+2018-02-23 13:06:52,331 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 13:06:52,538 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 13:06:52,538 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 13:06:52,601 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 13:06:52,945 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 13:06:53,999 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44de94c3'
+2018-02-23 13:11:59,040 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 13:11:59,252 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 13:11:59,254 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 13:11:59,315 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 13:11:59,713 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 13:12:00,953 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@203c20cf'
+2018-02-23 13:14:51,827 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 13:14:51,999 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 13:14:51,999 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 13:14:52,062 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 13:14:52,424 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 13:14:53,541 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c6ee758'
+2018-02-23 13:14:54,010 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-23 13:14:59,668 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 13:14:59,824 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 13:14:59,824 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 13:14:59,887 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 13:15:00,190 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 13:15:01,146 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@640dc4c6'
+2018-02-23 19:36:07,722 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 19:36:07,878 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 19:36:07,878 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 19:36:07,957 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 19:36:08,332 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 19:36:09,379 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4b54af3d'
+2018-02-23 19:36:09,972 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-23 21:26:14,613 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 21:26:14,773 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 21:26:14,773 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 21:26:14,819 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 21:26:15,192 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 21:26:16,255 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@203c20cf'
+2018-02-23 21:27:04,800 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 21:27:04,979 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 21:27:04,981 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 21:27:05,037 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 21:27:05,396 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 21:27:06,521 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@203c20cf'
+2018-02-23 21:29:35,857 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 21:29:36,044 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 21:29:36,044 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 21:29:36,154 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 21:29:36,513 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 21:29:37,531 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@203c20cf'
+2018-02-23 21:29:38,127 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-23 21:30:09,641 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 21:30:09,830 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 21:30:09,831 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 21:30:09,900 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 21:30:10,221 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 21:30:11,195 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@203c20cf'
+2018-02-23 21:30:11,757 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-23 22:37:00,774 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 22:37:00,946 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 22:37:00,946 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 22:37:01,009 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 22:37:01,368 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 22:37:02,477 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@616b241a'
+2018-02-23 22:38:04,658 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 22:38:04,829 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 22:38:04,829 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 22:38:04,907 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 22:38:05,235 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 22:38:06,247 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b8e246c'
+2018-02-23 22:39:23,743 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 22:39:23,903 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-23 22:39:23,903 INFO  - HHH000206: hibernate.properties not found
+2018-02-23 22:39:23,965 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 22:39:24,316 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-23 22:39:25,333 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b8e246c'

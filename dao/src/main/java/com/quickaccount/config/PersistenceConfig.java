@@ -56,7 +56,7 @@ public class PersistenceConfig {
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("by.hector.entity");
+        factory.setPackagesToScan("com.quickaccount.entity");
         factory.setDataSource(dataSource());
         factory.setJpaProperties(jpaProperties());
         return factory;
