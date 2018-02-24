@@ -2,11 +2,11 @@ package com.quickaccount.repository;
 
 import com.quickaccount.entity.Rate;
 import com.quickaccount.entity.User;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface RateRepository extends CrudRepository<Rate, Long> {
+public interface RateRepository extends JpaRepository<Rate, Long> {
 
-    List<Rate> getAllByUserRate (User user);
+    List<Rate> getAllByUserRate(User user);
 }

@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -26,7 +25,7 @@ public class Currency extends BaseIdEntity {
     private String currency;
 
     @OneToMany(mappedBy = "currency")
-    private Set<User> userSet = new HashSet<User>();
+    private Set<User> userSet = new HashSet<>();
 
     @OneToMany(mappedBy = "currencyIn")
     private List<Rate> rateIn;

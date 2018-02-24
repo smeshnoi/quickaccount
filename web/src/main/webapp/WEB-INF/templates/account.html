@@ -8,6 +8,39 @@
     <!-- jQuery library -->
 </head>
 <body>
-
+    <form class="form-inline" action="">
+        <div class="form_group">
+            <label for="searchText">Enter for search</label>
+            <input type="text" id="searchText">
+        </div>
+        <div class="form_group">
+            <label  for="typeAcc">Type Account: </label>
+            <select id="typeAcc" name="typeAccount">
+                <option value="CREDIT">CREDIT</option>
+                <option value="DEBIT">DEBIT</option>
+            </select>
+        </div>
+        <div class="form_group">
+            <label  for="limitPage">Limit Page: </label>
+            <select id="limitPage" name="limitPage">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="form_group">
+            <button class="btn btn-primary" type="reset">Search</button>
+        </div>
+    </form>
+    <table class="table">
+        <tr>
+            <td>
+                
+            </td>
+        </tr>
+        <tr th:each="account : ${accounts}">
+            <td th:text="${account.getAccountName()}"></td>
+        </tr>
+    </table>
 </body>
 </html>

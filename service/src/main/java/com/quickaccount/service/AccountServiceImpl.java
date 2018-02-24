@@ -13,10 +13,10 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService {
     private AccountDao accountDao;
 
-    @Autowired
-    public AccountServiceImpl(AccountDao accountDao) {
-        this.accountDao = accountDao;
-    }
+//    @Autowired
+//    public AccountServiceImpl(AccountDao accountDao) {
+//        this.accountDao = accountDao;
+//    }
 
     @Override
     public List<Account> getAll() {
