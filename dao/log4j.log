@@ -31,3 +31,29 @@ select SEQUENCE_CATALOG, SEQUENCE_SCHEMA, SEQUENCE_NAME, INCREMENT from informat
 2018-02-24 22:48:46,385 ERROR - Схема "information_schema" не найдена
 Schema "information_schema" not found; SQL statement:
 select SEQUENCE_CATALOG, SEQUENCE_SCHEMA, SEQUENCE_NAME, INCREMENT from information_schema.sequences [90079-195]
+2018-02-24 23:16:20,251 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-24 23:16:20,485 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-24 23:16:20,485 INFO  - HHH000206: hibernate.properties not found
+2018-02-24 23:16:20,548 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-24 23:16:20,905 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-24 23:16:21,960 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@47ec7422'
+2018-02-24 23:16:22,527 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-24 23:16:33,670 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-24 23:16:33,877 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-24 23:16:33,877 INFO  - HHH000206: hibernate.properties not found
+2018-02-24 23:16:33,939 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-24 23:16:34,260 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-24 23:16:35,254 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@f3fcd59'
+2018-02-24 23:16:45,011 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-24 23:16:45,199 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-24 23:16:45,214 INFO  - HHH000206: hibernate.properties not found
+2018-02-24 23:16:45,261 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-24 23:16:45,636 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-24 23:16:46,683 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@48535004'
+2018-02-24 23:16:47,271 INFO  - HHH000397: Using ASTQueryTranslatorFactory
