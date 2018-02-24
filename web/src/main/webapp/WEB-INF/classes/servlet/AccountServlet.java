@@ -1,6 +1,6 @@
 package servlet;
 
-import com.quickaccount.AccountService;
+import com.quickaccount.service.AccountService;
 import com.quickaccount.entity.Account;
 import config.ApplicationContextHolder;
 

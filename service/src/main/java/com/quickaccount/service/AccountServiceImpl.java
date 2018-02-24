@@ -1,5 +1,6 @@
-package com.quickaccount;
+package com.quickaccount.service;
 
+import com.quickaccount.AccountDao;
 import com.quickaccount.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

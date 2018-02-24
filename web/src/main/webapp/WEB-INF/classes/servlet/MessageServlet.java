@@ -1,6 +1,6 @@
 package servlet;
 
-import com.quickaccount.MessageService;
+import com.quickaccount.service.MessageService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

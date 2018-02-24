@@ -1,4 +1,4 @@
-package com.quickaccount;
+package com.quickaccount.service;
 
 import com.quickaccount.entity.Currency;
 

@@ -1,4 +1,6 @@
-package com.quickaccount;
+package com.quickaccount.service;
+
+import com.quickaccount.MessageDao;
 
 public class MessageService {
     private static MessageService instance = null;
