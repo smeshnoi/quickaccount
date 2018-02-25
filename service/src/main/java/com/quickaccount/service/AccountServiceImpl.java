@@ -1,8 +1,10 @@
 package com.quickaccount.service;
 
-import com.quickaccount.AccountDao;
 import com.quickaccount.entity.Account;
+import com.quickaccount.entity.TypeDC;
+import com.quickaccount.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -11,21 +13,30 @@ import java.util.List;
 @Service
 @Transactional
 public class AccountServiceImpl implements AccountService {
-    private AccountDao accountDao;
+    private AccountRepository accountRepository;
 
-//    @Autowired
-//    public AccountServiceImpl(AccountDao accountDao) {
-//        this.accountDao = accountDao;
-//    }
+    @Autowired
+    public AccountServiceImpl(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
+    }
 
     @Override
-    public List<Account> getAll() {
-        System.out.println(accountDao.findAll());
-        return accountDao.findAll();
+    public List<Account> findAll() {
+        return accountRepository.findAll();
     }
 
     @Override
     public List<Account> getAllByParameter(String findAccount, int limitPage, int page, String typeAccount) {
-        return accountDao.findAllByParameter(findAccount, limitPage, page, typeAccount);
+        return null;
+    }
+
+    @Override
+    public List<Account> findAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC, Pageable pageable) {
+        return accountRepository.findAllByAccountNameContainingAndTypeAccountTypeDC(accountName, typeDC, pageable);
+    }
+
+    @Override
+    public int countAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC) {
+        return accountRepository.countAllByAccountNameContainingAndTypeAccountTypeDC(accountName, typeDC);
     }
 }

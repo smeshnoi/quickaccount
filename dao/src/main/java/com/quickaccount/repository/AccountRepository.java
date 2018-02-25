@@ -9,7 +9,6 @@ import java.util.List;
 
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
-    int countAllBy();
     int countAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC);
 
     List<Account> findAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC, Pageable pageable);

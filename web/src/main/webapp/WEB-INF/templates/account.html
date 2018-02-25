@@ -8,21 +8,21 @@
     <!-- jQuery library -->
 </head>
 <body>
-    <form class="form-inline" th:action="@{/account}" method="post" th:object="${account}">
+    <form class="form-inline" th:action="@{/account}" method="post" th:object="${accountForm}">
         <div class="form_group">
             <label for="searchText">Enter for search</label>
-            <input type="text" id="searchText" th:field="*{accountName}">
+            <input type="text" id="searchText" th:field="*{searchText}">
         </div>
         <div class="form_group">
             <label  for="typeAcc">Type Account: </label>
-            <select id="typeAcc" name="typeAccount" th:field="*{typeAccount.typeDC}">
+            <select id="typeAcc" name="typeAccount" th:field="*{typeAccount}">
                 <option value="CREDIT">Credit</option>
                 <option value="DEBIT">Debit</option>
             </select>
         </div>
         <div class="form_group">
             <label  for="limitPage">Limit Page: </label>
-            <select id="limitPage" name="limitPage">
+            <select id="limitPage" name="limitPage" th:field="*{limitPage}">
                 <option value="3">3</option>
                 <option value="5">5</option>
                 <option value="10">10</option>
@@ -32,19 +32,20 @@
             <button class="btn btn-primary" type="submit">Search</button>
         </div>
     </form>
-    <table class="table">
-        <tr>
-            <td>
-                <tr>
-                    <td th:each="page : ${pageCount}" th:text="${page}">
+    <div class="table">
+        <taable>
+            <tr>
+                <td th:each="page : ${pageCount}">
+                    <a th:href="@{/account(page=${page})}" th:text="${page}"></a>
+                </td>
+            </tr>
+        </taable>
+        <table class="table">
+            <tr th:each="account : ${accounts}">
+                <td th:text="${account.getAccountName()}">test name</td>
+            </tr>
+        </table>
 
-                    </td>
-                </tr>
-            </td>
-        </tr>
-        <tr th:each="account : ${accounts}">
-            <td th:text="${account.getAccountName()}"></td>
-        </tr>
-    </table>
+    </div>
 </body>
 </html>

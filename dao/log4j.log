@@ -181,3 +181,37 @@ select SEQUENCE_CATALOG, SEQUENCE_SCHEMA, SEQUENCE_NAME, INCREMENT from informat
 2018-02-25 11:51:37,153 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 2018-02-25 11:51:38,402 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2db33feb'
 2018-02-25 11:51:41,822 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-25 19:01:00,627 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-25 19:01:00,799 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-25 19:01:00,799 INFO  - HHH000206: hibernate.properties not found
+2018-02-25 19:01:00,846 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-25 19:01:01,143 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-25 19:01:02,152 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@327c7bea'
+2018-02-25 19:01:02,780 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-25 19:01:03,015 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-25 19:01:03,015 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-02-25 19:01:03,030 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-25 19:01:03,030 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-02-25 19:01:03,046 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-25 19:01:03,046 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-02-25 19:01:03,061 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-25 19:01:03,061 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-02-25 19:15:25,035 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-25 19:15:25,218 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-25 19:15:25,225 INFO  - HHH000206: hibernate.properties not found
+2018-02-25 19:15:25,266 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-25 19:15:25,563 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-25 19:15:26,581 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@f3fcd59'
+2018-02-25 19:15:27,190 INFO  - HHH000397: Using ASTQueryTranslatorFactory
