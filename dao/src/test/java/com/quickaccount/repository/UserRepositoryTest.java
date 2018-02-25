@@ -31,7 +31,8 @@ public class UserRepositoryTest {
         User user = new User("test","Test", "Testov",
                 save, "passw", Role.USER,
                 new Contact("testA@gmail.com", "+375296465656"));
-        userRepository.save(user);
+        User save1 = userRepository.save(user);
+        assertThat(save1, equalTo(user));
     }
 
     @Test

@@ -8,16 +8,16 @@
     <!-- jQuery library -->
 </head>
 <body>
-    <form class="form-inline" action="">
+    <form class="form-inline" th:action="@{/account}" method="post" th:object="${account}">
         <div class="form_group">
             <label for="searchText">Enter for search</label>
-            <input type="text" id="searchText">
+            <input type="text" id="searchText" th:field="*{accountName}">
         </div>
         <div class="form_group">
             <label  for="typeAcc">Type Account: </label>
-            <select id="typeAcc" name="typeAccount">
-                <option value="CREDIT">CREDIT</option>
-                <option value="DEBIT">DEBIT</option>
+            <select id="typeAcc" name="typeAccount" th:field="*{typeAccount.typeDC}">
+                <option value="CREDIT">Credit</option>
+                <option value="DEBIT">Debit</option>
             </select>
         </div>
         <div class="form_group">
@@ -29,13 +29,17 @@
             </select>
         </div>
         <div class="form_group">
-            <button class="btn btn-primary" type="reset">Search</button>
+            <button class="btn btn-primary" type="submit">Search</button>
         </div>
     </form>
     <table class="table">
         <tr>
             <td>
+                <tr>
+                    <td th:each="page : ${pageCount}" th:text="${page}">
 
+                    </td>
+                </tr>
             </td>
         </tr>
         <tr th:each="account : ${accounts}">

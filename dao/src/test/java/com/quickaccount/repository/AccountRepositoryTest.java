@@ -11,8 +11,15 @@ import com.quickaccount.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
+
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = PersistenceConfig.class)
@@ -58,5 +65,10 @@ public class AccountRepositoryTest {
         accountRepository.save(account7);
         Account account8 = new Account("Test8", typeAccount, user);
         accountRepository.save(account8);
+        Integer integer = accountRepository.countAllByAccountNameContainingAndTypeAccountTypeDC("3", TypeDC.CREDIT);
+        assertThat(integer, equalTo(5));
+        Pageable pageable = new PageRequest(0,3);
+        List<Account> listAccount = accountRepository.findAllByAccountNameContainingAndTypeAccountTypeDC("3", TypeDC.CREDIT, pageable);
+        assertThat(listAccount.size(), equalTo(3));
     }
 }
