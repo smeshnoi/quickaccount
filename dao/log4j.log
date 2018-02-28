@@ -215,3 +215,28 @@ insert into currency (id, currency) values (null, ?) [23505-195]
 2018-02-25 19:15:25,563 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 2018-02-25 19:15:26,581 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@f3fcd59'
 2018-02-25 19:15:27,190 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-27 11:56:09,403 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-27 11:56:09,551 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-02-27 11:56:09,553 INFO  - HHH000206: hibernate.properties not found
+2018-02-27 11:56:09,604 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-27 11:56:10,015 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-27 11:56:10,977 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@78b41097'
+2018-02-27 11:56:11,585 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-02-27 11:56:11,831 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-27 11:56:11,832 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-02-27 11:56:11,876 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-27 11:56:11,876 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-02-27 11:56:11,918 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-27 11:56:11,918 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-02-27 11:56:11,925 WARN  - SQL Error: 23505, SQLState: 23505
+2018-02-27 11:56:11,926 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
