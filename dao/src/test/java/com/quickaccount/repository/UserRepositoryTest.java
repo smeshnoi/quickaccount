@@ -29,7 +29,7 @@ public class UserRepositoryTest {
         Currency currency = new Currency("USD");
         Currency save = currencyRepository.save(currency);
         User user = new User("test","Test", "Testov",
-                save, "passw", Role.USER,
+                save, "passw",
                 new Contact("testA@gmail.com", "+375296465656"));
         User save1 = userRepository.save(user);
         assertThat(save1, equalTo(user));
@@ -40,7 +40,7 @@ public class UserRepositoryTest {
         Currency currency = new Currency("USD");
         Currency save = currencyRepository.save(currency);
         User user = new User("test","Test", "Testov",
-                save, "passw", Role.USER,
+                save, "passw",
                 new Contact("testA@gmail.com", "+375296465656"));
         userRepository.save(user);
         assertThat(userRepository.getUserByLogin("test").getLogin(), equalTo("test"));

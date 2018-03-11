@@ -39,7 +39,7 @@ public class RateRepositoryTest {
         currencyRepository.save(currency);
         currencyRepository.save(currency2);
         User user = new User("test","Test", "Testov",
-                currency, "passw", Role.USER,
+                currency, "passw",
                 new Contact("testA@gmail.com", "+375296465656"));
         userRepository.save(user);
         LocalDate date = LocalDate.now();

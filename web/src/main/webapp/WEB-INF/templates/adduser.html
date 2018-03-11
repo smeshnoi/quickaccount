@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/qstyle.css">
+    <!-- jQuery library -->
+</head>
+<body>
+<div id="container" class="container">
+    <div id="header" class="">
+
+    </div>
+    <div id="navigation" class="navigation">
+
+    </div>
+    <div id="menu" class="menu" th:replace="menu::menu">
+
+    </div>
+    <div id="content">
+        <p>
+        <form th:action="@{/login}" method="post" th:object="${user}">
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="login" th:text="#{registryform.login}">Login:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{login}" class="form-control" type="text" id="login" name="login" formtarget="login" placeholder="Enter login">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="firstName" th:text="#{registryform.firstname}">First Name:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{firstName}" class="form-control" type="text" id="firstName" name="firstName" placeholder="Enter first name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lastName" th:text="#{registryform.lastname}">Last Name:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{lastName}" class="form-control" type="text" id="lastName" name="lastName" placeholder="Enter last name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="currency" th:text="#{registryform.currency}">Currency:</label>
+                        </td>
+                        <td>
+                            <select class="form-control" id="currency" name="currency" th:field="*{currency}">
+                                <option th:each="currency : ${currencies}" value="USD" th:text="${currency.getCurrency()}">USD</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email" th:text="#{registryform.email}">Email:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{contact.email}" class="form-control" type="email" id="email" name="email" placeholder="email@gmail.com">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone" th:text="#{registryform.phone}">Phone:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{contact.phone}" class="form-control" type="text" id="phone" name="phone" placeholder="Phone +37529 1111111">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" th:text="#{registryform.password}">Password:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{password}" class="form-control" type="password" id="password" name="password" placeholder="Enter password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-success" type="submit" th:text="#{registryform.button}">Registry</button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </form>
+        </p>
+
+    </div>
+    <div id="clear">
+
+    </div>
+    <div id="footer" class="footer">
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

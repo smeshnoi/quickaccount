@@ -33,10 +33,6 @@ public class User extends BaseIdEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Enumerated(value = EnumType.STRING)
-    @Column(name = "role", nullable = false)
-    private Role role;
-
     @AttributeOverrides({
             @AttributeOverride(name = "email", column = @Column(name = "user_email", unique = true, nullable = false)),
             @AttributeOverride(name = "phone", column = @Column(name = "user_phone"))
@@ -52,13 +48,18 @@ public class User extends BaseIdEntity {
     @OneToMany(mappedBy = "userAccount")
     private Set<Account> accountHashSet = new HashSet<>();
 
-    public User(String login, String firstName, String lastName, Currency currency, String password, Role role, Contact contact) {
+    @JoinTable(name = "users_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @ManyToMany
+    private Set<Role> roles = new HashSet<>();
+
+    public User(String login, String firstName, String lastName, Currency currency, String password, Contact contact) {
         this.login = login;
         this.firstName = firstName;
         this.lastName = lastName;
         this.currency = currency;
         this.password = password;
-        this.role = role;
         this.contact = contact;
     }
 }

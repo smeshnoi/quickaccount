@@ -44,7 +44,7 @@ public class AccountRepositoryTest {
         currencyRepository.save(currency);
         currencyRepository.save(currency2);
         User user = new User("test","Test", "Testov",
-                currency, "passw", Role.USER,
+                currency, "passw",
                 new Contact("testA@gmail.com", "+375296465656"));
         userRepository.save(user);
         TypeAccount typeAccount = new TypeAccount("Test Type", TypeDC.CREDIT);

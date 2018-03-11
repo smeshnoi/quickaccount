@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Companies</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/qstyle.css">
+    <!-- jQuery library -->
+</head>
+<body>
+<div id="container" class="container">
+    <div id="header" class="">
+
+    </div>
+    <div id="navigation" class="navigation">
+
+    </div>
+    <div id="menu" class="menu" th:replace="menu::menu">
+
+    </div>
+    <div id="content">
+        <p class="p">
+            <form th:action="@{/addcompany}">
+                <button  class="btn btn-success" type="submit" >Add Company</button>
+            </form>
+        </p>
+        <p class="p">
+            <table class="table">
+            <thead>
+                <tr>
+                    <td scope="col">Company name</td>
+                    <td scope="col">Description</td>
+                    <td scope="col">Email</td>
+                    <td scope="col">Phone</td>
+                </tr>
+            </thead>
+                <tr th:each="company : ${companies}">
+                    <td th:text="${company.getCompanyName()}"></td>
+                    <td th:text="${company.getDescription()}"></td>
+                    <td th:text="${company.getContact().email}"></td>
+                    <td th:text="${company.getContact().phone}"></td>
+                </tr>
+            </table>
+        </p>
+
+    </div>
+    <div id="clear">
+
+    </div>
+    <div id="footer" class="footer">
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

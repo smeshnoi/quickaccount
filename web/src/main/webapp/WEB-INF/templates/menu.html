@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <div id="menu" class="menu" th:fragment="menu">
+        <table>
+            <tr>
+                <td>
+                    <a class="a" th:href="@{/registry}">Registry</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="a" th:href="@{/companies}">Companies</a>
+                </td>
+            </tr>
+            <tr>
+                <td sec:authorize="isAuthenticated()">
+                    <a class="a" th:href="@{/logout}">Logout</a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</html>
