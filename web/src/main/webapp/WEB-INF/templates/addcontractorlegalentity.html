@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Contractor</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/qstyle.css">
+    <!-- jQuery library -->
+</head>
+<body>
+<div id="container" class="container">
+    <div id="header" class="">
+
+    </div>
+    <div id="navigation" class="navigation">
+
+    </div>
+    <div id="menu" class="menu" th:replace="menu::menu">
+
+    </div>
+    <div id="content">
+        <p>
+        <form  th:action="@{/contractorlegalentity}" method="post" th:object="${contractorLegalEntity}">
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="contractorName" th:text="#{registryform.contractorName}">Company:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{contractorName}" class="form-control" type="text" id="contractorName" name="contractorName" placeholder="Enter contractor name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="account" th:text="#{registryform.account}">First Name:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{account}" class="form-control" type="text" id="account" name="account" placeholder="Enter account">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="unn" th:text="#{registryform.unn}">Email:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{unn}" class="form-control" type="text" id="unn" name="unn" placeholder="Enter UNN">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="city" th:text="#{registryform.city}">City:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{address.city}" class="form-control" type="text" id="city" name="city" placeholder="Enter City">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="street" th:text="#{registryform.street}">street:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{address.street}" class="form-control" type="text" id="street" name="street" placeholder="Enter street">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="building" th:text="#{registryform.building}">building:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{address.building}" class="form-control" type="text" id="building" name="building" placeholder="Enter building">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="office" th:text="#{registryform.office}">office:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{address.office}" class="form-control" type="text" id="office" name="office" placeholder="Enter office">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-success" type="submit" th:text="#{registryform.buttonContractor}">Ф</button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </form>
+        </p>
+
+    </div>
+    <div id="clear">
+
+    </div>
+    <div id="footer" class="footer">
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

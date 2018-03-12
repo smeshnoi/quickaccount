@@ -5,47 +5,73 @@
     <title>Accounts</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/qstyle.css">
     <!-- jQuery library -->
 </head>
 <body>
-    <form class="form-inline" th:action="@{/account}" method="post" th:object="${accountForm}">
-        <div class="form_group">
-            <label for="searchText">Enter for search</label>
-            <input type="text" id="searchText" th:field="*{searchText}">
-        </div>
-        <div class="form_group">
-            <label  for="typeAcc">Type Account: </label>
-            <select id="typeAcc" name="typeAccount" th:field="*{typeAccount}">
-                <option value="CREDIT">Credit</option>
-                <option value="DEBIT">Debit</option>
-            </select>
-        </div>
-        <div class="form_group">
-            <label  for="limitPage">Limit Page: </label>
-            <select id="limitPage" name="limitPage" th:field="*{limitPage}">
-                <option value="3">3</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-            </select>
-        </div>
-        <div class="form_group">
-            <button class="btn btn-primary" type="submit">Search</button>
-        </div>
-    </form>
-    <div class="table">
-        <taable>
-            <tr>
-                <td th:each="page : ${pageCount}">
-                    <a th:href="@{/account(page=${page})}" th:text="${page}"></a>
-                </td>
-            </tr>
-        </taable>
-        <table class="table">
-            <tr th:each="account : ${accounts}">
-                <td th:text="${account.getAccountName()}">test name</td>
-            </tr>
-        </table>
+<div id="container" class="container">
+    <div id="header" class="">
 
     </div>
+    <div id="navigation" class="navigation">
+
+    </div>
+    <div id="menu" class="menu" th:replace="menu::menu">
+
+    </div>
+    <div id="content">
+        <p>
+        <form class="form-inline" th:action="@{/account}" method="post" th:object="${accountForm}">
+            <div class="form_group">
+                <label for="searchText">Enter for search</label>
+                <input type="text" id="searchText" th:field="*{searchText}">
+            </div>
+            <div class="form_group">
+                <label  for="typeAcc">Type Account: </label>
+                <select id="typeAcc" name="typeAccount" th:field="*{typeAccount}">
+                    <option value="CREDIT">Credit</option>
+                    <option value="DEBIT">Debit</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <label  for="limitPage">Limit Page: </label>
+                <select id="limitPage" name="limitPage" th:field="*{limitPage}">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+        <div class="table">
+            <taable>
+                <tr>
+                    <td th:each="page : ${pageCount}">
+                        <a th:href="@{/account(page=${page})}" th:text="${page}"></a>
+                    </td>
+                </tr>
+            </taable>
+            <table class="table">
+                <tr th:each="account : ${accounts}">
+                    <td th:text="${account.getAccountName()}">test name</td>
+                </tr>
+            </table>
+
+        </div>
+        </p>
+
+    </div>
+    <div id="clear">
+
+    </div>
+    <div id="footer" class="footer">
+
+    </div>
+
+
+</div>
+
 </body>
 </html>
