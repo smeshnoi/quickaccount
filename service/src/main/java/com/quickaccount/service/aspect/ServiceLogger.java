@@ -18,16 +18,16 @@ public class ServiceLogger {
 
     @Around("serviceLoging()")
     public Object logService(ProceedingJoinPoint joinPoint) {
-        String nameSegnature = joinPoint.getSignature().getName();
+        String nameSignature = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         Object result = null;
-        LOG.info("Start " + nameSegnature + " with args " + Arrays.toString(args));
+        LOG.info("Start " + nameSignature + " with args " + Arrays.toString(args));
         try {
             result = joinPoint.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-        LOG.info("End " + nameSegnature + " result - " + result);
+        LOG.info("End " + nameSignature + " result - " + result);
         return result;
     }
 }
