@@ -22,23 +22,25 @@
     <div id="content">
         <p class="p">
         <form th:action="@{/addcontractor}" method="post">
-        <label class="btn">
-            <input type="radio" name="contractorOption" value="contractorlegalentity">
-        </label>
-        <label class="btn">
-            <input type="radio" name="contractorOption" value="contractorindividual">
-        </label>
-            <button  class="btn btn-success" type="submit" >Add Contractor</button>
+            <div class="btn-group">
+                <label class="btn btn-primary">
+                    <input type="radio" name="contractorOption" id="contractorlegalentity" value="contractorlegalentity" autocomplete="off" checked>company
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="contractorOption" id="contractorindividual" value="contractorindividual" autocomplete="off">Individual
+                </label>
+            </div>
+        <button  class="btn btn-success" type="submit" >Add Contractor</button>
         </form>
         </p>
         <p class="p">
         <table class="table">
             <thead>
             <tr>
-                <td scope="col">Company name</td>
-                <td scope="col">Description</td>
-                <td scope="col">Email</td>
-                <td scope="col">Phone</td>
+                <td scope="col">Contractor Name</td>
+                <td scope="col"></td>
+                <td scope="col"></td>
+                <td scope="col"></td>
             </tr>
             </thead>
             <tr th:each="contractors">

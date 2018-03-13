@@ -1,8 +1,10 @@
 package controller;
 
 import com.quickaccount.entity.Account;
+import com.quickaccount.entity.TypeAccount;
 import com.quickaccount.entity.TypeDC;
 import com.quickaccount.service.AccountService;
+import com.quickaccount.service.TypeAccountService;
 import com.quickaccount.service.classForms.AccountForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -21,15 +23,29 @@ import java.util.List;
 public class AccountController {
     private AccountService accountService;
 
+    private TypeAccountService typeAccountService;
+
     @Autowired
-    public AccountController(AccountService accountService) {
+    public AccountController(AccountService accountService, TypeAccountService typeAccountService) {
         this.accountService = accountService;
+        this.typeAccountService = typeAccountService;
+    }
+
+    @ModelAttribute("account")
+    public Account account() {
+        return new Account();
+    }
+
+    @ModelAttribute("typeAccounts")
+    public List<TypeAccount> typeAccounts() {
+        return typeAccountService.findAll();
     }
 
     @ModelAttribute("accountForm")
     public AccountForm accountForm() {
         return new AccountForm();
     }
+
     @ModelAttribute("accounts")
     public List<Account> currencies() {
         List<Account> all = accountService.findAll();
@@ -79,5 +95,10 @@ public class AccountController {
             pageArray[i] = i + 1;
         }
         return pageArray;
+    }
+
+    @GetMapping("/addaccount")
+    public String showAddAccountPage(Model model, Account account, Integer page) {
+        return "addaccount";
     }
 }

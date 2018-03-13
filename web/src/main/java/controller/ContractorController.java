@@ -30,7 +30,14 @@ public class ContractorController {
     }
 
     @GetMapping("/contractors")
-    public String getContractorPage() {
+    public String getContractorPage()
+    {
+        return "contractors";
+    }
+
+    @GetMapping("/addcontractor")
+    public String showContractorLegalEntityPage() {
+
         return "contractors";
     }
 

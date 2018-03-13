@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
-import java.util.List;
 
 @Controller
 public class CompanyController {
@@ -34,7 +33,7 @@ public class CompanyController {
     }
 
     @GetMapping(value = "/addcompany")
-    public String showLoginPage() {
+    public String showAddCompanyPage() {
         return "addcompany";
     }
 

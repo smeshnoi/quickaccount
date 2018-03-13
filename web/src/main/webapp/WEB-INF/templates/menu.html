@@ -19,6 +19,11 @@
                 </td>
             </tr>
             <tr>
+                <td>
+                    <a class="a" th:href="@{/account}">Accounts</a>
+                </td>
+            </tr>
+            <tr>
                 <td sec:authorize="isAuthenticated()">
                     <a class="a" th:href="@{/logout}">Logout</a>
                 </td>
