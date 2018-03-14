@@ -1,6 +1,5 @@
 package com.quickaccount.service;
 
-import com.quickaccount.entity.Role;
 import com.quickaccount.entity.User;
 import com.quickaccount.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

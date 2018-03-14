@@ -30,14 +30,12 @@ public class ContractorController {
     }
 
     @GetMapping("/contractors")
-    public String getContractorPage()
-    {
+    public String getContractorPage() {
         return "contractors";
     }
 
     @GetMapping("/addcontractor")
     public String showContractorLegalEntityPage() {
-
         return "contractors";
     }
 
@@ -53,9 +51,9 @@ public class ContractorController {
 
     @PostMapping("/addcontractor")
     public String getAddContractorPage(@RequestParam String contractorOption) {
-        if (contractorOption.equals("contractorlegalentity")) {
+        if ("contractorlegalentity".equals(contractorOption)) {
             return "addcontractorlegalentity";
-        } else if (contractorOption.equals("contractorindividual")) {
+        } else if ("contractorindividual".equals(contractorOption)) {
             return "addcontractorindividual";
         }
         return "contractors";

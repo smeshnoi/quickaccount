@@ -37,14 +37,14 @@
                             <label for="typeAccount" th:text="#{registryform.typeAccount}">Type Account:</label>
                         </td>
                         <td>
-                            <select id="typeAccount" name="typeAccount" th:field="*{typeAccount}">
-                                <option th:each="typeAccount: ${typeAccounts}" th:value="${typeAccount}" th:text="${typeAccount.getTypeAccountName()}" class="form-control">3</option>
+                            <select id="typeAccount" name="typeAccount" th:field="*{typeAccount.id}">
+                                <option th:each="typeAcc: ${typeAccounts}" th:value="${typeAcc.getId()}" th:text="${typeAcc.getTypeAccountName()}" class="form-control">3</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button class="btn btn-success" type="submit" th:text="#{registryform.buttonAccount}">Ф</button>
+                            <button class="btn btn-success" type="submit" th:text="#{registryform.buttonAccount}"></button>
                         </td>
 
                     </tr>

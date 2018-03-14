@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+      xmlns:sec="http://www.thymeleaf.org/extras/thymeleaf-extras-springsecurity4">
     <div id="menu" class="menu" th:fragment="menu">
         <table>
             <tr>
@@ -24,8 +24,8 @@
                 </td>
             </tr>
             <tr>
-                <td sec:authorize="isAuthenticated()">
-                    <a class="a" th:href="@{/logout}">Logout</a>
+                <td >
+                    <a sec:authorize="isAuthenticated()" class="a" th:href="@{/logout}">Logout</a>
                 </td>
             </tr>
             <tr>

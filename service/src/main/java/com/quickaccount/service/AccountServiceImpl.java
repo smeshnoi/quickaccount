@@ -2,6 +2,7 @@ package com.quickaccount.service;
 
 import com.quickaccount.entity.Account;
 import com.quickaccount.entity.TypeDC;
+import com.quickaccount.entity.User;
 import com.quickaccount.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -26,6 +27,11 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    public Account save(Account account) {
+        return accountRepository.save(account);
+    }
+
+    @Override
     public List<Account> getAllByParameter(String findAccount, int limitPage, int page, String typeAccount) {
         return null;
     }
@@ -38,5 +44,10 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public int countAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC) {
         return accountRepository.countAllByAccountNameContainingAndTypeAccountTypeDC(accountName, typeDC);
+    }
+
+    @Override
+    public List<Account> findAllByUserAccount(User user) {
+        return accountRepository.findAllByUserAccount(user);
     }
 }

@@ -3,8 +3,10 @@ package controller;
 import com.quickaccount.entity.Account;
 import com.quickaccount.entity.TypeAccount;
 import com.quickaccount.entity.TypeDC;
+import com.quickaccount.entity.User;
 import com.quickaccount.service.AccountService;
 import com.quickaccount.service.TypeAccountService;
+import com.quickaccount.service.UserService;
 import com.quickaccount.service.classForms.AccountForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -25,10 +29,13 @@ public class AccountController {
 
     private TypeAccountService typeAccountService;
 
+    private UserService userService;
+
     @Autowired
-    public AccountController(AccountService accountService, TypeAccountService typeAccountService) {
+    public AccountController(AccountService accountService, TypeAccountService typeAccountService, UserService userService) {
         this.accountService = accountService;
         this.typeAccountService = typeAccountService;
+        this.userService = userService;
     }
 
     @ModelAttribute("account")
@@ -46,11 +53,11 @@ public class AccountController {
         return new AccountForm();
     }
 
-    @ModelAttribute("accounts")
-    public List<Account> currencies() {
-        List<Account> all = accountService.findAll();
-        return all;
-    }
+//    @ModelAttribute("accounts")
+//    public List<Account> currencies() {
+//        List<Account> all = accountService.findAllByUserAccount(null);
+//        return all;
+//    }
 
     @ModelAttribute("pageCount")
     public int[] startPages() {
@@ -60,7 +67,14 @@ public class AccountController {
     }
 
     @GetMapping("/account")
-    public String showAccountPage(Model model, AccountForm account, Integer page) {
+    public String showAccountPage(Model model, AccountForm account, Integer page, Principal principal) {
+        User userbyLogin = userService.getUserbyLogin(principal.getName());
+        List<Account> listUserAccount = accountService.findAllByUserAccount(userbyLogin);
+        List<Account> accountList = accountService.findAllByUserAccount(null);
+        List<Account> unionList = new ArrayList<>();
+        unionList.addAll(accountList);
+        unionList.addAll(listUserAccount);
+        model.addAttribute("accounts", unionList);
         model.containsAttribute("accountForm");
         if (account.getLimitPage() > 0) {
             if (page == null) {
@@ -75,11 +89,11 @@ public class AccountController {
                 typeAccDC = TypeDC.DEBIT;
             }
             int count = accountService.countAllByAccountNameContainingAndTypeAccountTypeDC(account.getSearchText(), typeAccDC);
-            int allPage =  (int)Math.ceil((double)count / account.getLimitPage());
+            int allPage =  (int) Math.ceil((double) count / account.getLimitPage());
             model.addAttribute("pageCount", getPageArray(allPage));
-            Pageable pageable = new PageRequest(page,account.getLimitPage());
-            List<Account> accountList = accountService.findAllByAccountNameContainingAndTypeAccountTypeDC(account.getSearchText(), typeAccDC, pageable);
-            model.addAttribute("accounts" ,accountList);
+            Pageable pageable = new PageRequest(page, account.getLimitPage());
+            //List<Account> accountList = accountService.findAllByAccountNameContainingAndTypeAccountTypeDC(account.getSearchText(), typeAccDC, pageable);
+            model.addAttribute("accounts" , accountList);
         }
         return "account";
     }
@@ -101,4 +115,12 @@ public class AccountController {
     public String showAddAccountPage(Model model, Account account, Integer page) {
         return "addaccount";
     }
+
+    @PostMapping("/addaccount")
+    public String addAccount(Model model, Account account, Principal principal) {
+        System.out.println(account.getTypeAccount().getTypeAccountName());
+        //accountService.save(account);
+        return "account";
+    }
+
 }

@@ -8,5 +8,5 @@ import lombok.Setter;
 public class AccountForm {
     private String searchText;
     private String typeAccount;
-    int limitPage;
+    private int limitPage;
 }

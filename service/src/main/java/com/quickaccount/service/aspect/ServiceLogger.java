@@ -11,23 +11,33 @@ import java.util.Arrays;
 @Aspect
 public class ServiceLogger {
 
-    private static final Logger LOG = Logger.getLogger(ServiceLogger.class);
+    private static final Logger LOGGER = Logger.getLogger(ServiceLogger.class);
+//    private static File file;
+//    private static FileWriter fw;
 
     @Pointcut("execution(* com.quickaccount.service.*.*(..))")
     public void serviceLoging() {}
 
     @Around("serviceLoging()")
     public Object logService(ProceedingJoinPoint joinPoint) {
+//        try {
+//            file = new File("../resources/aspect.log");
+//            fw = new FileWriter(file, true);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
         String nameSignature = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         Object result = null;
-        LOG.info("Start " + nameSignature + " with args " + Arrays.toString(args));
+        LOGGER.info("Start " + nameSignature + " with args " + Arrays.toString(args));
+
         try {
             result = joinPoint.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-        LOG.info("End " + nameSignature + " result - " + result);
+        LOGGER.info("End " + nameSignature + " result - " + result);
         return result;
     }
 }
