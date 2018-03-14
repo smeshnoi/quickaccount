@@ -1,6 +1,8 @@
 package com.quickaccount.service;
 
+import com.quickaccount.entity.Role;
 import com.quickaccount.entity.User;
+import com.quickaccount.repository.RoleRepository;
 import com.quickaccount.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -10,17 +12,21 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
+    private RoleRepository roleRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
     }
 
     @Override
@@ -41,5 +47,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserbyLogin(String login) {
         return userRepository.getUserByLogin(login);
+    }
+
+    @Override
+    public User save(User user) {
+        List<Role> addList = new ArrayList<>();
+        List<Role> all = roleRepository.findAll();
+        for (Role role : all) {
+            if (role.getName().equals("USER")) {
+                addList.add(role);
+            }
+        }
+        System.out.println(user.getCurrency());
+        //userRepository.save(user);
+        return null;
     }
 }

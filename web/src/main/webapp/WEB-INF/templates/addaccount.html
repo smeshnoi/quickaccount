@@ -38,7 +38,7 @@
                         </td>
                         <td>
                             <select id="typeAccount" name="typeAccount" th:field="*{typeAccount.id}">
-                                <option th:each="typeAcc: ${typeAccounts}" th:value="${typeAcc.getId()}" th:text="${typeAcc.getTypeAccountName()}" class="form-control">3</option>
+                                <option th:each="typeAcc: ${typeAccounts}" th:value="${typeAcc.id}" th:text="${typeAcc.getTypeAccountName()}" class="form-control">3</option>
                             </select>
                         </td>
                     </tr>
