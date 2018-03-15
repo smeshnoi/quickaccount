@@ -54,6 +54,9 @@ public class User extends BaseIdEntity {
     @ManyToMany
     private Set<Role> roles = new HashSet<>();
 
+    @OneToMany(mappedBy = "userContractor")
+    private Set<Contractor> contractorSet = new HashSet<>();
+
     public User(String login, String firstName, String lastName, Currency currency, String password, Contact contact) {
         this.login = login;
         this.firstName = firstName;

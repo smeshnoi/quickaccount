@@ -5,6 +5,7 @@ import com.quickaccount.entity.User;
 import com.quickaccount.service.CurrencyService;
 import com.quickaccount.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,11 +17,13 @@ import java.util.List;
 public class LoginController {
     private CurrencyService currencyService;
     private UserService userService;
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public LoginController(CurrencyService currencyService, UserService userService) {
+    public LoginController(CurrencyService currencyService, UserService userService, PasswordEncoder passwordEncoder) {
         this.currencyService = currencyService;
         this.userService = userService;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @ModelAttribute("user")
@@ -57,6 +60,9 @@ public class LoginController {
     @PostMapping(value = "/registry")
     public String addUser(User user) {
         System.out.println(user.getCurrency().getCurrency());
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        System.out.println(user);
+        //$2a$10$LwpL7e/dxFDk8ynbwvISqOKgD.ANKv7SAQWmkjfN3z9uQoPjE2CW.
 //        Set<Role> roleSet = r
 //        user.setRoles();
         //userService.save(user);

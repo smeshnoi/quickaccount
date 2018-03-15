@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "address")
-public class Address extends BaseIdEntity {
+public class Address extends BaseIdEntity{
 
     @Column(name = "city", nullable = false)
     private String city;
@@ -28,14 +28,7 @@ public class Address extends BaseIdEntity {
     private int office;
 
     @OneToOne
-    @JoinColumn(name = "id", nullable = false, unique = true)
+    @JoinColumn(name = "contractor_id", nullable = false, unique = true)
     private ContractorLegalEntity contractorLegalEntity;
 
-    public Address(Long id, String city, String street, String building, int office) {
-        super(id);
-        this.city = city;
-        this.street = street;
-        this.building = building;
-        this.office = office;
-    }
 }

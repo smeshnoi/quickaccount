@@ -19,4 +19,8 @@ public class Contractor extends BaseIdEntity {
     @Column(name = "type_contractor")
     private String typeContractor;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User userContractor;
+
 }
