@@ -65,7 +65,7 @@ public class LoginController {
         //$2a$10$LwpL7e/dxFDk8ynbwvISqOKgD.ANKv7SAQWmkjfN3z9uQoPjE2CW.
 //        Set<Role> roleSet = r
 //        user.setRoles();
-        //userService.save(user);
+        userService.save(user);
         return "login";
     }
 }

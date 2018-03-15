@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,11 +23,13 @@ import java.util.stream.Collectors;
 public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
     private RoleRepository roleRepository;
+    //private UsersRolesRepository usersRolesRepository;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
+        //this.usersRolesRepository = usersRolesRepository;
     }
 
     @Override
@@ -53,13 +56,19 @@ public class UserServiceImpl implements UserService {
     public User save(User user) {
         List<Role> addList = new ArrayList<>();
         List<Role> all = roleRepository.findAll();
+        HashSet<Role> roles = new HashSet<>(roleRepository.findAll());
+        user.setRoles(roles);
         for (Role role : all) {
             if (role.getName().equals("USER")) {
                 addList.add(role);
+
+                //usersRolesRepository.save(new UsersRoles(save, role));
             }
         }
-        System.out.println(user.getCurrency());
-        //userRepository.save(user);
+        User save = userRepository.save(user);
+        System.out.println(save);
+        //User save = userRepository.save(user);
+
         return null;
     }
 }
