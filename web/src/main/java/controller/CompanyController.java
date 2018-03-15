@@ -47,13 +47,8 @@ public class CompanyController {
     @PostMapping(value = "/companies")
     public String addCompany(Company company, User user, Authentication authentication, Principal principal) {
         SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println(company);
-        System.out.println(user.getLogin());
         user = userService.getUserbyLogin(principal.getName());
         company.setUserCompany(user);
-        System.out.println(principal.getName());
-        System.out.println(company.getUserCompany().getLogin() + " " + company.getUserCompany());
-        System.out.println(company.getCompanyName() + " " + company.getContact().getPhone());
         companyService.save(company);
         return "company";
     }

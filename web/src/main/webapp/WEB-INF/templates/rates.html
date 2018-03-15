@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rates</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/qstyle.css">
+    <!-- jQuery library -->
+</head>
+<body>
+<div id="container" class="container">
+    <div id="header" class="">
+
+    </div>
+    <div id="navigation" class="navigation">
+
+    </div>
+    <div id="menu" class="menu" th:replace="menu::menu">
+
+    </div>
+    <div id="content">
+        <p class="p">
+        <form th:action="@{/addrate}" method="get">
+            <button  class="btn btn-success" type="submit" >Add Rate</button>
+        </form>
+        </p>
+        <p class="p">
+        <table class="table">
+            <thead>
+            <tr>
+                <td scope="col">Date</td>
+                <td scope="col">Currency In</td>
+                <td scope="col">Currency Out</td>
+                <td scope="col">Rate</td>
+            </tr>
+            </thead>
+            <tr th:each="rate : ${rates}">
+                <td th:text="${rate}"></td>
+                <td th:text="${rate}"></td>
+                <td th:text="${rate}"></td>
+                <td th:text="${rate}"></td>
+            </tr>
+        </table>
+        </p>
+
+    </div>
+    <div id="clear">
+
+    </div>
+    <div id="footer" class="footer">
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

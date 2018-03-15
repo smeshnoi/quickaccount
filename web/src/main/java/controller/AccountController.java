@@ -93,7 +93,7 @@ public class AccountController {
             model.addAttribute("pageCount", getPageArray(allPage));
             Pageable pageable = new PageRequest(page, account.getLimitPage());
             //List<Account> accountList = accountService.findAllByAccountNameContainingAndTypeAccountTypeDC(account.getSearchText(), typeAccDC, pageable);
-            model.addAttribute("accounts" , accountList);
+            model.addAttribute("accounts" , unionList);
         }
         return "account";
     }
@@ -118,8 +118,11 @@ public class AccountController {
 
     @PostMapping("/addaccount")
     public String addAccount(Model model, Account account, Principal principal) {
+        User user = new User();
+        user = userService.getUserbyLogin(principal.getName());
         System.out.println(account.getTypeAccount().getTypeAccountName());
-        //accountService.save(account);
+        account.setUserAccount(user);
+        accountService.save(account);
         return "account";
     }
 

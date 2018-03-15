@@ -53,8 +53,8 @@
                             <label for="currency" th:text="#{registryform.currency}">Currency:</label>
                         </td>
                         <td>
-                            <select class="form-control" id="currency" name="currency" th:field="*{currency}">
-                                <option th:each="currency : ${currencies}" th:value="${currency.currency}" th:text="${currency.getCurrency()}">USD</option>
+                            <select class="form-control" id="currency" name="currency" th:field="*{currency.id}">
+                                <option th:each="currency : ${currencies}" th:value="${currency.id}" th:text="${currency.getCurrency()}">USD</option>
                             </select>
                         </td>
                     </tr>

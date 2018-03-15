@@ -21,15 +21,16 @@
     </div>
     <div id="content">
         <p>
-        <form  th:action="@{/contractorlegalentity}" method="post" th:object="${contractorIndividual}">
+        <form  th:action="@{/contractorindividual}" method="post" th:object="${contractorIndividual}">
             <div class="form-group">
                 <table>
                     <tr>
                         <td>
-                            <label for="contractorName" th:text="#{registryform.contractorName}">Company:</label>
+                            <label for="contractorName" th:text="#{registryform.contractorName}">Name:</label>
                         </td>
                         <td>
                             <input th:field="*{contractorName}" class="form-control" type="text" id="contractorName" name="contractorName" placeholder="Enter contractor name">
+                            <input th:field="*{typeContractor}" class="form-control" type="hidden" id="typeContractor" name="typeContractor" th:value="INDIVIDUAL">
                         </td>
                     </tr>
                     <tr>

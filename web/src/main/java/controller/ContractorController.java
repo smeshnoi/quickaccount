@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.security.Principal;
+
 @Controller
 public class ContractorController {
     private ContractorService contractorService;
@@ -40,12 +42,13 @@ public class ContractorController {
     }
 
     @PostMapping("/contractorlegalentity")
-    public String addContractorLegalEntity(ContractorLegalEntity contractorLegalEntity) {
+    public String addContractorLegalEntity(ContractorLegalEntity contractorLegalEntity, Principal principal) {
         return "contractors";
     }
 
     @PostMapping("/contractorindividual")
-    public String addContractorIndividual(ContractorIndividual contractorIndividual) {
+    public String addContractorIndividual(ContractorIndividual contractorIndividual, Principal principal) {
+        contractorService.saveContractorIndividual(contractorIndividual);
         return "contractors";
     }
 

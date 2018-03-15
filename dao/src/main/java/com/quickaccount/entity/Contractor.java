@@ -16,4 +16,7 @@ public class Contractor extends BaseIdEntity {
     @Column(name = "contractor_name", nullable = false, unique = true)
     private String contractorName;
 
+    @Column(name = "type_contractor")
+    private String typeContractor;
+
 }

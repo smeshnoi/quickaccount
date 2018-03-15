@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Rate</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/qstyle.css">
+    <!-- jQuery library -->
+</head>
+<body>
+<div id="container" class="container">
+    <div id="header" class="">
+
+    </div>
+    <div id="navigation" class="navigation">
+
+    </div>
+    <div id="menu" class="menu" th:replace="menu::menu">
+
+    </div>
+    <div id="content">
+        <form  th:action="@{/rates}" method="post" th:object="${rate}">
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="rateDate" th:text="#{registryform.rateDate}">Date:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{rateDate}" class="form-control" type="date" id="rateDate" name="rateDate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="currencyIn" th:text="#{registryform.currency}">Currency:</label>
+                        </td>
+                        <td>
+                            <select class="form-control" id="currencyIn" name="currencyIn" th:field="*{currencyIn.id}">
+                                <option th:each="currency : ${currencies}" th:value="${currency.id}" th:text="${currency.getCurrency()}">USD</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="currencyOut" th:text="#{registryform.currencyUser}">C:</label>
+                        </td>
+                        <td>
+                            <input disabled th:field="*{currencyOut.id}" th:placeholder="${user.getCurrency().id}" th:value="${user.getCurrency().id}" class="form-control" type="text" id="currencyOut" name="currencyOut">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-success" type="submit" th:text="#{registryform.buttonRate}"></button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+    </div>
+    <div id="clear">
+
+    </div>
+    <div id="footer" class="footer">
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

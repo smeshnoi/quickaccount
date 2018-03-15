@@ -1,7 +1,6 @@
 package controller;
 
 import com.quickaccount.entity.Currency;
-import com.quickaccount.entity.Role;
 import com.quickaccount.entity.User;
 import com.quickaccount.service.CurrencyService;
 import com.quickaccount.service.UserService;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
-import java.util.Set;
 
 @Controller
 public class LoginController {
@@ -61,7 +59,7 @@ public class LoginController {
         System.out.println(user.getCurrency().getCurrency());
 //        Set<Role> roleSet = r
 //        user.setRoles();
-        userService.save(user);
+        //userService.save(user);
         return "login";
     }
 }
