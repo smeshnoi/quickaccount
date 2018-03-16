@@ -13,10 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.ArrayList;
@@ -123,6 +120,13 @@ public class AccountController {
         System.out.println(account.getTypeAccount().getTypeAccountName());
         account.setUserAccount(user);
         accountService.save(account);
+        return "account";
+    }
+
+    @GetMapping("/editaccount/{id}")
+    public String showEditAccountPage(Model model, Account account, Integer page, @PathVariable("id") String id) {
+        long accountId = Long.parseLong(id);
+        accountService.update(account, accountId);
         return "account";
     }
 

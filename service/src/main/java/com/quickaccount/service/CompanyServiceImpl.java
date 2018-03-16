@@ -28,4 +28,19 @@ public class CompanyServiceImpl implements CompanyService {
     public Company save(Company company) {
         return companyRepository.save(company);
     }
+
+    @Override
+    public Company findCompanyById(Long id) {
+        Company companyById = companyRepository.findCompanyById(id);
+        return companyById;
+    }
+
+    @Override
+    public Company update(Company company, Long id) {
+        Company companyById = companyRepository.findCompanyById(id);
+        companyById.setCompanyName(company.getCompanyName());
+        companyById.setDescription(company.getDescription());
+        companyById.setContact(company.getContact());
+        return companyById;
+    }
 }

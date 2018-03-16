@@ -50,4 +50,12 @@ public class AccountServiceImpl implements AccountService {
     public List<Account> findAllByUserAccount(User user) {
         return accountRepository.findAllByUserAccount(user);
     }
+
+    @Override
+    public Account update(Account account, Long id) {
+        Account accountById = accountRepository.findById(id);
+        accountById.setAccountName(account.getAccountName());
+        accountById.setTypeAccount(account.getTypeAccount());
+        return null;
+    }
 }

@@ -11,8 +11,7 @@ import java.util.List;
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
     int countAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC);
-
     List<Account> findAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC, Pageable pageable);
-
     List<Account> findAllByUserAccount(User user);
+    Account findById(Long id);
 }

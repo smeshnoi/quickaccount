@@ -36,10 +36,10 @@
                 </tr>
             </thead>
                 <tr th:each="company : ${companies}">
-                    <td th:text="${company.getCompanyName()}"></td>
-                    <td th:text="${company.getDescription()}"></td>
-                    <td th:text="${company.getContact().email}"></td>
-                    <td th:text="${company.getContact().phone}"></td>
+                    <td><a th:href="@{'/editcompany/' + ${company.getId()}}" th:text="${company.getCompanyName()}"></a></td>
+                    <td><a th:href="@{'/editcompany/' + ${company.getId()}}" th:text="${company.getDescription()}"></a></td>
+                    <td><a th:href="@{'/editcompany/' + ${company.getId()}}" th:text="${company.getContact().email}"></a></td>
+                    <td><a th:href="@{'/editcompany/' + ${company.getId()}}" th:text="${company.getContact().phone}"></a></td>
                 </tr>
             </table>
         </p>

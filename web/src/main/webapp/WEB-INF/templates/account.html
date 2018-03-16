@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8">
     <title>Accounts</title>
@@ -60,7 +61,10 @@
             </taable>
             <table class="table">
                 <tr th:each="account : ${accounts}">
-                    <td th:text="${account.getAccountName()}">test name</td>
+                    <td th:if="${account.getUserAccount() == null}" th:text="${account.getAccountName()}">test name</td>
+                    <td th:if="${account.getUserAccount() != null}">
+                        <a th:href="@{'/editaccount/' + ${account.getId()}}" th:text="${account.getAccountName()}"></a>
+                    </td>
                 </tr>
             </table>
 

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
@@ -37,6 +38,7 @@ public class CompanyController {
         return "addcompany";
     }
 
+
     @GetMapping(value = "/companies")
     public String showCompaniesPage(Model model, Principal principal) {
         User user = userService.getUserbyLogin(principal.getName());
@@ -51,5 +53,20 @@ public class CompanyController {
         company.setUserCompany(user);
         companyService.save(company);
         return "company";
+    }
+
+    @GetMapping(value = "/editcompany/{id}")
+    public String showEditCompanyPage(Model model, Company company, @PathVariable("id") String id) {
+        Long companyId = Long.parseLong(id);
+        model.addAttribute("company", companyService.findCompanyById(companyId));
+        return "editcompany";
+    }
+
+    @PostMapping(value = "/editcompany/{id}")
+    public String editCompany(Model model, Company company, @PathVariable("id") String id) {
+        //System.out.println(company + " " + id);
+        Long companyId = Long.parseLong(id);
+        companyService.update(company, companyId);
+        return "editcompany";
     }
 }
