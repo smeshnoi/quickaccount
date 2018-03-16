@@ -58,4 +58,9 @@ public class AccountServiceImpl implements AccountService {
         accountById.setTypeAccount(account.getTypeAccount());
         return null;
     }
+
+    @Override
+    public Account findAccountById(Long id) {
+        return accountRepository.findById(id);
+    }
 }

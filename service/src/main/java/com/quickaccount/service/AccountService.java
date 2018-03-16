@@ -15,4 +15,5 @@ public interface AccountService {
     int countAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC);
     List<Account> findAllByUserAccount(User user);
     Account update(Account account, Long id);
+    Account findAccountById(Long id);
 }

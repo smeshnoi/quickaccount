@@ -3,37 +3,37 @@
       xmlns:sec="http://www.thymeleaf.org/extras/thymeleaf-extras-springsecurity4">
     <div id="menu" class="menu" th:fragment="menu">
         <table>
-            <tr>
+            <tr class="row">
                 <td>
-                    <a class="btn btn-outline-secondary" th:href="@{/registry}">Registry</a>
+                    <a class="a" th:href="@{/registry}">Registry</a>
                 </td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td>
-                    <a class="btn btn-outline-secondary" th:href="@{/companies}">Companies</a>
+                    <a class="a" th:href="@{/companies}">Companies</a>
                 </td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td>
-                    <a class="btn btn-outline-secondary" th:href="@{/contractors}">Contractors</a>
+                    <a class="a" th:href="@{/contractors}">Contractors</a>
                 </td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td>
-                    <a class="btn btn-outline-secondary" th:href="@{/account}">Accounts</a>
+                    <a class="a" th:href="@{/account}">Accounts</a>
                 </td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td>
-                    <a class="btn btn-outline-secondary" th:href="@{/rates}">Rates</a>
+                    <a class="a" th:href="@{/rates}">Rates</a>
                 </td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td>
-                    <a class="btn btn-outline-secondary" th:href="@{/transactions}">Transactions</a>
+                    <a class="a" th:href="@{/transactions}">Transactions</a>
                 </td>
             </tr>
-            <tr>
+            <tr class="row">
                 <td >
                     <a sec:authorize="isAuthenticated()" class="a" th:href="@{/logout}">Logout</a>
                 </td>

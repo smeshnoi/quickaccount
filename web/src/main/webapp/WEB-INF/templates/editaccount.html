@@ -13,7 +13,7 @@
     <div id="header" class="">
 
     </div>
-    <div id="navigation" class="navigation">
+    <div id="navigation" class="navigation" th:replace="navigation::navigation">
 
     </div>
     <div id="menu" class="menu" th:replace="menu::menu">
@@ -21,7 +21,7 @@
     </div>
     <div id="content">
         <p>
-        <form  th:action="@{/addaccount}" method="post" th:object="${account}">
+        <form  th:action="@{'/editaccount/' + ${account.getId()}}" method="post" th:object="${account}">
             <div class="form-group">
                 <table>
                     <tr>
@@ -44,7 +44,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button class="btn btn-success" type="submit" th:text="#{registryform.buttonAccount}"></button>
+                            <button class="btn btn-success" type="submit" th:text="#{registryform.buttonAccountEdit}"></button>
                         </td>
 
                     </tr>

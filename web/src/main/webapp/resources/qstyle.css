@@ -14,7 +14,7 @@ body {
 
 #header {
     background: #838283;
-    height: 200px;
+    height: 170px;
     width: 1170px;
 }
 
@@ -22,12 +22,13 @@ body {
     background: #a2a2a2;
     width: 1170px;
     height: 20px;
+    text-align-all: right;
 }
 
 #menu {
     background: #333333;
     float: left;
-    width: 200px;
+    width: 170px;
     height: 600px;
 }
 
@@ -45,6 +46,6 @@ body {
 
 #footer {
     background: #838283;
-    height: 180px;
+    height: 150px;
     width: 1170px;
 }

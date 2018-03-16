@@ -126,8 +126,15 @@ public class AccountController {
     @GetMapping("/editaccount/{id}")
     public String showEditAccountPage(Model model, Account account, Integer page, @PathVariable("id") String id) {
         long accountId = Long.parseLong(id);
+        model.addAttribute("account", accountService.findAccountById(accountId));
+        return "editaccount";
+    }
+
+    @PostMapping("/editaccount/{id}")
+    public String editAccount(Model model, Account account, Integer page, @PathVariable("id") String id) {
+        long accountId = Long.parseLong(id);
         accountService.update(account, accountId);
-        return "account";
+        return "editaccount";
     }
 
 }
