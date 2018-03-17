@@ -33,11 +33,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="currencyIn" th:text="#{registryform.currency}">Currency:</label>
+                            <label for="currencyIn" th:text="#{registryform.currencyIn}">Currency:</label>
                         </td>
                         <td>
-                            <select class="form-control" id="currencyIn" name="currencyIn" th:field="*{currencyIn.id}">
-                                <option th:each="currency : ${currencies}" th:value="${currency.id}" th:text="${currency.getCurrency()}">USD</option>
+                            <select class="form-control" id="currencyIn" name="currencyIn" th:field="*{currencyIn}">
+                                <option th:if="${currency.id} != ${user.getCurrency().id}" th:each="currency : ${currencies}" th:value="${currency.id}" th:text="${currency.getCurrency()}">USD</option>
                             </select>
                         </td>
                     </tr>
@@ -46,7 +46,17 @@
                             <label for="currencyOut" th:text="#{registryform.currencyUser}">C:</label>
                         </td>
                         <td>
-                            <input disabled th:field="*{currencyOut.id}" th:placeholder="${user.getCurrency().id}" th:value="${user.getCurrency().id}" class="form-control" type="text" id="currencyOut" name="currencyOut">
+                            <select class="form-control" id="currencyOut" name="currencyOut" th:field="*{currencyOut}">
+                                <option th:if="${currency.id} == ${user.getCurrency().id}" th:each="currency : ${currencies}" th:value="${currency.id}" th:text="${currency.getCurrency()}">USD</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="rate" th:text="#{registryform.rate}">Rate:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{rate}" class="form-control" type="text" id="rate" name="rate">
                         </td>
                     </tr>
                     <tr>

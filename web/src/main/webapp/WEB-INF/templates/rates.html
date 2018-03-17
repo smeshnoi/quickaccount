@@ -27,7 +27,7 @@
         </p>
         <p class="p">
         <table class="table">
-            <thead>
+            <thead class="">
             <tr>
                 <td scope="col">Date</td>
                 <td scope="col">Currency In</td>
@@ -36,10 +36,10 @@
             </tr>
             </thead>
             <tr th:each="rate : ${rates}">
-                <td th:text="${rate}"></td>
-                <td th:text="${rate}"></td>
-                <td th:text="${rate}"></td>
-                <td th:text="${rate}"></td>
+                <td th:text="${rate.rateDate}"></td>
+                <td th:text="${rate.getCurrencyIn().currency}"></td>
+                <td th:text="${rate.getCurrencyOut().currency}"></td>
+                <td th:text="${rate.rate}"></td>
             </tr>
         </table>
         </p>

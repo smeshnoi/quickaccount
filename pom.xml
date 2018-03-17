@@ -131,6 +131,12 @@
       <version>1.8.13</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>5.4.1.Final</version>
+    </dependency>
+
   </dependencies>
 
   <reporting>

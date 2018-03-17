@@ -1,6 +1,8 @@
 package controller;
 
+import com.quickaccount.dto.RateDto;
 import com.quickaccount.entity.Rate;
+import com.quickaccount.entity.User;
 import com.quickaccount.service.CurrencyService;
 import com.quickaccount.service.RateService;
 import com.quickaccount.service.UserService;
@@ -27,20 +29,22 @@ public class RateController {
 
     @GetMapping("/rates")
     public String getRatesPage (Model model, Principal principal) {
+        User userbyLogin = userService.getUserbyLogin(principal.getName());
         model.addAttribute("currencies", currencyService.findAll());
-        model.addAttribute("rates");
+        model.addAttribute("rates", rateService.findAllByUser(userbyLogin));
         return "rates";
     }
 
     @PostMapping("/rates")
-    public String addRate (Rate rate, Principal principal) {
-        System.out.println(rate);
+    public String addRate (RateDto rate, Principal principal) {
+        User userbyLogin = userService.getUserbyLogin(principal.getName());
+        rateService.save(rate, userbyLogin);
         return "rates";
     }
 
     @GetMapping("/addrate")
     public String addRatePage (Model model, Principal principal) {
-        model.addAttribute("rate", new Rate());
+        model.addAttribute("rate", new RateDto());
         model.addAttribute("currencies", currencyService.findAll());
         model.addAttribute("rates");
         model.addAttribute("user", userService.getUserbyLogin(principal.getName()));

@@ -22,6 +22,8 @@ public class ContractorLegalEntity extends Contractor {
     @Column(name = "unn")
     private String unn;
 
-    @OneToOne(mappedBy = "contractorLegalEntity")
-    private Address address;
+    @Column(name = "address")
+    private String address;
+//    @OneToOne(mappedBy = "contractorLegalEntity")
+//    private Address address;
 }
