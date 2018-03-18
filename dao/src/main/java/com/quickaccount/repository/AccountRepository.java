@@ -14,4 +14,5 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     List<Account> findAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC, Pageable pageable);
     List<Account> findAllByUserAccount(User user);
     Account findById(Long id);
+    List<Account> findAllByUserAccountIn(List<User> list);
 }

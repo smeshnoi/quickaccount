@@ -21,8 +21,12 @@ public class TransactionAccount extends BaseIdEntity {
     private Company company;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", nullable = false)
-    private Account account;
+    @JoinColumn(name = "account_debit_id", nullable = false)
+    private Account accountDebit;
+
+    @ManyToOne
+    @JoinColumn(name = "account_credit_id", nullable = false)
+    private Account accountCredit;
 
     @Enumerated(value = EnumType.STRING)
     @Column(name = "type_dc", nullable = false)
@@ -32,20 +36,30 @@ public class TransactionAccount extends BaseIdEntity {
     @JoinColumn(name = "currency_id", nullable = false)
     private Currency currency;
 
-    @Column(name = "amount", nullable = false)
-    private Double amount;
+    @Column(name = "amount_debit", nullable = false)
+    private Double amountDebit;
+
+    @Column(name = "amount_credit", nullable = false)
+    private Double amountCredit;
 
     @ManyToOne
     @JoinColumn(name = "contractor_id", nullable = false)
     private Contractor contractor;
 
-    public TransactionAccount(LocalDate date, Company company, Account account, TypeDC typeDC, Currency currency, Double amount, Contractor contractor) {
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    private User userTransaction;
+
+    public TransactionAccount(LocalDate date, Company company, Account accountDebit,
+                              Account accountCredit, Currency currency, Double amountDebit,
+                              Double amountCredit, Contractor contractor) {
         this.date = date;
         this.company = company;
-        this.account = account;
-        this.typeDC = typeDC;
+        this.accountDebit = accountDebit;
+        this.accountCredit = accountCredit;
         this.currency = currency;
-        this.amount = amount;
+        this.amountDebit = amountDebit;
+        this.amountCredit = amountCredit;
         this.contractor = contractor;
     }
 }

@@ -2,6 +2,7 @@ package controller;
 
 import com.quickaccount.entity.ContractorIndividual;
 import com.quickaccount.entity.ContractorLegalEntity;
+import com.quickaccount.entity.User;
 import com.quickaccount.service.ContractorService;
 import com.quickaccount.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,8 +38,8 @@ public class ContractorController {
 
     @GetMapping("/contractors")
     public String getContractorPage(Model model, Principal principal) {
-
-        model.addAttribute("contractors", 1);
+        User userbyLogin = userService.getUserbyLogin(principal.getName());
+        model.addAttribute("contractors", contractorService.findContractorsByUser(userbyLogin));
         return "contractors";
     }
 

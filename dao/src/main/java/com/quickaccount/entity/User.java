@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.Transaction;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -56,6 +57,9 @@ public class User extends BaseIdEntity {
 
     @OneToMany(mappedBy = "userContractor")
     private Set<Contractor> contractorSet = new HashSet<>();
+
+//    @OneToMany(mappedBy = "userTransaction")
+//    private Set<Transaction> transactionSetSet = new HashSet<>();
 
     public User(String login, String firstName, String lastName, Currency currency, String password, Contact contact) {
         this.login = login;

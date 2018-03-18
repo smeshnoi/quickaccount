@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface TransactionRepository extends JpaRepository<TransactionAccount, Long> {
     List<TransactionAccount> findAllByCompanyUserCompany(Company company);
+    //List<TransactionAccount> findAllByUser();
 }

@@ -39,7 +39,7 @@ public class ContractorServiceImpl implements ContractorService {
     }
 
     @Override
-    public List<Contractor> findContractorsByUser(Contractor contractor, User user) {
+    public List<Contractor> findContractorsByUser(User user) {
         contractorRepository.findAllByUserContractorOrderByContractorName(user);
         return null;
     }

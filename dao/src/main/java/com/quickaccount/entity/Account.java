@@ -27,8 +27,11 @@ public class Account extends BaseIdEntity {
     @JoinColumn(name = "user_id")
     private User userAccount;
 
-    @OneToMany(mappedBy = "account")
-    private Set<TransactionAccount> transactionAccountSet = new HashSet<>();
+    @OneToMany(mappedBy = "accountDebit")
+    private Set<TransactionAccount> transactionAccountDebitSet = new HashSet<>();
+
+    @OneToMany(mappedBy = "accountCredit")
+    private Set<TransactionAccount> transactionAccountCreditSet = new HashSet<>();
 
     public Account(String accountName, TypeAccount typeAccount, User userAccount) {
         this.accountName = accountName;

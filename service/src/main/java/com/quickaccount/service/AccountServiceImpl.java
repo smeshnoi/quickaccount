@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -62,5 +63,19 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Account findAccountById(Long id) {
         return accountRepository.findById(id);
+    }
+
+    @Override
+    public List<Account> getAllAccounts(User userbyLogin) {
+        List<Account> listUserAccount = accountRepository.findAllByUserAccount(userbyLogin);
+        List<Account> accountList = accountRepository.findAllByUserAccount(null);
+        List<User> userList = new ArrayList<>();
+        //userList.add(new User());
+        userList.add(userbyLogin);
+        List<Account> allByUserAccountContaining = accountRepository.findAllByUserAccountIn(userList);
+        List<Account> unionList = new ArrayList<>();
+        unionList.addAll(accountList);
+        unionList.addAll(listUserAccount);
+        return allByUserAccountContaining;
     }
 }

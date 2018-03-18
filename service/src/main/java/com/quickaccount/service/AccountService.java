@@ -16,4 +16,6 @@ public interface AccountService {
     List<Account> findAllByUserAccount(User user);
     Account update(Account account, Long id);
     Account findAccountById(Long id);
+
+    List<Account> getAllAccounts(User userbyLogin);
 }

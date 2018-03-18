@@ -21,39 +21,79 @@
     </div>
     <div id="content">
         <p>
-        <form  th:action="@{/transactions}" method="post" th:object="${transaction}">
+        <form  th:action="@{/transactions}" method="post" th:object="${transactionDto}">
             <div class="form-group">
                 <table>
+                    <td>
+                        <label for="transactionDate">Transaction Date:</label>
+                    </td>
+                    <td>
+                        <input disabled th:field="*{transactionDate}" class="form-control" type="date" id="transactionDate" name="transactionDate">
+                    </td>
                     <tr>
                         <td>
-                            <label for="" th:text="#{registryform.}">:</label>
+                            <label for="currencyTransaction">Transaction Currency:</label>
                         </td>
                         <td>
-                            <input th:field="*{}" class="form-control" type="text" id="" name="" placeholder="">
+                            <select class="form-control" id="currencyTransaction" name="currencyTransaction" th:field="*{currency.id}">
+                                <option th:if="${currency.id} == ${transactionDto.getCurrency().id}" th:each="currency : ${currencies}" th:value="${currency.id}" th:text="${currency.getCurrency()}">USD</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="" th:text="#{registryform.}">:</label>
+                            <label for="companyTransaction">Company:</label>
                         </td>
                         <td>
-                            <input th:field="*{}" class="form-control" type="text" id="" name="" placeholder="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="" th:text="#{registryform.}">Email:</label>
-                        </td>
-                        <td>
-                            <input th:field="*{}" class="form-control" type="" id="" name="" placeholder="">
+                            <select class="form-control" id="companyTransaction" name="companyTransaction" th:field="*{company.id}">
+                                <option th:each="company : ${companies}" th:value="${company.id}" th:text="${company.getCompanyName()}">company name</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="" th:text="#{registryform.}">:</label>
+                            <label for="debitAmount" >Debit Amount:</label>
                         </td>
                         <td>
-                            <input th:field="*{}" class="form-control" type="text" id="" name="" placeholder="">
+                            <input th:field="*{amountDebit}" class="form-control" type="number" id="debitAmount" name="" placeholder="Enter debit amount">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="accountDebitTransaction">Debit account:</label>
+                        </td>
+                        <td>
+                            <select class="form-control" id="accountDebitTransaction" name="accountDebitTransaction" th:field="*{accountDebit.id}">
+                                <option th:each="account : ${accounts}" th:value="${account.id}" th:text="${account.getAccountName()}">account</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="creditAmount" >Credit Amount:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{amountCredit}" class="form-control" type="number" id="creditAmount" name="" placeholder="Enter credit amount">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="accountCreditTransaction">Credit account:</label>
+                        </td>
+                        <td>
+                            <select class="form-control" id="accountCreditTransaction" name="accountCreditTransaction" th:field="*{accountCredit.id}">
+                                <option th:each="account : ${accounts}" th:value="${account.id}" th:text="${account.getAccountName()}">account</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contractor">Contractor:</label>
+                        </td>
+                        <td>
+                            <select class="form-control" id="contractor" name="contractor" th:field="*{contractor.id}">
+                                <option th:each="contractor : ${contractors}" th:value="${contractor.id}" th:text="${contractor.getContractorName()}">account</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
