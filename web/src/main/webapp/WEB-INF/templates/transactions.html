@@ -58,22 +58,23 @@
             <thead>
             <tr>
                 <td scope="col">Date Transaction</td>
-                <td scope="col">Account</td>
                 <td scope="col">Debit</td>
+                <td scope="col">Account debit</td>
                 <td scope="col">Credit</td>
-                <td scope="col">Description</td>
-                <td scope="col">Description</td>
+                <td scope="col">Account credit</td>
+                <td scope="col">Company</td>
+                <td scope="col">Contractor</td>
                 <td scope="col">Description</td>
             </tr>
             </thead>
-            <tr th:each="transaction : ${transaction}">
-                <td th:text="${transaction}"></td>
-                <td th:text="${transaction}"></td>
-                <td th:text="${transaction}"></td>
-                <td th:text="${transaction}"></td>
-                <td th:text="${transaction}"></td>
-                <td th:text="${transaction}"></td>
-                <td th:text="${transaction}"></td>
+            <tr th:each="transaction : ${transactions}">
+                <td th:text="${transaction.getTransactionDate()}"></td>
+                <td th:text="${transaction.getAmountDebit()}"></td>
+                <td th:text="${transaction.accountDebit.getAccountName()}"></td>
+                <td th:text="${transaction.getAmountCredit()}"></td>
+                <td th:text="${transaction.accountCredit.getAccountName()}"></td>
+                <td th:text="${transaction.company.getCompanyName()}"></td>
+                <td th:text="${transaction.getDescription()}"></td>
             </tr>
         </table>
         </p>

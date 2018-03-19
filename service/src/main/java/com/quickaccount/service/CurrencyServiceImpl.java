@@ -23,4 +23,9 @@ public class CurrencyServiceImpl implements CurrencyService {
     public List<Currency> findAll() {
         return currencyRepository.findAll();
     }
+
+    @Override
+    public Currency findOne(Long id) {
+        return currencyRepository.getOne(id);
+    }
 }

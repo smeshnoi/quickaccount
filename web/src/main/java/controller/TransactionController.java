@@ -1,6 +1,7 @@
 package controller;
 
 import com.quickaccount.dto.TransactionDto;
+import com.quickaccount.entity.Currency;
 import com.quickaccount.entity.Rate;
 import com.quickaccount.entity.User;
 import com.quickaccount.service.*;
@@ -46,6 +47,7 @@ public class TransactionController {
         model.addAttribute("user", userbyLogin);
         model.addAttribute("currencies", currencyService.findAll());
         model.addAttribute("transaction", new TransactionDto());
+        model.addAttribute("transactions", transactionService.findAllByUser(userbyLogin));
         return "transactions";
     }
 
@@ -54,9 +56,10 @@ public class TransactionController {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
         LocalDate date = LocalDate.parse(transactionDto.getTransactionDate(),
                 DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH));
+        Currency currency = currencyService.findOne(transactionDto.getCurrency().getId());
         List<Rate> allByDate = rateService.findAllByDate(userbyLogin, date);
         for (Rate rate : allByDate) {
-            if (rate.getCurrencyIn().getCurrency().equals(userbyLogin.getCurrency().getCurrency())) {
+            if (rate.getCurrencyIn().getCurrency().equals(currency.getCurrency())) {
                 model.addAttribute("transactionDto", transactionDto);
                 model.addAttribute("currencies", currencyService.findAll());
                 model.addAttribute("companies", companyService.findAllByUserCompany(userbyLogin));

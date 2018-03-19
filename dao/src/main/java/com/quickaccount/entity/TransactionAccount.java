@@ -28,9 +28,8 @@ public class TransactionAccount extends BaseIdEntity {
     @JoinColumn(name = "account_credit_id", nullable = false)
     private Account accountCredit;
 
-    @Enumerated(value = EnumType.STRING)
-    @Column(name = "type_dc", nullable = false)
-    private TypeDC typeDC;
+    @Column(name = "description")
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "currency_id", nullable = false)

@@ -11,4 +11,6 @@ public interface TransactionService {
     List<TransactionAccount> findAllByCompany(Company company);
 
     TransactionAccount addTransacton(TransactionDto transactionDto, User userbyLogin);
+
+    List<TransactionAccount> findAllByUser(User user);
 }

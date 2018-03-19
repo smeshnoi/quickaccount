@@ -39,4 +39,6 @@ public class TransactionDto {
 
     @NotEmpty(message = "not null")
     private Contractor contractor;
+
+    private String description;
 }

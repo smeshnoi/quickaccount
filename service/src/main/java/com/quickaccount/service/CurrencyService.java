@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CurrencyService {
     List<Currency> findAll();
+    Currency findOne(Long id);
 }

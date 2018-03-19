@@ -49,7 +49,13 @@ public class TransactionServiceImpl implements TransactionService {
         TransactionAccount transactionAccount = new TransactionAccount(date, company, adebit,
                 accountDebit, acredit, accountCredit, currency);
         transactionAccount.setContractor(contractor);
+        transactionAccount.setDescription(transactionDto.getDescription());
         TransactionAccount save = transactionRepository.save(transactionAccount);
         return save;
+    }
+
+    @Override
+    public List<TransactionAccount> findAllByUser(User user) {
+        return transactionRepository.findAllByCompanyUserCompany(user);
     }
 }

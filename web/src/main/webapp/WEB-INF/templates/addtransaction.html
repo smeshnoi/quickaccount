@@ -28,7 +28,7 @@
                         <label for="transactionDate">Transaction Date:</label>
                     </td>
                     <td>
-                        <input disabled th:field="*{transactionDate}" class="form-control" type="date" id="transactionDate" name="transactionDate">
+                        <input th:field="*{transactionDate}" class="form-control" type="date" id="transactionDate" name="transactionDate">
                     </td>
                     <tr>
                         <td>
@@ -94,6 +94,14 @@
                             <select class="form-control" id="contractor" name="contractor" th:field="*{contractor.id}">
                                 <option th:each="contractor : ${contractors}" th:value="${contractor.id}" th:text="${contractor.getContractorName()}">account</option>
                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="description" >Description:</label>
+                        </td>
+                        <td>
+                            <input th:field="*{description}" class="form-control" type="text" id="description" name="description" placeholder="Enter credit amount">
                         </td>
                     </tr>
                     <tr>
