@@ -50,16 +50,16 @@ public class TransactionAccount extends BaseIdEntity {
 //    @JoinColumn(name = "user_id")
 //    private User userTransaction;
 
-    public TransactionAccount(LocalDate date, Company company, Account accountDebit,
-                              Account accountCredit, Currency currency, Double amountDebit,
-                              Double amountCredit, Contractor contractor) {
+    public TransactionAccount(LocalDate date, Company company, Double amountDebit, Account accountDebit,
+                              Double amountCredit, Account accountCredit, Currency currency
+                              ) {
         this.date = date;
         this.company = company;
+        this.amountDebit = amountDebit;
         this.accountDebit = accountDebit;
+        this.amountCredit = amountCredit;
         this.accountCredit = accountCredit;
         this.currency = currency;
-        this.amountDebit = amountDebit;
-        this.amountCredit = amountCredit;
-        this.contractor = contractor;
+        //this.contractor = contractor;
     }
 }

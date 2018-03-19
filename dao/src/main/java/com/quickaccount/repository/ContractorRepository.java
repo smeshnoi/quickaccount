@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface ContractorRepository extends JpaRepository<Contractor, Long> {
     List<Contractor> findAllByUserContractorOrderByContractorName(User user);
+    List<Contractor> findAllByUserContractor(User user);
 }

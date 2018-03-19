@@ -10,5 +10,5 @@ import java.util.List;
 public interface RateRepository extends JpaRepository<Rate, Long> {
 
     List<Rate> getAllByUserRate(User user);
-    //List<Rate> findAllByRateDate(LocalDate date);
+    List<Rate> findAllByUserRateAndRateDate(User user, LocalDate date);
 }

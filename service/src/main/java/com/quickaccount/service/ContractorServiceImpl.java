@@ -40,7 +40,7 @@ public class ContractorServiceImpl implements ContractorService {
 
     @Override
     public List<Contractor> findContractorsByUser(User user) {
-        contractorRepository.findAllByUserContractorOrderByContractorName(user);
-        return null;
+        //System.out.println(contractorRepository.findAllByUserContractorOrderByContractorName(user));
+        return contractorRepository.findAllByUserContractorOrderByContractorName(user);
     }
 }

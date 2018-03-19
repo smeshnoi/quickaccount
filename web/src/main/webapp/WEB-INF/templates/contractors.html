@@ -38,16 +38,12 @@
             <thead>
             <tr>
                 <td scope="col">Contractor Name</td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
+                <td scope="col">Contractor Type</td>
             </tr>
             </thead>
-            <tr th:each="contractors">
-                <td th:text=""></td>
-                <td th:text=""></td>
-                <td th:text=""></td>
-                <td th:text=""></td>
+            <tr th:each="contractor : ${contractors}">
+                <td th:text="${contractor.getContractorName()}"></td>
+                <td th:text="${contractor.getTypeContractor()}"></td>
             </tr>
         </table>
         </p>
