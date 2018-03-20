@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/qstyle.css">
+    <!-- jQuery library -->
+</head>
+<body>
+<div id="container" class="container">
+    <div id="header" class="">
+
+    </div>
+    <div id="navigation" class="navigation" th:replace="navigation::navigation">
+
+    </div>
+    <div id="menu" class="menu" th:replace="menu::menu">
+
+    </div>
+    <div id="content">
+        <p class="p">
+        <table class="table">
+            <thead class="">
+            <tr>
+                <td scope="col">Generate report by contractor</td>
+                <td>
+                    <form th:action="@{/contractorreport}" method="get">
+                        <button  class="btn btn-success" type="submit" >Generate</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td scope="col">Generate report by user currency</td>
+                <td>
+                    <form th:action="@{/usercurrencyreport}" method="get">
+                        <button  class="btn btn-success" type="submit" >Generate</button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+        </table>
+        </p>
+
+    </div>
+    <div id="clear">
+
+    </div>
+    <div id="footer" class="footer">
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

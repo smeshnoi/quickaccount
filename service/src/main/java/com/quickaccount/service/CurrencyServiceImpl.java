@@ -3,6 +3,7 @@ package com.quickaccount.service;
 import com.quickaccount.entity.Currency;
 import com.quickaccount.repository.CurrencyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -20,6 +21,7 @@ public class CurrencyServiceImpl implements CurrencyService {
     }
 
     @Override
+    @Cacheable("currency")
     public List<Currency> findAll() {
         return currencyRepository.findAll();
     }

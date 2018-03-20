@@ -1,9 +1,7 @@
 package controller;
 
 import com.quickaccount.dto.TransactionDto;
-import com.quickaccount.entity.Currency;
-import com.quickaccount.entity.Rate;
-import com.quickaccount.entity.User;
+import com.quickaccount.entity.*;
 import com.quickaccount.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -44,10 +42,15 @@ public class TransactionController {
     @GetMapping("/transactions")
     public String showTransactionsPage(Model model, Principal principal) {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
+        List<Company> allByUserCompany = companyService.findAllByUserCompany(userbyLogin);
         model.addAttribute("user", userbyLogin);
         model.addAttribute("currencies", currencyService.findAll());
         model.addAttribute("transaction", new TransactionDto());
-        model.addAttribute("transactions", transactionService.findAllByUser(userbyLogin));
+        List<TransactionAccount> allByUser = transactionService.findAllByUser(allByUserCompany);
+        for (TransactionAccount transaction : allByUser) {
+            System.out.println(transaction.getTransactionDate());
+        }
+        model.addAttribute("transactions", transactionService.findAllByUser(allByUserCompany));
         return "transactions";
     }
 
@@ -85,7 +88,7 @@ public class TransactionController {
 //        model.addAttribute("user", userbyLogin);
 //        model.addAttribute("currencies", currencyService.findAll());
 //        model.addAttribute("transaction", new TransactionDto());
-        return "transactions";
+        return "redirect:transactions";
     }
 
 //    @GetMapping("/addtransaction")

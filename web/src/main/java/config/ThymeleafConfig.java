@@ -2,6 +2,7 @@ package config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
@@ -25,6 +26,7 @@ public class ThymeleafConfig {
         engine.setEnableSpringELCompiler(true);
         engine.setTemplateResolver(templateResolver());
         engine.addDialect(securityDialect());
+        engine.addDialect(new Java8TimeDialect());
         return engine;
     }
 
@@ -40,4 +42,5 @@ public class ThymeleafConfig {
     public SpringSecurityDialect securityDialect() {
         return new SpringSecurityDialect();
     }
+
 }

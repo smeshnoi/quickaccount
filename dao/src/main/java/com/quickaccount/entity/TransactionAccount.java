@@ -1,6 +1,7 @@
 package com.quickaccount.entity;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,7 +15,8 @@ import java.time.LocalDate;
 public class TransactionAccount extends BaseIdEntity {
 
     @Column(name = "date", nullable = false)
-    private LocalDate date;
+    @DateTimeFormat
+    private LocalDate transactionDate;
 
     @ManyToOne
     @JoinColumn(name = "company_id", nullable = false)
@@ -49,10 +51,10 @@ public class TransactionAccount extends BaseIdEntity {
 //    @JoinColumn(name = "user_id")
 //    private User userTransaction;
 
-    public TransactionAccount(LocalDate date, Company company, Double amountDebit, Account accountDebit,
+    public TransactionAccount(LocalDate transactionDate, Company company, Double amountDebit, Account accountDebit,
                               Double amountCredit, Account accountCredit, Currency currency
                               ) {
-        this.date = date;
+        this.transactionDate = transactionDate;
         this.company = company;
         this.amountDebit = amountDebit;
         this.accountDebit = accountDebit;

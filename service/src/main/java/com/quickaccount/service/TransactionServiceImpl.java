@@ -55,7 +55,14 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
-    public List<TransactionAccount> findAllByUser(User user) {
-        return transactionRepository.findAllByCompanyUserCompany(user);
+    public List<TransactionAccount> findAllByUser(List<Company> companyList) {
+        List<TransactionAccount> allByCompanyIn = transactionRepository.findAllByCompanyInOrderByTransactionDate(companyList);
+        System.out.println();
+        return allByCompanyIn;
+    }
+
+    @Override
+    public List<TransactionAccount> findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(LocalDate dateStart, LocalDate dateEnd, List<Company> companyList) {
+        return transactionRepository.findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(dateStart, dateEnd, companyList);
     }
 }

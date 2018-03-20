@@ -61,8 +61,8 @@
             </taable>
             <table class="table">
                 <tr th:each="account : ${accounts}">
-                    <td th:if="${account.getUserAccount() == null}" th:text="${account.getAccountName()}">test name</td>
-                    <td th:if="${account.getUserAccount() != null}">
+                    <td th:if="${account.getUserAccount()} != ${currentuser}" th:text="${account.getAccountName()}">test name</td>
+                    <td th:if="${account.getUserAccount()} == ${currentuser}">
                         <a th:href="@{'/editaccount/' + ${account.getId()}}" th:text="${account.getAccountName()}"></a>
                     </td>
                 </tr>

@@ -48,8 +48,13 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public List<Account> findAllByUserAccount(User user) {
-        return accountRepository.findAllByUserAccount(user);
+    public List<Account> findAllByUserAccountIn(List<User> userList, Pageable pageable) {
+        return accountRepository.findAllByUserAccountIn(userList, pageable);
+    }
+
+    @Override
+    public int countAllByUserAccountIn(List<User> userList) {
+        return accountRepository.countAllByUserAccountIn(userList);
     }
 
     @Override
@@ -72,10 +77,10 @@ public class AccountServiceImpl implements AccountService {
         List<User> userList = new ArrayList<>();
         //userList.add(new User());
         userList.add(userbyLogin);
-        List<Account> allByUserAccountContaining = accountRepository.findAllByUserAccountIn(userList);
+        //List<Account> allByUserAccountContaining = accountRepository.findAllByUserAccount(userList);
         List<Account> unionList = new ArrayList<>();
         unionList.addAll(accountList);
         unionList.addAll(listUserAccount);
-        return allByUserAccountContaining;
+        return null;// allByUserAccountContaining;
     }
 }
