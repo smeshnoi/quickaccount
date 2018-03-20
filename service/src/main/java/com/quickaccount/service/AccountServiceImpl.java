@@ -4,6 +4,7 @@ import com.quickaccount.entity.Account;
 import com.quickaccount.entity.TypeDC;
 import com.quickaccount.entity.User;
 import com.quickaccount.repository.AccountRepository;
+import com.quickaccount.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -16,10 +17,12 @@ import java.util.List;
 @Transactional
 public class AccountServiceImpl implements AccountService {
     private AccountRepository accountRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    public AccountServiceImpl(AccountRepository accountRepository) {
+    public AccountServiceImpl(AccountRepository accountRepository, UserRepository userRepository) {
         this.accountRepository = accountRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -45,6 +48,15 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public int countAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC) {
         return accountRepository.countAllByAccountNameContainingAndTypeAccountTypeDC(accountName, typeDC);
+    }
+
+    @Override
+    public List<Account> findAllByUserAccountIn(User user) {
+        User sys = userRepository.getUserByLogin("sys");
+        List<User> userList = new ArrayList<>();
+        userList.add(user);
+        userList.add(sys);
+        return accountRepository.findAllByUserAccountIn(userList);
     }
 
     @Override

@@ -6,6 +6,7 @@ import com.quickaccount.repository.*;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.awt.print.Pageable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -62,7 +63,17 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
+    public List<TransactionAccount> findAllByUser(List<Company> companyList, Pageable pageable) {
+        return transactionRepository.findAllByCompanyInOrderByTransactionDate(companyList, pageable);
+    }
+
+    @Override
     public List<TransactionAccount> findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(LocalDate dateStart, LocalDate dateEnd, List<Company> companyList) {
         return transactionRepository.findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(dateStart, dateEnd, companyList);
+    }
+
+    @Override
+    public int countAllByCompanyInOrderByTransactionDate(List<Company> allByUserCompany) {
+        return transactionRepository.countAllByCompanyInOrderByTransactionDate(allByUserCompany);
     }
 }

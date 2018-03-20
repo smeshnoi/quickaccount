@@ -52,13 +52,13 @@
             </div>
         </form>
         <div class="table">
-            <taable>
+            <table>
                 <tr>
                     <td th:each="page : ${pageCount}">
                         <a th:href="@{/account(page=${page})}" th:text="${page}"></a>
                     </td>
                 </tr>
-            </taable>
+            </table>
             <table class="table">
                 <tr th:each="account : ${accounts}">
                     <td th:if="${account.getUserAccount()} != ${currentuser}" th:text="${account.getAccountName()}">test name</td>

@@ -13,6 +13,7 @@ public interface AccountService {
     List<Account> getAllByParameter(String findAccount, int limitPage, int page, String typeAccount);
     List<Account> findAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC, Pageable pageable);
     int countAllByAccountNameContainingAndTypeAccountTypeDC(String accountName, TypeDC typeDC);
+    List<Account> findAllByUserAccountIn(User user);
     List<Account> findAllByUserAccountIn(List<User> userList, Pageable pageable);
     int countAllByUserAccountIn(List<User> userList);
     Account update(Account account, Long id);

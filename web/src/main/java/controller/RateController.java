@@ -39,7 +39,7 @@ public class RateController {
     public String addRate (RateDto rate, Principal principal) {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
         rateService.save(rate, userbyLogin);
-        return "rates";
+        return "redirect:rates";
     }
 
     @GetMapping("/addrate")
