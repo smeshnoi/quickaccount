@@ -64,15 +64,14 @@
                 <td scope="col">Description</td>
             </tr>
             </thead>
-            <tr th:each="transaction : ${transactions}">
-                <td th:text="${transaction.transactionDate}"></td>
+            <tr th:each="transaction : ${transactionsreport}">
+                <td th:text="${transaction.dateTransaction}"></td>
                 <td th:text="${transaction.amountDebit}"></td>
                 <td th:text="${transaction.accountDebit.accountName}"></td>
                 <td th:text="${transaction.amountCredit}"></td>
                 <td th:text="${transaction.accountCredit.accountName}"></td>
                 <td th:text="${transaction.company.companyName}"></td>
                 <td th:text="${transaction.contractor.contractorName}"></td>
-                <td th:text="${transaction.description}"></td>
                 <!--<td>-->
                 <!--<a th:href="" class="btn btn-outline-danger" role="button" aria-pressed="true">X</a>-->
                 <!--</td>-->

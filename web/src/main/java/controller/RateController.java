@@ -1,7 +1,6 @@
 package controller;
 
 import com.quickaccount.dto.RateDto;
-import com.quickaccount.entity.Rate;
 import com.quickaccount.entity.User;
 import com.quickaccount.service.CurrencyService;
 import com.quickaccount.service.RateService;
@@ -36,7 +35,7 @@ public class RateController {
     }
 
     @PostMapping("/rates")
-    public String addRate (RateDto rate, Principal principal) {
+    public String addRate (RateDto rate, Principal principal, Error error) {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
         rateService.save(rate, userbyLogin);
         return "redirect:rates";

@@ -52,7 +52,7 @@ public class CompanyController {
         user = userService.getUserbyLogin(principal.getName());
         company.setUserCompany(user);
         companyService.save(company);
-        return "company";
+        return "redirect:company";
     }
 
     @GetMapping(value = "/editcompany/{id}")
