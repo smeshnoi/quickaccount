@@ -1,6 +1,8 @@
 package controller;
 
+import com.quickaccount.dto.ReportAccountBalanceDto;
 import com.quickaccount.dto.ReportToUserCurrencyDto;
+import com.quickaccount.entity.Account;
 import com.quickaccount.entity.Company;
 import com.quickaccount.entity.Rate;
 import com.quickaccount.entity.TransactionAccount;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -113,8 +116,24 @@ public class ReportController {
         return reportDtoList;
     }
 
-    private void reportAccountBalancesForYear(List<ReportToUserCurrencyDto> reportByUserCurrency) {
-
+    private List<ReportAccountBalanceDto> reportAccountBalancesForYear(List<ReportToUserCurrencyDto> reportByUserCurrency) {
+        List<ReportAccountBalanceDto> reportList = new ArrayList<>();
+        HashMap<Account, Double> hashMap = new HashMap<>();
+        for (ReportToUserCurrencyDto report : reportByUserCurrency) {
+            if (hashMap.get(report.getAccountDebit()) != null) {
+                hashMap.put(report.getAccountDebit(), hashMap.get(report.getAccountDebit()) + report.getAmountDebit());
+            } else {
+                hashMap.put(report.getAccountDebit(), report.getAmountDebit());
+            }
+            if (hashMap.get(report.getAccountCredit()) != null) {
+                hashMap.put(report.getAccountCredit(), hashMap.get(report.getAccountCredit()) + report.getAmountCredit());
+            } else {
+                hashMap.put(report.getAccountCredit(), report.getAmountCredit());
+            }
+        }
+        for (Account key: hashMap.keySet()) {
+            reportList.add(new ReportAccountBalanceDto(key, hashMap.get(key)));
+        }
+        return reportList;
     }
-
 }
