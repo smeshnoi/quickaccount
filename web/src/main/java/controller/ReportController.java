@@ -87,8 +87,8 @@ public class ReportController {
         List<Company> allByUserCompany = companyService.findAllByUserCompany(userbyLogin);
         List<TransactionAccount> allByUser = transactionService.findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(startDate, endDate, allByUserCompany);
         reportByUserCurrency = getReportByUserCurrency(allByUser, userbyLogin);
-        reportAccountBalancesForYear(reportByUserCurrency);
-        model.addAttribute("transactionsreport", reportByUserCurrency);
+        List<ReportAccountBalanceDto> reportAccountBalanceDtos = reportAccountBalancesForYear(reportByUserCurrency);
+        model.addAttribute("transactionsreport", reportAccountBalanceDtos);
         return "accountbalancesreport";
     }
 
@@ -126,7 +126,7 @@ public class ReportController {
                 hashMap.put(report.getAccountDebit(), report.getAmountDebit());
             }
             if (hashMap.get(report.getAccountCredit()) != null) {
-                hashMap.put(report.getAccountCredit(), hashMap.get(report.getAccountCredit()) + report.getAmountCredit());
+                hashMap.put(report.getAccountCredit(), hashMap.get(report.getAccountCredit()) - report.getAmountCredit());
             } else {
                 hashMap.put(report.getAccountCredit(), report.getAmountCredit());
             }

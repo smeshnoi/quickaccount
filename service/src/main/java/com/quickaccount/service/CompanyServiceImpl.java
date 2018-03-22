@@ -37,10 +37,12 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     public Company update(Company company, Long id) {
-        Company companyById = companyRepository.findCompanyById(id);
-        companyById.setCompanyName(company.getCompanyName());
-        companyById.setDescription(company.getDescription());
-        companyById.setContact(company.getContact());
-        return companyById;
+        //Company companyById = companyRepository.findCompanyById(id);
+        //companyById.setCompanyName(company.getCompanyName());
+        //companyById.setDescription(company.getDescription());
+        //ompanyById.setContact(company.getContact());
+        //company.setId(id);
+        Company save = companyRepository.save(company);
+        return save;
     }
 }

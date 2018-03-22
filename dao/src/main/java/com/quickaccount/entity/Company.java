@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -35,6 +36,9 @@ public class Company extends BaseIdEntity {
 
     @OneToMany(mappedBy = "company")
     private Set<TransactionAccount> transactionAccountSet = new HashSet<>();
+
+    @Version
+    private LocalDateTime versionDate;
 
     public Company(String companyName, String description, Contact contact, User userCompany) {
         this.companyName = companyName;

@@ -9,14 +9,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
 @Controller
+@SessionAttributes("currentCompany")
 public class CompanyController {
     private CompanyService companyService;
 
@@ -32,6 +30,7 @@ public class CompanyController {
     public Company initCompany() {
         return new Company();
     }
+
 
     @GetMapping(value = "/addcompany")
     public String showAddCompanyPage() {
@@ -52,21 +51,24 @@ public class CompanyController {
         user = userService.getUserbyLogin(principal.getName());
         company.setUserCompany(user);
         companyService.save(company);
-        return "redirect:company";
+        return "redirect:companies";
     }
 
     @GetMapping(value = "/editcompany/{id}")
     public String showEditCompanyPage(Model model, Company company, @PathVariable("id") String id) {
         Long companyId = Long.parseLong(id);
         model.addAttribute("company", companyService.findCompanyById(companyId));
+        model.addAttribute("currentCompany", companyService.findCompanyById(companyId));
         return "editcompany";
     }
 
     @PostMapping(value = "/editcompany/{id}")
-    public String editCompany(Model model, Company company, @PathVariable("id") String id) {
-        //System.out.println(company + " " + id);
-        Long companyId = Long.parseLong(id);
-        companyService.update(company, companyId);
+    public String editCompany(Model model, Company company, @SessionAttribute("currentCompany") Company currentCompany, @PathVariable("id") Long id) {
+        currentCompany.setId(id);
+        currentCompany.setCompanyName(company.getCompanyName());
+        currentCompany.setDescription(company.getDescription());
+        currentCompany.setContact(company.getContact());
+        companyService.update(currentCompany, id);
         return "editcompany";
     }
 }

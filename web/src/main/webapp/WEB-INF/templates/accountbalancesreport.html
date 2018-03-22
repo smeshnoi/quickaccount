@@ -54,27 +54,14 @@
         <table class="table">
             <thead>
             <tr>
-                <td scope="col">Date Transaction</td>
-                <td scope="col">Debit</td>
                 <td scope="col">Account debit</td>
-                <td scope="col">Credit</td>
-                <td scope="col">Account credit</td>
-                <td scope="col">Company</td>
-                <td scope="col">Contractor</td>
-                <td scope="col">Description</td>
+                <td scope="col">Balance</td>
             </tr>
             </thead>
             <tr th:each="transaction : ${transactionsreport}">
-                <td th:text="${transaction.dateTransaction}"></td>
-                <td th:text="${transaction.amountDebit}"></td>
-                <td th:text="${transaction.accountDebit.accountName}"></td>
-                <td th:text="${transaction.amountCredit}"></td>
-                <td th:text="${transaction.accountCredit.accountName}"></td>
-                <td th:text="${transaction.company.companyName}"></td>
-                <td th:text="${transaction.contractor.contractorName}"></td>
-                <!--<td>-->
-                <!--<a th:href="" class="btn btn-outline-danger" role="button" aria-pressed="true">X</a>-->
-                <!--</td>-->
+                <td th:text="${transaction.account.accountName}"></td>
+                <td th:text="${transaction.amount}"></td>
+
             </tr>
         </table>
         </p>
