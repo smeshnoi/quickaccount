@@ -39,6 +39,14 @@
                     </form>
                 </td>
             </tr>
+            <tr>
+                <td scope="col">Generate report by user currency and group company</td>
+                <td>
+                    <form th:action="@{/usercompanyreport}" method="get">
+                        <button  class="btn btn-success" type="submit" >Generate</button>
+                    </form>
+                </td>
+            </tr>
             </thead>
         </table>
         </p>
