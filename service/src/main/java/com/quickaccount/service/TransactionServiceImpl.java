@@ -81,4 +81,14 @@ public class TransactionServiceImpl implements TransactionService {
     public TransactionAccount findTransactionById(Long id) {
         return transactionRepository.findOne(id);
     }
+
+    @Override
+    public List<List<TransactionAccount>> findAllByCompanyUserCompany(List<Company> allByUserCompany) {
+        List<List<TransactionAccount>> arrayList = null;
+        for (Company company: allByUserCompany) {
+            List<TransactionAccount> transactionAccountList = transactionRepository.findAllByCompanyUserCompany(company);
+            arrayList.add(transactionAccountList);
+        }
+        return arrayList;
+    }
 }

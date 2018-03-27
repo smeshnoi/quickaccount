@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.security.Principal;
 
 @Controller
@@ -46,12 +47,17 @@ public class CompanyController {
     }
 
     @PostMapping(value = "/companies")
-    public String addCompany(Company company, User user, Authentication authentication, Principal principal) {
-        SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        user = userService.getUserbyLogin(principal.getName());
-        company.setUserCompany(user);
-        companyService.save(company);
-        return "redirect:companies";
+    public String addCompany(@Valid Company company, User user, Authentication authentication, Principal principal, Model model, Error error) {
+        if (error.getMessage().isEmpty()) {
+            SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            user = userService.getUserbyLogin(principal.getName());
+            company.setUserCompany(user);
+            companyService.save(company);
+            return "redirect:companies";
+        } else {
+            model.addAttribute("error", error.getMessage());
+            return "addcompany";
+        }
     }
 
     @GetMapping(value = "/editcompany/{id}")

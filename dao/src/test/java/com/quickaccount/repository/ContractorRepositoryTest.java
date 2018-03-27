@@ -32,6 +32,5 @@ public class ContractorRepositoryTest {
                 currency, "passw",
                 new Contact("testContr@gmail.com", "+375296465656"));
         userRepository.save(user);
-
     }
 }

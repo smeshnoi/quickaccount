@@ -22,4 +22,6 @@ public interface TransactionService {
     int countAllByCompanyInOrderByTransactionDate(List<Company> allByUserCompany);
 
     TransactionAccount findTransactionById(Long id);
+
+    List<List<TransactionAccount>> findAllByCompanyUserCompany(List<Company> allByUserCompany);
 }

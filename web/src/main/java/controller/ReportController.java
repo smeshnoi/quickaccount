@@ -43,14 +43,20 @@ public class ReportController {
         return "report";
     }
 
-    @GetMapping("/contractorreport")
-    public String getContractorReportPage(Model model, String dateStart, String dateEnd, Principal principal) {
-        LocalDate dateS = LocalDate.parse(dateStart);
-        LocalDate dateE = LocalDate.parse(dateEnd);
+    @GetMapping("/usercompanyreport")
+    public String getContractorReportPage(Model model, Principal principal) {
+//        if (dateStart == null) {
+//            dateStart = LocalDate.now().minusYears(1).toString();
+//        }
+//        if (dateEnd == null) {
+//            dateEnd = LocalDate.now().toString();
+//        }
+//        LocalDate dateS = LocalDate.parse(dateStart);
+//        LocalDate dateE = LocalDate.parse(dateEnd);
         List<Company> allByUserCompany = companyService.findAllByUserCompany(userService.getUserbyLogin(principal.getName()));
-        List<TransactionAccount> transactionAccountList = transactionService.findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(dateS, dateE, allByUserCompany);
-        model.addAttribute("transactions", transactionAccountList);
-        return "contractorreport";
+        transactionService.findAllByCompanyUserCompany(allByUserCompany);
+        //model.addAttribute("transactions", transactionAccountList);
+        return "usercompanyreport";
     }
 
     @GetMapping("/usercurrencyreport")
@@ -66,15 +72,15 @@ public class ReportController {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
         List<ReportToUserCurrencyDto> reportByUserCurrency;
         List<Company> allByUserCompany = companyService.findAllByUserCompany(userbyLogin);
-        if (dateS == null || dateE == null) {
-            List<TransactionAccount> allByUser = transactionService.findAllByUser(allByUserCompany);
-            reportByUserCurrency = getReportByUserCurrency(allByUser, userbyLogin);
-        } else {
+//        if (dateS == null || dateE == null) {
+//            List<TransactionAccount> allByUser = transactionService.findAllByUser(allByUserCompany);
+//            reportByUserCurrency = getReportByUserCurrency(allByUser, userbyLogin);
+//        } else {
             List<TransactionAccount> allByUser = transactionService.findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(dateS, dateE, allByUserCompany);
             reportByUserCurrency = getReportByUserCurrency(allByUser, userbyLogin);
-        }
+        //}
         model.addAttribute("transactionsreport", reportByUserCurrency);
-        return "contractorreport";
+        return "usercurrencyreport";
     }
 
     @GetMapping("/accountbalancesreport")

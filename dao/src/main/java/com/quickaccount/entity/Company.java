@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,6 +20,7 @@ import java.util.Set;
 public class Company extends BaseIdEntity {
 
     @Column(name = "company_name")
+    @NotNull(message = "company name not null")
     private String companyName;
 
     @Column(name = "description")
@@ -32,6 +34,7 @@ public class Company extends BaseIdEntity {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @NotNull
     private User userCompany;
 
     @OneToMany(mappedBy = "company")
