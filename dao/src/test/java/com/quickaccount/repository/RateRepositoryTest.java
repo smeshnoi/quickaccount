@@ -34,13 +34,13 @@ public class RateRepositoryTest {
     @Test
     public void getRateByUserTest () {
 
-        Currency currency = new Currency("USD");
-        Currency currency2 = new Currency("EUR");
+        Currency currency = new Currency("RRR");
+        Currency currency2 = new Currency("EEE");
         currencyRepository.save(currency);
         currencyRepository.save(currency2);
-        User user = new User("test","Test", "Testov",
+        User user = new User("test1","Test", "Testov",
                 currency, "passw",
-                new Contact("testA@gmail.com", "+375296465656"));
+                new Contact("testA1@gmail.com", "+375296465656"));
         userRepository.save(user);
         LocalDate date = LocalDate.now();
         LocalDate date2 = LocalDate.of(2017, 12, 25);

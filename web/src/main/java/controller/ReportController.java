@@ -64,9 +64,9 @@ public class ReportController {
         LocalDate dateS = LocalDate.parse(dateStart);
         LocalDate dateE = LocalDate.parse(dateEnd);
         User userbyLogin = userService.getUserbyLogin(principal.getName());
-        List<ReportToUserCurrencyDto> reportByUserCurrency = new ArrayList<>();
+        List<ReportToUserCurrencyDto> reportByUserCurrency;
         List<Company> allByUserCompany = companyService.findAllByUserCompany(userbyLogin);
-        if (dateS.equals(null) || dateE.equals(null)) {
+        if (dateS == null || dateE == null) {
             List<TransactionAccount> allByUser = transactionService.findAllByUser(allByUserCompany);
             reportByUserCurrency = getReportByUserCurrency(allByUser, userbyLogin);
         } else {
@@ -83,7 +83,7 @@ public class ReportController {
         LocalDate startDate = LocalDate.of(year, 1, 1);
         LocalDate endDate = LocalDate.of(year + 1, 1, 1);
         User userbyLogin = userService.getUserbyLogin(principal.getName());
-        List<ReportToUserCurrencyDto> reportByUserCurrency = new ArrayList<>();
+        List<ReportToUserCurrencyDto> reportByUserCurrency;
         List<Company> allByUserCompany = companyService.findAllByUserCompany(userbyLogin);
         List<TransactionAccount> allByUser = transactionService.findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(startDate, endDate, allByUserCompany);
         reportByUserCurrency = getReportByUserCurrency(allByUser, userbyLogin);
@@ -93,7 +93,7 @@ public class ReportController {
     }
 
     public List<ReportToUserCurrencyDto> getReportByUserCurrency(List<TransactionAccount> allByUser, User userbyLogin) {
-        List<ReportToUserCurrencyDto> reportDtoList = new ArrayList<>();
+        List<ReportToUserCurrencyDto> reportDtoList = new ArrayList<ReportToUserCurrencyDto>();
         List<Rate> listRate = rateService.findAllByUser(userbyLogin);
         for (TransactionAccount transaction: allByUser) {
             Double amountDebit = transaction.getAmountDebit();
@@ -117,8 +117,8 @@ public class ReportController {
     }
 
     private List<ReportAccountBalanceDto> reportAccountBalancesForYear(List<ReportToUserCurrencyDto> reportByUserCurrency) {
-        List<ReportAccountBalanceDto> reportList = new ArrayList<>();
-        HashMap<Account, Double> hashMap = new HashMap<>();
+        List<ReportAccountBalanceDto> reportList = new ArrayList<ReportAccountBalanceDto>();
+        HashMap<Account, Double> hashMap = new HashMap<Account, Double>();
         for (ReportToUserCurrencyDto report : reportByUserCurrency) {
             if (hashMap.get(report.getAccountDebit()) != null) {
                 hashMap.put(report.getAccountDebit(), hashMap.get(report.getAccountDebit()) + report.getAmountDebit());

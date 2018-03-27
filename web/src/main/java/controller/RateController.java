@@ -27,7 +27,7 @@ public class RateController {
     }
 
     @GetMapping("/rates")
-    public String getRatesPage (Model model, Principal principal) {
+    public String getRatesPage(Model model, Principal principal) {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
         model.addAttribute("currencies", currencyService.findAll());
         model.addAttribute("rates", rateService.findAllByUser(userbyLogin));
@@ -35,14 +35,14 @@ public class RateController {
     }
 
     @PostMapping("/rates")
-    public String addRate (RateDto rate, Principal principal, Error error) {
+    public String addRate(RateDto rate, Principal principal, Error error) {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
         rateService.save(rate, userbyLogin);
         return "redirect:rates";
     }
 
     @GetMapping("/addrate")
-    public String addRatePage (Model model, Principal principal) {
+    public String addRatePage(Model model, Principal principal) {
         model.addAttribute("rate", new RateDto());
         model.addAttribute("currencies", currencyService.findAll());
         model.addAttribute("rates");

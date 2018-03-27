@@ -39,17 +39,17 @@ public class AccountRepositoryTest {
 
     @Test
     public void getAccountTest() {
-        Currency currency = new Currency("USD");
-        Currency currency2 = new Currency("EUR");
+        Currency currency = new Currency("WWW");
+        Currency currency2 = new Currency("AAA");
         currencyRepository.save(currency);
         currencyRepository.save(currency2);
-        User user = new User("test","Test", "Testov",
+        User user = new User("test2","Test", "Testov",
                 currency, "passw",
-                new Contact("testA@gmail.com", "+375296465656"));
+                new Contact("testA2@gmail.com", "+375296465656"));
         userRepository.save(user);
         TypeAccount typeAccount = new TypeAccount("Test Type", TypeDC.CREDIT);
         typeAccountRepository.save(typeAccount);
-        Account account = new Account("Test Account", typeAccount, user);
+        Account account = new Account("Test Account1", typeAccount, user);
         accountRepository.save(account);
         Account account2 = new Account("Test2", typeAccount, user);
         accountRepository.save(account2);

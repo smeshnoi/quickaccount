@@ -66,7 +66,7 @@ public class AccountController {
     public String showAccountPage(Model model, AccountForm account, Integer page, Principal principal) {
         User userbyLogin = userService.getUserbyLogin(principal.getName());
         User sys = userService.getUserbyLogin("sys");
-        List<User> userList = new ArrayList<>();
+        List<User> userList = new ArrayList<User>();
         userList.add(sys);
         userList.add(userbyLogin);
         if (page == null) {

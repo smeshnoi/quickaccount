@@ -109,8 +109,15 @@ public class TransactionController {
     }
 
     @GetMapping("/deletetransaction/{id}")
-    public String showAddTransactionPage(Model model, TransactionAccount transaction, @PathVariable("id") String id) {
-        model.addAttribute("transaction", 1);
+    public String showAddTransactionPage(Model model, TransactionAccount transaction, @PathVariable("id") Long id) {
+        TransactionAccount transactionById = transactionService.findTransactionById(id);
+        model.addAttribute("transaction", transactionById);
         return "deletetransaction";
+    }
+
+    @PostMapping("/deletetransaction")
+    public String deleteTransaction(TransactionAccount transaction) {
+        System.out.println(transaction);
+        return "redirect:transactions";
     }
 }

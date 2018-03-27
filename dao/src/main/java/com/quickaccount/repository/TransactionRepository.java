@@ -14,4 +14,5 @@ public interface TransactionRepository extends JpaRepository<TransactionAccount,
     List<TransactionAccount> findAllByCompanyInOrderByTransactionDate(List<Company> companyList, Pageable pageable);
     int countAllByCompanyInOrderByTransactionDate(List<Company> companyList);
     List<TransactionAccount> findAllByTransactionDateBetweenAndCompanyInOrderByTransactionDate(LocalDate dateStart, LocalDate dateEnd, List<Company> companyList);
+    //TransactionAccount find
 }

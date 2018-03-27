@@ -76,4 +76,9 @@ public class TransactionServiceImpl implements TransactionService {
     public int countAllByCompanyInOrderByTransactionDate(List<Company> allByUserCompany) {
         return transactionRepository.countAllByCompanyInOrderByTransactionDate(allByUserCompany);
     }
+
+    @Override
+    public TransactionAccount findTransactionById(Long id) {
+        return transactionRepository.findOne(id);
+    }
 }

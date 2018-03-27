@@ -317,3 +317,380 @@ insert into currency (id, currency) values (null, ?) [23505-195]
 2018-03-19 22:30:07,325 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
 Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
 insert into currency (id, currency) values (null, ?) [23505-195]
+2018-03-25 23:31:18,096 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:31:18,287 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:31:18,289 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:31:18,416 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:31:18,956 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:31:19,743 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:31:20,389 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:31:21,388 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:31:21,712 WARN  - SQL Error: 23505, SQLState: 23505
+2018-03-25 23:31:21,712 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-03-25 23:31:21,741 WARN  - SQL Error: 23505, SQLState: 23505
+2018-03-25 23:31:21,741 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-03-25 23:31:21,758 WARN  - SQL Error: 23505, SQLState: 23505
+2018-03-25 23:31:21,758 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-03-25 23:31:21,772 WARN  - SQL Error: 23505, SQLState: 23505
+2018-03-25 23:31:21,773 ERROR - Нарушение уникального индекса или первичного ключа: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"
+Unique index or primary key violation: "UK_h90x5sssmlhgwq75bd5q2trhu_INDEX_2 ON PUBLIC.""currency""(""currency"") VALUES ('USD', 1)"; SQL statement:
+insert into currency (id, currency) values (null, ?) [23505-195]
+2018-03-25 23:32:40,701 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:32:40,870 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:32:40,872 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:32:40,924 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:32:41,269 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:32:41,968 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:32:42,510 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4ab550d5'
+2018-03-25 23:32:43,222 WARN  - SQL Error: 23505, SQLState: 23505
+2018-03-25 23:32:43,223 ERROR - Нарушение уникального индекса или первичного ключа: "UK_33uo7vet9c79ydfuwg1w848f_INDEX_6 ON PUBLIC.""users""(""user_email"") VALUES ('testA@gmail.com', 1)"
+Unique index or primary key violation: "UK_33uo7vet9c79ydfuwg1w848f_INDEX_6 ON PUBLIC.""users""(""user_email"") VALUES ('testA@gmail.com', 1)"; SQL statement:
+insert into users (id, user_email, user_phone, currency_id, first_name, last_name, login, password) values (null, ?, ?, ?, ?, ?, ?, ?) [23505-195]
+2018-03-25 23:33:29,784 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:33:29,974 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:33:29,977 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:33:30,052 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:33:30,384 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:33:31,098 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:33:31,603 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4ab550d5'
+2018-03-25 23:33:32,359 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:34:09,101 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:34:09,348 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:34:09,350 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:34:09,415 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:34:09,833 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:34:10,748 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:34:11,290 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3cd206b5'
+2018-03-25 23:34:12,056 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:34:36,094 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:34:36,318 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:34:36,320 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:34:36,383 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:34:36,806 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:34:37,552 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:34:38,026 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7c75db8b'
+2018-03-25 23:34:38,865 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:35:26,065 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:35:26,273 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:35:26,277 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:35:26,337 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:35:26,781 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:35:27,711 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:35:28,154 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@116a2108'
+2018-03-25 23:35:29,033 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:35:39,178 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:35:39,307 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:35:39,309 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:35:39,352 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:35:39,669 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:35:40,315 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:35:40,804 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:35:41,566 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:35:41,919 WARN  - SQL Error: 23505, SQLState: 23505
+2018-03-25 23:35:41,920 ERROR - Нарушение уникального индекса или первичного ключа: "UK_33uo7vet9c79ydfuwg1w848f_INDEX_6 ON PUBLIC.""users""(""user_email"") VALUES ('testA1@gmail.com', 2)"
+Unique index or primary key violation: "UK_33uo7vet9c79ydfuwg1w848f_INDEX_6 ON PUBLIC.""users""(""user_email"") VALUES ('testA1@gmail.com', 2)"; SQL statement:
+insert into users (id, user_email, user_phone, currency_id, first_name, last_name, login, password) values (null, ?, ?, ?, ?, ?, ?, ?) [23505-195]
+2018-03-25 23:36:21,832 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:36:21,964 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:36:21,966 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:36:22,006 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:36:22,365 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:36:23,032 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:36:23,503 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:36:24,263 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:36:24,643 WARN  - SQL Error: 23505, SQLState: 23505
+2018-03-25 23:36:24,643 ERROR - Нарушение уникального индекса или первичного ключа: "UK_33uo7vet9c79ydfuwg1w848f_INDEX_6 ON PUBLIC.""users""(""user_email"") VALUES ('testA1@gmail.com', 2)"
+Unique index or primary key violation: "UK_33uo7vet9c79ydfuwg1w848f_INDEX_6 ON PUBLIC.""users""(""user_email"") VALUES ('testA1@gmail.com', 2)"; SQL statement:
+insert into users (id, user_email, user_phone, currency_id, first_name, last_name, login, password) values (null, ?, ?, ?, ?, ?, ?, ?) [23505-195]
+2018-03-25 23:36:54,741 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:36:54,869 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:36:54,870 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:36:54,915 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:36:55,262 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:36:55,859 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:36:56,385 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:36:57,259 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:39:34,239 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:39:34,380 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:39:34,381 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:39:34,421 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:39:34,734 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:39:35,424 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:39:35,888 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:39:36,608 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:39:52,065 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:39:52,268 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:39:52,270 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:39:52,339 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:39:52,796 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:39:53,842 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:39:54,355 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:39:55,224 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:40:25,228 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:40:25,434 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:40:25,439 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:40:25,520 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:40:25,888 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:40:26,535 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:40:27,026 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:40:27,816 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:41:05,875 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:41:06,068 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:41:06,070 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:41:06,135 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:41:06,459 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:41:07,231 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:41:07,769 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:41:08,561 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:41:17,609 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:41:17,803 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:41:17,805 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:41:17,875 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:41:18,278 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:41:19,166 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:41:19,700 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:41:20,462 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:41:50,368 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:41:50,623 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:41:50,624 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:41:50,676 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:41:51,012 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:41:51,749 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:41:52,262 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:41:53,066 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:42:09,535 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:42:09,739 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:42:09,741 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:42:09,818 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:42:10,181 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:42:11,073 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:42:11,500 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:42:12,294 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:42:33,421 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:42:33,649 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:42:33,651 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:42:33,713 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:42:34,101 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:42:34,891 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:42:35,371 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:42:36,120 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:43:11,802 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:43:12,079 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:43:12,081 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:43:12,165 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:43:12,616 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:43:13,297 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:43:13,812 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:43:14,559 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:44:05,458 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:44:05,643 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:44:05,644 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:44:05,697 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:44:06,034 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:44:06,821 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:44:07,349 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:44:08,103 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:44:32,012 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:44:32,237 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:44:32,239 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:44:32,304 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:44:32,777 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:44:33,653 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:44:34,160 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:44:34,856 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:45:04,770 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:45:04,992 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:45:04,994 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:45:05,071 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:45:05,453 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:45:06,313 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:45:06,788 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:45:07,492 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:45:39,371 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:45:39,589 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:45:39,590 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:45:39,651 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:45:40,006 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:45:40,762 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:45:41,281 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:45:42,035 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:45:53,520 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:45:53,721 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:45:53,722 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:45:53,778 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:45:54,110 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:45:54,875 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:45:55,389 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:45:56,144 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:49:17,669 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:49:17,896 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:49:17,898 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:49:17,951 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:49:18,327 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:49:19,006 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:49:19,582 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:49:20,261 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:49:38,300 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:49:38,564 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:49:38,566 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:49:38,637 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:49:38,979 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:49:39,751 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:49:40,260 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:49:41,008 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:51:18,487 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:51:18,704 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:51:18,706 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:51:18,754 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:51:19,124 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:51:19,840 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:51:20,449 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@598260a6'
+2018-03-25 23:51:21,208 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:51:35,755 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:51:35,884 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:51:35,885 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:51:35,927 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:51:36,235 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:51:36,921 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:51:37,381 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:51:38,167 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:53:12,794 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:53:12,931 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:53:12,933 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:53:12,978 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:53:13,305 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:53:13,974 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:53:14,456 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:53:15,247 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:55:50,273 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:55:50,403 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:55:50,405 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:55:50,450 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:55:50,782 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:55:51,441 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:55:51,926 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:55:52,706 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:58:57,129 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:58:57,249 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:58:57,250 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:58:57,294 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:58:57,592 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:58:58,231 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:58:58,760 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:58:59,586 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-25 23:59:43,357 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-25 23:59:43,483 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-25 23:59:43,484 INFO  - HHH000206: hibernate.properties not found
+2018-03-25 23:59:43,528 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-25 23:59:43,830 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-25 23:59:44,618 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-25 23:59:45,079 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-25 23:59:45,828 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-26 00:00:12,740 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-26 00:00:12,857 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-26 00:00:12,859 INFO  - HHH000206: hibernate.properties not found
+2018-03-26 00:00:12,903 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-26 00:00:13,222 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-26 00:00:13,917 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-26 00:00:14,377 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-26 00:00:15,084 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-26 00:01:29,000 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-26 00:01:29,118 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-26 00:01:29,119 INFO  - HHH000206: hibernate.properties not found
+2018-03-26 00:01:29,160 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-26 00:01:29,492 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-26 00:01:30,192 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-26 00:01:30,681 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-26 00:01:31,414 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-26 00:01:52,724 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-26 00:01:52,843 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-26 00:01:52,845 INFO  - HHH000206: hibernate.properties not found
+2018-03-26 00:01:52,890 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-26 00:01:53,198 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-26 00:01:53,920 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-26 00:01:54,399 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-26 00:01:55,197 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-26 00:02:32,062 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-26 00:02:32,185 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-26 00:02:32,188 INFO  - HHH000206: hibernate.properties not found
+2018-03-26 00:02:32,233 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-26 00:02:32,557 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-26 00:02:33,206 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-26 00:02:33,746 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
+2018-03-26 00:02:34,502 INFO  - HHH000397: Using ASTQueryTranslatorFactory
