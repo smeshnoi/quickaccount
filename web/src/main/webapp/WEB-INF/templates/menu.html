@@ -5,6 +5,11 @@
         <table>
             <tr class="row">
                 <td>
+                    <a sec:authorize="hasAuthority('ADMIN')" class="a" th:href="@{/users}">Users</a>
+                </td>
+            </tr>
+            <tr class="row">
+                <td>
                     <a class="a" th:href="@{/registry}">Registry</a>
                 </td>
             </tr>

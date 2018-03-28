@@ -54,8 +54,8 @@ public class ReportController {
 //        LocalDate dateS = LocalDate.parse(dateStart);
 //        LocalDate dateE = LocalDate.parse(dateEnd);
         List<Company> allByUserCompany = companyService.findAllByUserCompany(userService.getUserbyLogin(principal.getName()));
-        transactionService.findAllByCompanyUserCompany(allByUserCompany);
-        //model.addAttribute("transactions", transactionAccountList);
+        List<List<TransactionAccount>> allByCompanyUserCompany = transactionService.findAllByCompanyUserCompany(allByUserCompany);
+        model.addAttribute("transactionsCompany", allByCompanyUserCompany);
         return "usercompanyreport";
     }
 
