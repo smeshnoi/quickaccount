@@ -112,7 +112,8 @@ public class TransactionController {
     public String showAddTransactionPage(Model model, TransactionAccount transaction, @PathVariable("id") Long id) {
         TransactionAccount transactionById = transactionService.findTransactionById(id);
         model.addAttribute("transaction", transactionById);
-        return "deletetransaction";
+        transactionService.delete(transactionById);
+        return "redirect:/transactions";
     }
 
     @PostMapping("/deletetransaction")

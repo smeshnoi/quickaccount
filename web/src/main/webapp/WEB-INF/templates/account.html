@@ -27,30 +27,30 @@
             </form>
         </p>
         <p>
-        <form class="form-inline" th:action="@{/account}" method="post" th:object="${accountForm}">
-            <div class="form_group">
-                <label for="searchText">Enter for search</label>
-                <input type="text" id="searchText" th:field="*{searchText}">
-            </div>
-            <div class="form_group">
-                <label  for="typeAcc">Type Account: </label>
-                <select id="typeAcc" name="typeAccount" th:field="*{typeAccount}">
-                    <option value="CREDIT">Credit</option>
-                    <option value="DEBIT">Debit</option>
-                </select>
-            </div>
-            <div class="form_group">
-                <label  for="limitPage">Limit Page: </label>
-                <select id="limitPage" name="limitPage" th:field="*{limitPage}">
-                    <option value="3">3</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                </select>
-            </div>
-            <div class="form_group">
-                <button class="btn btn-primary" type="submit">Search</button>
-            </div>
-        </form>
+        <!--<form class="form-inline" th:action="@{/account}" method="post" th:object="${accountForm}">-->
+            <!--<div class="form_group">-->
+                <!--<label for="searchText">Enter for search</label>-->
+                <!--<input type="text" id="searchText" th:field="*{searchText}">-->
+            <!--</div>-->
+            <!--<div class="form_group">-->
+                <!--<label  for="typeAcc">Type Account: </label>-->
+                <!--<select id="typeAcc" name="typeAccount" th:field="*{typeAccount}">-->
+                    <!--<option value="CREDIT">Credit</option>-->
+                    <!--<option value="DEBIT">Debit</option>-->
+                <!--</select>-->
+            <!--</div>-->
+            <!--<div class="form_group">-->
+                <!--<label  for="limitPage">Limit Page: </label>-->
+                <!--<select id="limitPage" name="limitPage" th:field="*{limitPage}">-->
+                    <!--<option value="3">3</option>-->
+                    <!--<option value="5">5</option>-->
+                    <!--<option value="10">10</option>-->
+                <!--</select>-->
+            <!--</div>-->
+            <!--<div class="form_group">-->
+                <!--<button class="btn btn-primary" type="submit">Search</button>-->
+            <!--</div>-->
+        <!--</form>-->
         <div class="table">
             <table>
                 <tr>

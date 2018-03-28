@@ -9,6 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -47,15 +48,17 @@ public class CompanyController {
     }
 
     @PostMapping(value = "/companies")
-    public String addCompany(@Valid Company company, User user, Authentication authentication, Principal principal, Model model, Error error) {
-        if (error.getMessage().isEmpty()) {
+    public String addCompany(@Valid Company company, User user, Authentication authentication, Principal principal, Model model, Errors error) {
+        if (error.getErrorCount() == 0) {
             SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             user = userService.getUserbyLogin(principal.getName());
             company.setUserCompany(user);
             companyService.save(company);
             return "redirect:companies";
         } else {
-            model.addAttribute("error", error.getMessage());
+            //model.addAttribute("error", error.getFieldValue("companyName"));
+            System.out.println(error.getErrorCount());
+            //model.addAttribute("company", company);
             return "addcompany";
         }
     }

@@ -24,4 +24,6 @@ public interface TransactionService {
     TransactionAccount findTransactionById(Long id);
 
     List<List<TransactionAccount>> findAllByCompanyUserCompany(List<Company> allByUserCompany);
+
+    void delete(TransactionAccount transactionById);
 }

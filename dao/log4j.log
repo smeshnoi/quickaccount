@@ -694,3 +694,13 @@ insert into users (id, user_email, user_phone, currency_id, first_name, last_nam
 2018-03-26 00:02:33,206 INFO  - HV000001: Hibernate Validator 5.4.1.Final
 2018-03-26 00:02:33,746 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6c796cc1'
 2018-03-26 00:02:34,502 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-03-28 21:17:09,355 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-03-28 21:17:09,550 INFO  - HHH000412: Hibernate Core {5.2.10.Final}
+2018-03-28 21:17:09,551 INFO  - HHH000206: hibernate.properties not found
+2018-03-28 21:17:09,644 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-28 21:17:10,227 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-03-28 21:17:10,970 INFO  - HV000001: Hibernate Validator 5.4.1.Final
+2018-03-28 21:17:11,538 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3ac8cf9b'
+2018-03-28 21:17:12,463 INFO  - HHH000397: Using ASTQueryTranslatorFactory

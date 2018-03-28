@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface TransactionRepository extends JpaRepository<TransactionAccount, Long> {
     List<TransactionAccount> findAllByCompanyUserCompany(Company company);
+    List<TransactionAccount> findAllByCompany(Company company);
     List<TransactionAccount> findAllByCompanyInOrderByTransactionDate(List<Company> companyList);
     List<TransactionAccount> findAllByCompanyInOrderByTransactionDate(List<Company> companyList, Pageable pageable);
     int countAllByCompanyInOrderByTransactionDate(List<Company> companyList);

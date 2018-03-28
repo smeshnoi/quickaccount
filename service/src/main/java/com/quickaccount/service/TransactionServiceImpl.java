@@ -85,10 +85,19 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public List<List<TransactionAccount>> findAllByCompanyUserCompany(List<Company> allByUserCompany) {
         List<List<TransactionAccount>> arrayList = null;
+        List<TransactionAccount> transactionAccountList = null;
         for (Company company: allByUserCompany) {
-            List<TransactionAccount> transactionAccountList = transactionRepository.findAllByCompanyUserCompany(company);
-            arrayList.add(transactionAccountList);
+            transactionAccountList = transactionRepository.findAllByCompany(company);
+            if (transactionAccountList != null) {
+                arrayList.add(transactionAccountList);
+            }
         }
         return arrayList;
+    }
+
+    @Override
+    public void delete(TransactionAccount transactionById) {
+        transactionRepository.delete(transactionById);
+
     }
 }
